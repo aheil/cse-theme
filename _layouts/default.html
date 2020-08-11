@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {%- include head.html -%}
+
+  <body>
+
+    {%- include header.html -%}
+
+    <main>
+      <nav class="skin">
+        <ul>
+          <li><a href="/">Course information</a></li>
+          <li class="nothing">---</li>
+          <li class="nothing">Assignments &amp; Practicing</li>
+          <li class="nothing">---</li>
+          {% for practical in site.practicals %}
+          <li>
+            <a href="{{ practical.url }}">
+              {{ practical.linkname }}
+            </a>
+          </li>
+          {% endfor %}
+          <li class="nothing">---</li>
+          <li class="nothing">Lectures</li>
+          <li class="nothing">---</li>
+          {% for lecture in site.lectures %}
+          <li>
+            <a href="{{ lecture.url }}">
+              {{ lecture.linkname }}
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </nav>
+      
+      <section class="markdown-body">
+        {{ content }}
+      </section>
+    
+      {%- include footer.html -%}
+
+    </main>
+  </body>
+</html>

@@ -1,0 +1,216 @@
+@import "personalizable.css";
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: 1fr 30px;
+}
+
+nav {
+  color: var(--nav-foreground);
+  background-color: var(--nav-background);
+}
+
+footer {
+  display: grid;
+  background-color: var(--footer-background);
+  color: var(--footer-foreground);
+  grid-column-start: 1;
+  grid-column-end: 3;
+  align-items: center;
+  justify-items: center;
+  font-size: 15px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+header {
+  /* TU Delft's EEMCS building */
+  background-image: url("https://d1rkab7tlqy5f1.cloudfront.net/News/2015/09_September/tudelft_campus_lente_EWI_09_1_.jpg");
+  background-size: cover;
+  height: 100vh;
+  color: var(--header-foreground);
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.skin {
+  font-family: "Share Tech Mono", monospace;
+}
+
+.skin a {
+  color: var(--nav-link-color);
+  text-decoration: none;
+}
+
+.skin a:hover {
+  text-decoration: underline overline;
+  text-decoration-thickness: .125em;
+  text-underline-offset: 2.5px;
+}
+
+.skin li {
+  list-style: none;
+}
+
+.skin li:before {
+  content: var(--nav-link-icon);
+}
+
+.skin .nothing:before {
+  content: " ";
+}
+
+.skin .nothing:hover {
+  text-decoration: none;
+}
+
+.skin .boxing1 {
+  background-color: var(--header-main-box-color);
+  border: 1px solid var(--header-border);
+  font-size: 20vmin;
+}
+
+.skin .boxing2 {
+  background-color: var(--header-main-box-color);
+  display: inline-block;
+  border: 1px solid var(--header-border);
+  font-size: calc(0.4 * 20vmin);
+  margin-top: 10px;
+}
+
+.skin .boxing3 {
+  background-color: var(--header-highlight-box-color);
+}
+
+.skin .preview {
+  background-color: var(--header-preview-box-color);
+  display: inline-block;
+  border: 1px solid var(--header-border);
+  margin-top: 10px;
+  font-size: calc(0.15 * 20vmin);
+}
+
+.skin .preview::after {
+  content: "";
+  animation: preview 4s linear 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes preview {
+  from {
+    content: "N";
+  }
+  3% {
+    content: "No";
+  }
+  6% {
+    content: "Nod";
+  }
+  9% {
+    content: "Node";
+  }
+  12% {
+    content: "Node.";
+  }
+  15% {
+    content: "Node.j";
+  }
+  18% {
+    content: "Node.js";
+  }
+  21% {
+    content: "Node.js,";
+  }
+  24% {
+    content: "Node.js, ";
+  }
+  27% {
+    content: "Node.js, J";
+  }
+  30% {
+    content: "Node.js, Ja";
+  }
+  33% {
+    content: "Node.js, Jav";
+  }
+  36% {
+    content: "Node.js, Java";
+  }
+  39% {
+    content: "Node.js, JavaS";
+  }
+  42% {
+    content: "Node.js, JavaSc";
+  }
+  45% {
+    content: "Node.js, JavaScr";
+  }
+  48% {
+    content: "Node.js, JavaScri";
+  }
+  51% {
+    content: "Node.js, JavaScrip";
+  }
+  54% {
+    content: "Node.js, JavaScript";
+  }
+  57% {
+    content: "Node.js, JavaScript,";
+  }
+  60% {
+    content: "Node.js, JavaScript, ";
+  }
+  63% {
+    content: "Node.js, JavaScript, C";
+  }
+  66% {
+    content: "Node.js, JavaScript, CS";
+  }
+  69% {
+    content: "Node.js, JavaScript, CSS";
+  }
+  72% {
+    content: "Node.js, JavaScript, CSS,";
+  }
+  75% {
+    content: "Node.js, JavaScript, CSS, ";
+  }
+  78% {
+    content: "Node.js, JavaScript, CSS, H";
+  }
+  81% {
+    content: "Node.js, JavaScript, CSS, HT";
+  }
+  84% {
+    content: "Node.js, JavaScript, CSS, HTT";
+  }
+  87% {
+    content: "Node.js, JavaScript, CSS, HTTP";
+  }
+  89% {
+    content: "Node.js, JavaScript, CSS, HTTP,";
+  }
+  91% {
+    content: "Node.js, JavaScript, CSS, HTTP, ";
+  }
+  93% {
+    content: "Node.js, JavaScript, CSS, HTTP, H";
+  }
+  95% {
+    content: "Node.js, JavaScript, CSS, HTTP, HT";
+  }
+  97% {
+    content: "Node.js, JavaScript, CSS, HTTP, HTM";
+  }
+  to {
+    content: "Node.js, JavaScript, CSS, HTTP, HTML";
+  }
+}
