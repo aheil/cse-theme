@@ -1,6 +1,6 @@
 # cse-theme
 
-This Jekyll theme has been derived from [Minima](https://github.com/jekyll/minima), Jekyll's default theme. Only the necessary files were kept, the rest was stripped from the repo.
+This Jekyll theme is built on top of [Minima](https://github.com/jekyll/minima), Jekyll's default theme. Only the necessary files were kept, the rest was stripped from the repo.
 
 For this theme to work, the lectures and practicals need to reside in specific folders (see below). The general course information needs to reside in `index.md`. Apart from those prerequisites, it should be possible to develop the lecture materials entirely in markdown, without regard for the `cse-theme`.
 
@@ -8,9 +8,13 @@ For this theme to work, the lectures and practicals need to reside in specific f
 
 # Course content
 
+## Course information
+
+The course information (overview, instructors, grading, etc.) should all be contained in `index.md`.
+
 ## Adding a lecture
 
-Place thes lecture (each one in a separate markdown file) in the `_lectures` folder and add the [YAML front matter](https://jekyllrb.com/docs/front-matter/) at the top of each page file tripple dashes:
+Place the lectures (each one in a separate markdown file) in the `_lectures` folder and add the [YAML front matter](https://jekyllrb.com/docs/front-matter/) at the top of each file, separated by tripple dashes:
 
 ```
 ---
@@ -23,18 +27,14 @@ ordering: 4
 OTHER CONTENT
 ```
 
-The `layout` variable is always `default` in our case (other Jekyll themes may have different types of pages depending on the content type). The `permalink` variable beautifies the URL and the `linkname` variable determines how the link appears in the navigation bar. As lessons are typically in a specific order, the `ordering` variable determines the order of the lectures (otherwise the lectures would be orderd alphabetically).
+The `layout` variable is always `default` in our case (other Jekyll themes may have different types of pages depending on the content type). The `permalink` variable beautifies the URL and the `linkname` variable determines how the link appears in the navigation bar. As lectures are typically in a specific order, the `ordering` variable (just use integers, ascending order) determines the order of the lectures. Without this explicit ordering, the links would show up in alphabetic order.
 
 Note: all content appearing after the front matter is pushed into the `content` attribute, accessed as `{{content}}` in `default.html`.
 
 
 ## Adding practicals
 
-Practicals (assignments, exercises, etc.) are added to the `_practicals` folder. The front matter is the same as for the lectures.
-
-## Course information
-
-The course information should all be contained in `index.md`.
+Practicals (assignments, exercises, old exams, etc.) are added to the `_practicals` folder. The front matter is the same as for the lectures.
 
 # Layout
 

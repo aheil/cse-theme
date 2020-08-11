@@ -5,6 +5,7 @@ gemspec
 
 gem "jekyll", ENV["JEKYLL_VERSION"] if ENV["JEKYLL_VERSION"]
 gem 'jemoji'
+gem "jekyll-remote-theme"
 
 group :jekyll_plugins do
     gem 'jekyll-commonmark'
