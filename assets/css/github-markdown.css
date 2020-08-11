@@ -101,7 +101,7 @@
   }
 
   .markdown-body a::before {
-      content: "⇗";
+      content: var(--content-link-before-icon);
   }
   
   .markdown-body a:active,
@@ -711,6 +711,12 @@
     padding-bottom: .3em;
     border-bottom: 1px solid var(--content-hX-underline);
   }
+
+  .markdown-body h3,
+  .markdown-body h4 {
+    text-underline-offset: .3em;
+    text-decoration: underline;
+  }
   
   .markdown-body h2 {
     font-size: 1.5em;
@@ -748,6 +754,11 @@
   
   .markdown-body li {
     word-wrap: break-all;
+    list-style: none;  
+  }
+
+  .markdown-body li:before {
+    content: var(--content-list-icon);
   }
   
   .markdown-body li>p {

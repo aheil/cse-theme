@@ -2,7 +2,7 @@
 
 This Jekyll theme is built on top of [Minima](https://github.com/jekyll/minima), Jekyll's default theme. Only the necessary files were kept, the rest was stripped from the repo.
 
-For this theme to work, the lectures and practicals need to reside in specific folders (see below). The general course information needs to reside in `index.md`. Apart from those prerequisites, it should be possible to develop the lecture materials entirely in markdown, without regard for the `cse-theme`.
+For this theme to work, the course information, lectures and practicals need to reside in specific folders/files (see below). Apart from those prerequisites, it should be possible to develop the lecture materials entirely in markdown, without regard for the `cse-theme`.
 
 ![cse-theme preview](/screenshot.png)
 
@@ -47,18 +47,11 @@ The CSS is split across files:
 
 ## Installation
 
+This theme repo was designed for the [CSE1500 course materials](https://github.io/chauff/Web-Teaching/). It does not have to be forked, cloned or anything else. It can be used as [remote theme](https://github.blog/2017-11-29-use-any-theme-with-github-pages/). All that is needed in the repository to apply the theme to is a file `_config.yml` that contains just two lines:
 
-Add this line to your Jekyll site's Gemfile:
-
-```ruby
-gem "minima"
+```
+baseurl: "/Web-Teaching"
+remote_theme: chauff/cse-theme
 ```
 
-And then execute:
-
-    $ bundle
-
-
-## Local Testing
-
-To test the theme, start the server with `bundle exec jekyll serve` and open the URL `http://localhost:4000`. Modifications to the theme are visible immediately (no need to restart the server).
+The `baseurl` is used to set the root of the website (minus the hostname). The `remote_theme` has the format `GITHUBUSERNAME/REPO`. That's it. Once the `_config.yml` file is added to the repository of choice this theme will apply to it.

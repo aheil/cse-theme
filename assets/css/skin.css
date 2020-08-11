@@ -61,7 +61,7 @@ header {
 }
 
 .skin li:before {
-  content: var(--nav-link-icon);
+  content: var(--nav-list-icon);
 }
 
 .skin .nothing:before {
