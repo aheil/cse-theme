@@ -3,10 +3,11 @@
 source "https://rubygems.org"
 gemspec
 
-gem "jekyll", ENV["JEKYLL_VERSION"] if ENV["JEKYLL_VERSION"]
+gem "jekyll"
 gem 'jemoji'
 gem "jekyll-remote-theme"
+gem "github-pages"
 
 group :jekyll_plugins do
-    gem 'jekyll-commonmark'
-  end
+    gem 'jekyll-commonmark-ghpages'
+end
