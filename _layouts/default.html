@@ -6,17 +6,17 @@
   <body>
 
     {%- include header.html -%}
-
+    
     <main>
       <nav class="skin">
         <ul>
-          <li><a href="/">Course information</a></li>
+          <li><a href="{{ "/" | relative_url}}">Course information</a></li>
           <li class="nothing">---</li>
           <li class="nothing">Assignments &amp; Practicing</li>
           <li class="nothing">---</li>
           {% for practical in site.practicals %}
           <li>
-            <a href="{{ practical.url }}">
+            <a href="{{ practical.url | relative_url}}">
               {{ practical.linkname }}
             </a>
           </li>
@@ -26,7 +26,7 @@
           <li class="nothing">---</li>
           {% for lecture in site.lectures %}
           <li>
-            <a href="{{ lecture.url }}">
+            <a href="{{ lecture.url | relative_url}}">
               {{ lecture.linkname }}
             </a>
           </li>
