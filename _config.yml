@@ -10,6 +10,7 @@ collections:
 plugins:
   - jemoji
   - jekyll-remote-theme
+  
 
 markdown: kramdown
 # !github-pages! mandatory › https://help.github.com/articles/using-jekyll-with-pages/#configuration-settings-you-cannot-change
