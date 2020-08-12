@@ -8,14 +8,20 @@ body {
 
 main {
   display: grid;
-  grid-template-columns: 300px 1fr;
+  grid-template-columns: 0.3fr 0.7fr;
   grid-template-rows: 1fr 30px;
 }
 
 nav {
   color: var(--nav-foreground);
   background-color: var(--nav-background);
-  padding-top: 1em;
+  padding-top: 45px;
+}
+
+@media (max-width: 767px) {
+  nav {
+      padding-top: 15px;
+  }
 }
 
 footer {
@@ -43,7 +49,7 @@ header {
 
 .skin {
   font-family: "Share Tech Mono", monospace;
-  font-size: calc(0.1em + 1vw) 
+  font-size: calc(1em + 0.2vw);
 }
 
 .skin a {
@@ -213,5 +219,12 @@ header {
   }
   to {
     content: "Node.js, JavaScript, CSS, HTTP, HTML";
+  }
+}
+
+
+@media only screen and (max-width:500px){
+  .skin {
+    font-size: 10px;
   }
 }
