@@ -24,7 +24,8 @@
           <li class="nothing">---</li>
           <li class="nothing">Lectures</li>
           <li class="nothing">---</li>
-          {% for lecture in site.lectures %}
+          {% assign sorted_lectures = site.lectures | sort:"ordering" %}
+          {% for lecture in sorted_lectures %}
           <li>
             <a href="{{ lecture.url | relative_url}}">
               {{ lecture.linkname }}

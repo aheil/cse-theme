@@ -6,6 +6,17 @@ For this theme to work, the course information, lectures and practicals need to 
 
 ![cse-theme preview](/screenshot.png)
 
+## Installation
+
+This theme repo was designed for the [CSE1500 course materials](https://github.io/chauff/Web-Teaching/). It does not have to be forked, cloned or anything else. It can be used as [remote theme](https://github.blog/2017-11-29-use-any-theme-with-github-pages/). All that is needed in the repository to apply the theme to is to copy the contents of `_config.yml`, remove the line `theme: minima` and add the following two lines:
+
+```
+baseurl: "/Web-Teaching/"
+remote_theme: chauff/cse-theme
+```
+
+The `baseurl` is used to set the root of the website (minus the hostname). The `remote_theme` has the format `GITHUBUSERNAME/REPO`. That's it. Once the `_config.yml` file is added to the repository of choice this theme will apply to it.
+
 # Course content
 
 ## Course information
@@ -45,13 +56,7 @@ The CSS is split across files:
 - `/assets/css/github-markdown.css` contains the CSS for the layout of the lectures/exercises, etc. The CSS comes from [sindresorhus](https://github.com/sindresorhus/github-markdown-css) (with slight adaptations).
 
 
-## Installation
 
-This theme repo was designed for the [CSE1500 course materials](https://github.io/chauff/Web-Teaching/). It does not have to be forked, cloned or anything else. It can be used as [remote theme](https://github.blog/2017-11-29-use-any-theme-with-github-pages/). All that is needed in the repository to apply the theme to is a file `_config.yml` that contains just two lines:
+# Notes
 
-```
-baseurl: "/Web-Teaching"
-remote_theme: chauff/cse-theme
-```
-
-The `baseurl` is used to set the root of the website (minus the hostname). The `remote_theme` has the format `GITHUBUSERNAME/REPO`. That's it. Once the `_config.yml` file is added to the repository of choice this theme will apply to it.
+- GitHub Pages does not run the latest Jekyll version, make sure to check the right Jekyll version when looking at the documentation. GitHub's Jekyll version can be found [here](https://pages.github.com/versions/). For example, the very useful `sort_by` is a Jekyll 4 feature.
