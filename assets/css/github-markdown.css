@@ -4,6 +4,14 @@
 
 @import "personalizable.css";
 
+.markdown-body summary {
+  color: var(--content-summary);
+}
+
+.markdown-body details {
+  color: var(--content-details);
+}
+
 .markdown-body {
     box-sizing: border-box;
     min-width: 300px;

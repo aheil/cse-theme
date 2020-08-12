@@ -18,4 +18,6 @@
     --content-table-fg-header: white;
     --content-table-row-alt: rgba(195, 49, 47, 0.25);
     --content-link-before-icon: "⇗ ";
+    --content-summary: rgba( 196, 31, 122 );
+    --content-details: rgb(124, 20, 77);
   }
