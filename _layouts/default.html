@@ -14,7 +14,8 @@
           <li class="nothing">---</li>
           <li class="nothing">Assignments &amp; Practicing</li>
           <li class="nothing">---</li>
-          {% for practical in site.practicals %}
+          {% assign sorted_practicals = site.practicals | sort:"ordering" %}
+          {% for practical in sorted_practicals %}
           <li>
             <a href="{{ practical.url | relative_url}}">
               {{ practical.linkname }}
