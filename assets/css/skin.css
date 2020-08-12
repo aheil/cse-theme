@@ -15,6 +15,7 @@ main {
 nav {
   color: var(--nav-foreground);
   background-color: var(--nav-background);
+  padding-top: 1em;
 }
 
 footer {
@@ -25,7 +26,6 @@ footer {
   grid-column-end: 3;
   align-items: center;
   justify-items: center;
-  font-size: 15px;
   overflow: hidden;
   white-space: nowrap;
 }
@@ -43,6 +43,7 @@ header {
 
 .skin {
   font-family: "Share Tech Mono", monospace;
+  font-size: calc(0.1em + 1vw) 
 }
 
 .skin a {
