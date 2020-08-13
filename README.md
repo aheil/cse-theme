@@ -17,6 +17,8 @@ remote_theme: chauff/cse-theme
 
 The `baseurl` is used to set the root of the website (minus the hostname). The `remote_theme` has the format `GITHUBUSERNAME/REPO`. That's it. Once the `_config.yml` file is added to the repository of choice this theme will apply to it.
 
+The custom 404 page for some reason did not work when only placed in this repo, so it should be copied to the repository that uses the remote theme.
+
 # Course content
 
 ## Course information
