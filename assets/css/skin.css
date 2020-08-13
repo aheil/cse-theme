@@ -12,6 +12,11 @@ main {
   grid-template-rows: 1fr 30px;
 }
 
+section {
+  width: 100%;
+  overflow: scroll;
+}
+
 nav {
   color: var(--nav-foreground);
   background-color: var(--nav-background);
@@ -50,6 +55,25 @@ header {
 .skin {
   font-family: "Share Tech Mono", monospace;
   font-size: calc(1em + 0.2vw);
+}
+
+@media (max-width: 700px) {
+  .skin {
+    font-size: calc(0.5em + 1vw);
+  }
+  ul {
+    padding-left: 10px;
+  }
+}
+
+@media (max-width: 450px) {
+  .skin {
+    font-size: calc(0.25em + 1vw);
+  }
+}
+
+footer.skin {
+  font-size: 75%;
 }
 
 .skin a {
