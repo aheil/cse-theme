@@ -43,7 +43,7 @@ footer {
 
 header {
   /* TU Delft's EEMCS building */
-  background-image: url("https://d1rkab7tlqy5f1.cloudfront.net/News/2015/09_September/tudelft_campus_lente_EWI_09_1_.jpg");
+  background-image: url("../images/tudelft_campus_lente_EWI_09_1_.jpg");
   background-size: cover;
   height: 100vh;
   color: var(--header-foreground);
