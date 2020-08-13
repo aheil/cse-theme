@@ -61,7 +61,8 @@ header {
   .skin {
     font-size: calc(0.5em + 1vw);
   }
-  ul {
+
+  .skin ul {
     padding-left: 10px;
   }
 }
