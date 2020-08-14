@@ -1,5 +1,5 @@
 function getStorageKey() {
-    let key = window.location.pathname + "-text-highlights";
+    let key = "-text-highlights";
     return key;
 }
 
@@ -8,13 +8,7 @@ function addEventListenerToHighlights() {
     highlights.forEach(function (highlight) {
 
         highlight.addEventListener('click', function (e) {
-            
-                let textNode = document.createTextNode(this.innerHTML);
-                this.parentNode.insertBefore(textNode, this);
-                this.parentNode.removeChild(this);//<span>x</span>
-                e.preventDefault();//once we click a highlight that is a link we don't want the link to open
-
-                //which page are we on?
+                hltr.removeHighlights(highlight);
                 localStorage.setItem(getStorageKey(), hltr.serializeHighlights());
 
         });
@@ -32,7 +26,9 @@ let hltr = new TextHighlighter(document.querySelector('section'), {
 
 // if highlights are stored locally, pull them up
 let storedHighlights = localStorage.getItem(getStorageKey());
-if (storedHighlights.length != null)
+if (storedHighlights != null)
     hltr.deserializeHighlights(storedHighlights);
+else
+    console.log("No highlights stored in localStorage.");
 addEventListenerToHighlights();
 
