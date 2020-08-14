@@ -12,6 +12,10 @@
   color: var(--content-details);
 }
 
+.markdown-body ::selection{
+  background: #ccff00;
+}
+
 .markdown-body {
     box-sizing: border-box;
     min-width: 300px;
