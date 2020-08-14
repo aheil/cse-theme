@@ -12,7 +12,7 @@ The **Web technology materials and resources** of the 2019/20 [Web and Database 
 
 They were initially created for the 2018/19 edition of the course and have been updated for this year's edition.
 
-The database materials (lectures/assignments) are not included here! You can find them on Brightspace! Due to the many code examples in the web technology lectures we opted to maintain the materials in a GitHub repository.
+The materials (lectures/assignments) are not included here! You can find them on Brightspace! Due to the many code examples in the web technology lectures we opted to maintain the materials in a GitHub repository.
 
 ## Table of Contents <!-- omit in toc -->
 - [Course instructors](#course-instructors)

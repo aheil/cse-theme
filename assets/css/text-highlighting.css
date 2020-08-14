@@ -1,0 +1,9 @@
+@import "personalizable.css";
+
+.text-highlighted::after {
+    content: "✗";
+    position: relative;
+    top: -5px;
+    right: -5px;
+    color: var(--delete-x);
+}

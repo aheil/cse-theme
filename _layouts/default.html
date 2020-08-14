@@ -1,59 +1,99 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-  {%- include head.html -%}
+{%- include head.html -%}
 
-  <body>
+<body>
 
-    {%- include header.html -%}
-    
-    <main>
-      <nav class="skin">
-        <ul>
-          <li><a href="{{ "/" | relative_url}}">Course information</a></li>
-          <li class="nothing">---</li>
-          <li class="nothing">Assignments &amp; Practicing</li>
-          <li class="nothing">---</li>
-          {% assign sorted_practicals = site.practicals | sort:"ordering" %}
-          {% for practical in sorted_practicals %}
-          <li>
-            <a href="{{ practical.url | relative_url}}">
-              {{ practical.linkname }}
-            </a>
-          </li>
-          {% endfor %}
-          <li class="nothing">---</li>
-          <li class="nothing">Lectures</li>
-          <li class="nothing">---</li>
-          {% assign sorted_lectures = site.lectures | sort:"ordering" %}
-          {% for lecture in sorted_lectures %}
-          <li>
-            <a href="{{ lecture.url | relative_url}}">
-              {{ lecture.linkname }}
-            </a>
-          </li>
-          {% endfor %}
-        </ul>
-      </nav>
-      
-      <section class="markdown-body">
-        {{ content }}
-      </section>
-    
-      {%- include footer.html -%}
+  {%- include header.html -%}
 
-    </main>
+  <main>
+    <nav class="skin">
+      <ul>
+        <li><a href="{{ "/" | relative_url}}">Course information</a></li>
+        <li class="nothing">---</li>
+        <li class="nothing">Assignments &amp; Practicing</li>
+        <li class="nothing">---</li>
+        {% assign sorted_practicals = site.practicals | sort:"ordering" %}
+        {% for practical in sorted_practicals %}
+        <li>
+          <a href="{{ practical.url | relative_url}}">
+            {{ practical.linkname }}
+          </a>
+        </li>
+        {% endfor %}
+        <li class="nothing">---</li>
+        <li class="nothing">Lectures</li>
+        <li class="nothing">---</li>
+        {% assign sorted_lectures = site.lectures | sort:"ordering" %}
+        {% for lecture in sorted_lectures %}
+        <li>
+          <a href="{{ lecture.url | relative_url}}">
+            {{ lecture.linkname }}
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </nav>
+
+    <section class="markdown-body">
+      {{ content }}
+    </section>
+
+    {%- include footer.html -%}
+
+  </main>
 
   <!-- Default Statcounter code for CSE1500
 https://chauff.github.io/Web-Teaching/ -->
-<script type="text/javascript">
-  var sc_project=12375957; 
-  var sc_invisible=1; 
-  var sc_security="67c15f41"; 
+  <script type="text/javascript">
+    var sc_project = 12375957;
+    var sc_invisible = 1;
+    var sc_security = "67c15f41"; 
   </script>
-  <script type="text/javascript"
-  src="https://www.statcounter.com/counter/counter.js"
-  async></script>
-  <!-- End of Statcounter Code -->  
-  </body>
+  <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+  <!-- End of Statcounter Code -->
+
+  <script type="text/javascript" src="{{ "/assets/javascript/TextHighlighter.js" | relative_url}}"></script>
+  <script type="text/javascript">
+
+    function addEventListenerToHighlights(){
+      let highlights = document.querySelectorAll(".text-highlighted");
+
+      highlights.forEach(function (highlight) {
+
+        highlight.addEventListener('click', function (e) {
+          if (e.offsetX > highlight.offsetWidth) {
+            let text = this.innerHTML;
+            let textNode = document.createTextNode(this.innerHTML);
+            this.parentNode.insertBefore(textNode, this);
+            this.parentNode.removeChild(this);//<span>x</span>
+
+            localStorage.setItem("text-highlights", hltr.serializeHighlights());
+          }
+        });
+      });
+    };
+
+    let hltr = new TextHighlighter(document.querySelector('section'), {
+      color: "#ccff00",
+      onAfterHighlight: function (range) {
+
+        //dump highlights out to local storage again
+        localStorage.setItem("text-highlights", hltr.serializeHighlights());
+        addEventListenerToHighlights();
+      }
+    });
+
+    // if highlights are stored locally, pull them up
+    let storedHighlights = localStorage.getItem("text-highlights");
+    if (storedHighlights.length != null){
+      hltr.deserializeHighlights(storedHighlights);
+      addEventListenerToHighlights();
+    }
+
+
+  </script>
+</body>
+
 </html>
