@@ -34,6 +34,16 @@
         </li>
         {% endfor %}
       </ul>
+
+      <ul class="text-highlighted-info">
+      <li><small>The course notes can be <span class="text-highlighted-highlight">highlighted</span>. 
+        Click on a highlight to remove it again. This markup is persistent and stored in the browser's localStorage.
+        <br>
+        This works in modern browsers ...</small>
+      </li>  
+      </ul>
+
+
     </nav>
 
     <section class="markdown-body">
@@ -55,45 +65,8 @@ https://chauff.github.io/Web-Teaching/ -->
   <!-- End of Statcounter Code -->
 
   <script type="text/javascript" src="{{ "/assets/javascript/TextHighlighter.js" | relative_url}}"></script>
-  <script type="text/javascript">
+  <script type="text/javascript" src="{{ "/assets/javascript/utils.js" | relative_url}}"></script>
 
-    function addEventListenerToHighlights(){
-      let highlights = document.querySelectorAll(".text-highlighted");
-
-      highlights.forEach(function (highlight) {
-
-        highlight.addEventListener('click', function (e) {
-          if (e.offsetX > highlight.offsetWidth) {
-            let text = this.innerHTML;
-            let textNode = document.createTextNode(this.innerHTML);
-            this.parentNode.insertBefore(textNode, this);
-            this.parentNode.removeChild(this);//<span>x</span>
-
-            localStorage.setItem("text-highlights", hltr.serializeHighlights());
-          }
-        });
-      });
-    };
-
-    let hltr = new TextHighlighter(document.querySelector('section'), {
-      color: "#ccff00",
-      onAfterHighlight: function (range) {
-
-        //dump highlights out to local storage again
-        localStorage.setItem("text-highlights", hltr.serializeHighlights());
-        addEventListenerToHighlights();
-      }
-    });
-
-    // if highlights are stored locally, pull them up
-    let storedHighlights = localStorage.getItem("text-highlights");
-    if (storedHighlights.length != null){
-      hltr.deserializeHighlights(storedHighlights);
-      addEventListenerToHighlights();
-    }
-
-
-  </script>
 </body>
 
 </html>

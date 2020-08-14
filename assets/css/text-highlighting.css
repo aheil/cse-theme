@@ -1,9 +1,25 @@
 @import "personalizable.css";
 
 .text-highlighted::after {
-    content: "✗";
+    content: "✘";
     position: relative;
     top: -5px;
-    right: -5px;
+    right: 0px;
     color: var(--delete-x);
+}
+
+ul.text-highlighted-info {
+    background-color: gainsboro;
+    color: black;
+    font-size: 80%;
+    padding-right: 5px;
+}
+
+ul.text-highlighted-info li::before{
+    content: "";
+}
+
+.text-highlighted-highlight {
+    background-color: var(--highlight-color);
+    color: black;
 }
