@@ -11,7 +11,7 @@ function addEventListenerToHighlights() {
         highlight.addEventListener('click', function (e) {
                 hltr.removeHighlights(highlight);
                 localStorage.setItem(getStorageKey(), hltr.serializeHighlights());
-
+                e.preventDefault();//click on a link should not lead to additional hyperlink behaviour
         });
     });
 };
