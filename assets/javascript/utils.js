@@ -7,6 +7,7 @@ function addEventListenerToHighlights() {
                 let textNode = document.createTextNode(this.innerHTML);
                 this.parentNode.insertBefore(textNode, this);
                 this.parentNode.removeChild(this);//<span>x</span>
+                e.preventDefault();
 
                 localStorage.setItem("text-highlights", hltr.serializeHighlights());
 
