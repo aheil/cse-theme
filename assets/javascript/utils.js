@@ -1,5 +1,6 @@
 function getStorageKey() {
-    let key = "-text-highlights";
+    let path = window.location.pathname;
+    let key = path + "-text-highlights";
     return key;
 }
 
