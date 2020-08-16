@@ -64,6 +64,9 @@ footer.skin {
   nav ul {
     padding-left: 15px;
   }
+  footer.skin {
+    font-size: 60%;
+  }
 }
 
 @media (max-width: 500px){
@@ -76,6 +79,9 @@ footer.skin {
   }
   footer {
     grid-column-end: 2;
+  }
+  footer.skin {
+    font-size: 50%;
   }
 }
 
