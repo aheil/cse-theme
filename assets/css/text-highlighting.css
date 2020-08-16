@@ -13,6 +13,7 @@ ul.text-highlighted-info {
     color: black;
     font-size: 80%;
     padding-right: 5px;
+    display: none;
 }
 
 ul.text-highlighted-info li::before{

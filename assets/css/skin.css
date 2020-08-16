@@ -23,12 +23,6 @@ nav {
   padding-top: 45px;
 }
 
-@media (max-width: 767px) {
-  nav {
-      padding-top: 15px;
-  }
-}
-
 footer {
   display: grid;
   background-color: var(--footer-background);
@@ -57,19 +51,27 @@ header {
   font-size: calc(1em + 0.2vw);
 }
 
-@media (max-width: 700px) {
-  .skin {
-    font-size: calc(0.5em + 1vw);
-  }
 
-  .skin ul {
-    padding-left: 10px;
+@media (max-width: 767px) {
+  nav.skin {
+      padding-top: 15px;
+      font-size: calc(0.8em);
+  }
+  nav ul {
+    padding-left: 15px;
   }
 }
 
-@media (max-width: 450px) {
-  .skin {
-    font-size: calc(0.25em + 1vw);
+@media (max-width: 500px){
+  main {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr 30px;
+  }
+  nav.skin {
+    font-size: 100%;
+  }
+  footer {
+    grid-column-end: 2;
   }
 }
 
