@@ -43,6 +43,11 @@ function addEventListenerToHighlights(hltr) {
             e.preventDefault();//click on a link should not lead to additional hyperlink behaviour
         });
     });
+
+    document.getElementById("deleteHighlights").addEventListener("click", function(e){
+        hltr.removeHighlights();
+        localStorage.removeItem(getStorageKey());
+    });
 };
 
 if (storageAvailable('localStorage') == true) {
@@ -51,6 +56,7 @@ if (storageAvailable('localStorage') == true) {
         onAfterHighlight: function (range) {
             //dump highlights out to local storage again
             localStorage.setItem(getStorageKey(), hltr.serializeHighlights());
+            //add event listener to highlight so it can be removed again
             addEventListenerToHighlights(hltr);
         }
     });
