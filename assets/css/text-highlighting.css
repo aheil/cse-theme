@@ -11,9 +11,11 @@
 ul.text-highlighted-info {
     background-color: gainsboro;
     color: black;
-    font-size: 80%;
+    font-size: 90%;
     padding-right: 5px;
     display: none;
+    border-bottom: 2px dashed var(--nav-background);
+    border-top: 2px dashed var(--nav-background);
 }
 
 ul.text-highlighted-info li::before{
