@@ -52,7 +52,7 @@ function addEventListenerToHighlights(hltr) {
 
 if (storageAvailable('localStorage') == true) {
     let hltr = new TextHighlighter(document.querySelector('section'), {
-        color: "#ccff00",
+        color: "gold",
         onAfterHighlight: function (range) {
             //dump highlights out to local storage again
             localStorage.setItem(getStorageKey(), hltr.serializeHighlights());

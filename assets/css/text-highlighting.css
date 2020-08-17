@@ -12,7 +12,6 @@
 	font-size:15px;
 	padding:6px 24px;
 	text-decoration:none;
-    text-shadow:0px 1px 0px #ded17c;
     margin-top: 10px;
     margin-bottom: 10px;
 }
@@ -20,12 +19,6 @@
 	background:linear-gradient(to bottom, #f2ab1e 5%, #f0c911 100%);
 	background-color:#f2ab1e;
 }
-#deleteHighlights:active {
-	position:relative;
-	top:1px;
-}
-
-
 
 .text-highlighted::after {
     content: "✘";
