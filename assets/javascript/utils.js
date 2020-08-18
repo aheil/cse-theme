@@ -50,7 +50,7 @@ function addEventListenerToHighlights(hltr) {
             //several highlights can have the same timestamp
             let dataTimestamp = this.getAttribute("data-timestamp");
             //hltr.removeHighlights(this);
-            let toDelete = document.querySelectorAll(".text-highlighted[data-timestamp='"+dataTimestamp+"']");
+            let toDelete = Array.from( document.querySelectorAll(".text-highlighted[data-timestamp='"+dataTimestamp+"']") );
 
             toDelete.forEach(function(item) {
                 hltr.removeHighlights(item);
@@ -75,8 +75,16 @@ function addEventListenerToHighlights(hltr) {
             document.getElementById("popup").style.display="block";
             document.getElementById("popup-text").value="";
             document.getElementById("popup").removeAttribute("data-timestamp");
-            document.getElementById("popup").style.left = e.pageX+"px";
-            document.getElementById("popup").style.top = e.pageY+"px";
+
+            let clientWidth =  document.getElementsByTagName("body")[0].clientWidth;
+            let clientHeight = document.getElementsByTagName("body")[0].clientHeight;
+            let popupWidth = popup.offsetWidth;
+            let popupHeight = popup.offsetHeight;
+
+            //bottom and right borders need to be treated with care
+            document.getElementById("popup").style.left = Math.min(e.pageX, clientWidth - popupWidth)+"px";
+            document.getElementById("popup").style.top  = Math.min(e.pageY, clientHeight - popupHeight)+"px";
+
             document.getElementById("popup").setAttribute("data-timestamp", this.getAttribute("data-timestamp"));
 
             //content stored in localstorage is visible
