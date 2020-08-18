@@ -1,5 +1,3 @@
-//@ts-check
-
 //Source MDN: https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API#Testing_for_availability
 //two options:
 //a) localStorage does not exist
@@ -36,7 +34,7 @@ function getHighlightStorageKey() {
     return key;
 }
 
-function getAnnotationStorageKey(timestamp){
+function getAnnotationStorageKey(timestamp) {
     let path = window.location.pathname;
     let key = path + "-" + timestamp;
     return key;
@@ -50,40 +48,40 @@ function addEventListenerToHighlights(hltr) {
             //several highlights can have the same timestamp
             let dataTimestamp = this.getAttribute("data-timestamp");
             //hltr.removeHighlights(this);
-            let toDelete = Array.from( document.querySelectorAll(".text-highlighted[data-timestamp='"+dataTimestamp+"']") );
+            let toDelete = Array.from(document.querySelectorAll(".text-highlighted[data-timestamp='" + dataTimestamp + "']"));
 
-            toDelete.forEach(function(item) {
-                hltr.removeHighlights(item);
-              });
+            toDelete.forEach(function (del) {
+                hltr.removeHighlights(del);
+            });
 
             localStorage.setItem(getHighlightStorageKey(), hltr.serializeHighlights());
             localStorage.removeItem(getAnnotationStorageKey(dataTimestamp));
-            document.getElementById("popup").style.display="none";
+            document.getElementById("popup").style.display = "none";
 
             e.preventDefault();//click on a link should not lead to additional hyperlink behaviour
         });
 
-        highlight.addEventListener('mouseenter', function(e){
+        highlight.addEventListener('mouseenter', function (e) {
 
             let popup = document.getElementById("popup");
 
             //textarea is already visible and we remain in the same highlight
-            if( popup.style.display === "block" && popup.getAttribute("data-timestamp")===this.getAttribute("data-timestamp"))
+            if (popup.style.display === "block" && popup.getAttribute("data-timestamp") === this.getAttribute("data-timestamp"))
                 return;
 
             //textarea is visible
-            document.getElementById("popup").style.display="block";
-            document.getElementById("popup-text").value="";
+            document.getElementById("popup").style.display = "block";
+            document.getElementById("popup-text").value = "";
             document.getElementById("popup").removeAttribute("data-timestamp");
 
-            let clientWidth =  document.getElementsByTagName("body")[0].clientWidth;
+            let clientWidth = document.getElementsByTagName("body")[0].clientWidth;
             let clientHeight = document.getElementsByTagName("body")[0].clientHeight;
             let popupWidth = popup.offsetWidth;
             let popupHeight = popup.offsetHeight;
 
             //bottom and right borders need to be treated with care
-            document.getElementById("popup").style.left = Math.min(e.pageX, clientWidth - popupWidth)+"px";
-            document.getElementById("popup").style.top  = Math.min(e.pageY, clientHeight - popupHeight)+"px";
+            document.getElementById("popup").style.left = Math.min(e.pageX, clientWidth - popupWidth) + "px";
+            document.getElementById("popup").style.top = Math.min(e.pageY, clientHeight - popupHeight) + "px";
 
             document.getElementById("popup").setAttribute("data-timestamp", this.getAttribute("data-timestamp"));
 
@@ -91,40 +89,38 @@ function addEventListenerToHighlights(hltr) {
             //get data-timestamp
             let timestamp = this.getAttribute("data-timestamp");
             let stored = localStorage.getItem(getAnnotationStorageKey(timestamp));
-            if(stored != null){
+            if (stored != null) {
                 document.getElementById("popup-text").value = stored;
             }
-            else 
+            else
                 console.log("Nothing stored for this timestamp");
         });
 
-        document.getElementById("popup-close").addEventListener("click", function(e){
+        document.getElementById("popup-close").addEventListener("click", function (e) {
             let timestamp = document.getElementById("popup").getAttribute("data-timestamp");
             localStorage.setItem(getAnnotationStorageKey(timestamp), document.getElementById("popup-text").value);
-            document.getElementById("popup").style.display="none";
+            document.getElementById("popup").style.display = "none";
         });
 
-        document.getElementsByTagName("main")[0].addEventListener("click", function(e){
-
-            console.log("trying to use target/closest");
+        document.getElementsByTagName("main")[0].addEventListener("click", function (e) {
             //if click on <main> and not on any highlight, make the popup invisible
-            if( e.target.closest(".text-highlighted")==null && document.getElementById("popup").style.display!="none")
-                document.getElementById("popup").style.display="none";
+            if (e.target.closest(".text-highlighted") == null && document.getElementById("popup").style.display != "none")
+                document.getElementById("popup").style.display = "none";
         })
     });
 
-    document.getElementById("popup-close").addEventListener("click", function(e){
-        document.getElementById("popup").style.display="none";
+    document.getElementById("popup-close").addEventListener("click", function (e) {
+        document.getElementById("popup").style.display = "none";
     });
 
-    document.getElementById("deleteHighlights").addEventListener("click", function(e){
+    document.getElementById("deleteHighlights").addEventListener("click", function (e) {
         hltr.removeHighlights();
         localStorage.removeItem(getHighlightStorageKey());
 
-        Object.keys(localStorage).forEach(function(key){
-            if(key.startsWith(window.location.pathname))
+        Object.keys(localStorage).forEach(function (key) {
+            if (key.startsWith(window.location.pathname))
                 localStorage.removeItem(key);
-         });
+        });
     });
 };
 

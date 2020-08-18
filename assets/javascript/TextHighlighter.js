@@ -282,6 +282,25 @@
                 var nodes = Array.prototype.slice.call(el.childNodes),
                     wrapper;
 
+                //issue: consider a highlight such as [WORD1 WORD2] (the whitespace is important)
+                //to remove the highlight, we click anywhere but at the end of WORD1 => results in a node array of size 1
+                //to remove the highlight, we click at the end of WORD1 => results in 3 elements in the node array
+                //this occurrence is specific to Chrome (does not happen on Firefox, array length remains 1 here)
+                //this splitting into 3 (in the example) nodes leads to a null error later on.
+                //Solution for now: check all nodes and as long as - starting from node[0] - they are all text nodes,
+                //add their value to node[0] and delete them
+                for(let i=1; i<nodes.length; i++){
+                    if(nodes[i].nodeType==3){
+                        nodes[0].nodeValue+=nodes[i].nodeValue;
+                        nodes[i]=null;
+                    }
+                    else
+                        break;
+                }
+                nodes = nodes.filter(function (el) {
+                    return el != null;
+                });
+
                 nodes.forEach(function (node) {
                     wrapper = node.parentNode;
                     dom(node).insertBefore(node.parentNode);
@@ -715,9 +734,8 @@
 
         function removeHighlight(highlight) {
             var textNodes = dom(highlight).unwrap();
-
             textNodes.forEach(function (node) {
-                mergeSiblingTextNodes(node);
+                 mergeSiblingTextNodes(node);
             });
         }
 
