@@ -37,8 +37,8 @@
 
       <ul class="text-highlighted-info">
         <li><small>The course notes can be <span class="text-highlighted-highlight">✎ highlighted</span> (by selecting
-            text).
-            A click on a highlight removes it. The highlights are persistent and stored in the browser's localStorage.
+            text). <span class="text-highlighted-highlight">Hovering</span> over a highlight opens a small popup for notes.
+            A <span class="text-highlighted-highlight">double-click</span> on a highlight removes it. The highlights are persistent and stored in the browser's localStorage.
             <br />
             <button id="deleteHighlights">Delete all highlights.</button>
           </small>
@@ -55,6 +55,12 @@
     {%- include footer.html -%}
 
   </main>
+
+  <div id="popup">
+    <textarea id="popup-text"  placeholder="Add your notes here, don't forget hit save!" cols="20" rows="10"></textarea>
+    <br />
+    <button id="popup-close">Save</button>
+  </div>
 
   <!-- Default Statcounter code for CSE1500
 https://chauff.github.io/Web-Teaching/ -->
