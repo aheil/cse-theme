@@ -4,7 +4,7 @@ This Jekyll theme is built on top of [Minima](https://github.com/jekyll/minima),
 
 For this theme to work, the course information, lectures and practicals need to reside in specific folders/files (see below). Apart from those prerequisites, it should be possible to develop the lecture materials entirely in markdown, without regard for the `cse-theme`.
 
-**Highlighting** and **not taking** is built into the theme. All data is stored in the browser's localStorage.
+**Highlighting** and **note-taking** is built into the theme. All data is stored in the browser's localStorage.
 
 ![cse-theme preview](/screenshot.png)
 
