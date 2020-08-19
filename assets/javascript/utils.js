@@ -40,15 +40,29 @@ function getAnnotationStorageKey(timestamp) {
     return key;
 }
 
+function hidePopup(){
+    document.getElementById("popup").style.display = "none";    
+}
+
+function showPopup(){
+    document.getElementById("popup").style.display = "block";      
+}
+
+function clearPopup(){
+    document.getElementById("popup-text").value = "";
+    document.getElementById("popup").removeAttribute("data-timestamp");
+}
+
 function addEventListenerToHighlights(hltr) {
     let highlights = document.querySelectorAll(".text-highlighted");
 
     highlights.forEach(function (highlight) {
         highlight.addEventListener('dblclick', function (e) {
+            
             //several highlights can have the same timestamp
             let dataTimestamp = this.getAttribute("data-timestamp");
             //hltr.removeHighlights(this);
-            let toDelete = Array.from(document.querySelectorAll(".text-highlighted[data-timestamp='" + dataTimestamp + "']"));
+            let toDelete = document.querySelectorAll(".text-highlighted[data-timestamp='" + dataTimestamp + "']");
 
             toDelete.forEach(function (del) {
                 hltr.removeHighlights(del);
@@ -64,15 +78,14 @@ function addEventListenerToHighlights(hltr) {
         highlight.addEventListener('mouseenter', function (e) {
 
             let popup = document.getElementById("popup");
+            let dataTimestamp = this.getAttribute("data-timestamp");
 
             //textarea is already visible and we remain in the same highlight
-            if (popup.style.display === "block" && popup.getAttribute("data-timestamp") === this.getAttribute("data-timestamp"))
+            if (popup.style.display === "block" && popup.getAttribute("data-timestamp") === dataTimestamp)
                 return;
 
-            //textarea is visible
-            document.getElementById("popup").style.display = "block";
-            document.getElementById("popup-text").value = "";
-            document.getElementById("popup").removeAttribute("data-timestamp");
+            clearPopup();
+            showPopup();//needed here, otherwise popup size is 0/0
 
             let clientWidth = document.getElementsByTagName("body")[0].clientWidth;
             let clientHeight = document.getElementsByTagName("body")[0].clientHeight;
@@ -80,15 +93,12 @@ function addEventListenerToHighlights(hltr) {
             let popupHeight = popup.offsetHeight;
 
             //bottom and right borders need to be treated with care
-            document.getElementById("popup").style.left = Math.min(e.pageX, clientWidth - popupWidth) + "px";
-            document.getElementById("popup").style.top = Math.min(e.pageY, clientHeight - popupHeight) + "px";
+            popup.style.left = Math.min(e.pageX, clientWidth - popupWidth) + "px";
+            popup.style.top = Math.min(e.pageY, clientHeight - popupHeight) + "px";
 
-            document.getElementById("popup").setAttribute("data-timestamp", this.getAttribute("data-timestamp"));
+            popup.setAttribute("data-timestamp", dataTimestamp);
 
-            //content stored in localstorage is visible
-            //get data-timestamp
-            let timestamp = this.getAttribute("data-timestamp");
-            let stored = localStorage.getItem(getAnnotationStorageKey(timestamp));
+            let stored = localStorage.getItem(getAnnotationStorageKey(dataTimestamp));
             if (stored != null) {
                 document.getElementById("popup-text").value = stored;
             }
@@ -97,20 +107,23 @@ function addEventListenerToHighlights(hltr) {
         });
 
         document.getElementById("popup-close").addEventListener("click", function (e) {
-            let timestamp = document.getElementById("popup").getAttribute("data-timestamp");
-            localStorage.setItem(getAnnotationStorageKey(timestamp), document.getElementById("popup-text").value);
-            document.getElementById("popup").style.display = "none";
+
+            let popup = document.getElementById("popup");
+            let dataTimestamp = popup.getAttribute("data-timestamp");
+
+            localStorage.setItem(getAnnotationStorageKey(dataTimestamp), document.getElementById("popup-text").value);
+            hidePopup();
         });
 
         document.getElementsByTagName("main")[0].addEventListener("click", function (e) {
             //if click on <main> and not on any highlight, make the popup invisible
             if (e.target.closest(".text-highlighted") == null && document.getElementById("popup").style.display != "none")
-                document.getElementById("popup").style.display = "none";
+                hidePopup();
         })
     });
 
     document.getElementById("popup-close").addEventListener("click", function (e) {
-        document.getElementById("popup").style.display = "none";
+        hidePopup();
     });
 
     document.getElementById("deleteHighlights").addEventListener("click", function (e) {
