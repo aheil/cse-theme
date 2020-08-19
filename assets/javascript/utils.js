@@ -103,7 +103,7 @@ function addEventListenerToHighlights(hltr) {
                 document.getElementById("popup-text").value = stored;
             }
             else
-                console.log("Nothing stored for this timestamp");
+                console.log("%c Nothing stored for this timestamp", "color: white; background-color: darkorange; padding: 5px; border-radius: 15px");
         });
 
         document.getElementById("popup-close").addEventListener("click", function (e) {
@@ -138,6 +138,8 @@ function addEventListenerToHighlights(hltr) {
 };
 
 if (storageAvailable('localStorage') == true) {
+    console.log("%c Browser feature localStorage available.", "color: white; background-color: darkgreen; border-radius: 15px; padding: 5px");
+
     let hltr = new TextHighlighter(document.querySelector('section'), {
         color: "gold",
         onAfterHighlight: function (range) {
@@ -153,12 +155,12 @@ if (storageAvailable('localStorage') == true) {
     if (storedHighlights != null)
         hltr.deserializeHighlights(storedHighlights);
     else
-        console.log("No highlights stored in localStorage.");
+        console.log("%c No highlights stored in localStorage.", "color: white; background-color: darkorange; padding: 5px; border-radius: 15px");
     addEventListenerToHighlights(hltr);
 
     //make the highlight information box available
     document.getElementsByClassName("text-highlighted-info")[0].style.display = "block";
 }
 else
-    console.log("Browser feature localStorage not available.");
+    console.log("%c Browser feature localStorage not available.", "color: white; background-color: crimson; border-radius: 15px; padding: 5px");
 
