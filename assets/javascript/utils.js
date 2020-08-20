@@ -1,3 +1,4 @@
+//@ts-check
 //Source MDN: https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API#Testing_for_availability
 //two options:
 //a) localStorage does not exist
@@ -27,6 +28,24 @@ function storageAvailable(type) {
     }
 }
 
+let styles = {
+    warning: "color: white; background-color: darkorange; padding: 5px; border-radius: 15px",
+    info: "color: white; background-color: gray; padding: 5px; border-radius: 15px",
+    goodNews:  "color: white; background-color: darkgreen; border-radius: 15px; padding: 5px",
+    badNews: "color: white; background-color: red; border-radius: 15px; padding: 5px"
+}
+
+/* Which key has which keyCode? Head over to https://keycode.info/ */
+let keysPressed = {};
+window.onkeyup = function(e) { 
+    console.log("%c key up: "+e.keyCode, styles["info"]);
+    keysPressed[e.keyCode] = 0; 
+}
+window.onkeydown = function(e) { 
+    console.log("%c key down: "+e.keyCode, styles["info"]);
+    keysPressed[e.keyCode] = 1; 
+}
+
 //key for each path
 function getHighlightStorageKey() {
     let path = window.location.pathname;
@@ -34,6 +53,7 @@ function getHighlightStorageKey() {
     return key;
 }
 
+//notes are stored in localStorage too 
 function getAnnotationStorageKey(timestamp) {
     let path = window.location.pathname;
     let key = path + "-" + timestamp;
@@ -103,7 +123,7 @@ function addEventListenerToHighlights(hltr) {
                 document.getElementById("popup-text").value = stored;
             }
             else
-                console.log("%c Nothing stored for this timestamp", "color: white; background-color: darkorange; padding: 5px; border-radius: 15px");
+                console.log("%c Nothing stored for this timestamp", styles["warning"]);
         });
 
         document.getElementById("popup-close").addEventListener("click", function (e) {
@@ -138,10 +158,16 @@ function addEventListenerToHighlights(hltr) {
 };
 
 if (storageAvailable('localStorage') == true) {
-    console.log("%c Browser feature localStorage available.", "color: white; background-color: darkgreen; border-radius: 15px; padding: 5px");
+    console.log("%c Browser feature localStorage available.", styles["goodNews"]);
 
     let hltr = new TextHighlighter(document.querySelector('section'), {
         color: "gold",
+        onBeforeHighlight: function(range){
+            //check if 'h' is pressed
+            if( keysPressed[72]>0)
+                return true;
+            return false;
+        },
         onAfterHighlight: function (range) {
             //dump highlights out to local storage again
             localStorage.setItem(getHighlightStorageKey(), hltr.serializeHighlights());
@@ -155,12 +181,12 @@ if (storageAvailable('localStorage') == true) {
     if (storedHighlights != null)
         hltr.deserializeHighlights(storedHighlights);
     else
-        console.log("%c No highlights stored in localStorage.", "color: white; background-color: darkorange; padding: 5px; border-radius: 15px");
+        console.log("%c No highlights stored in localStorage.", styles["warning"]);
     addEventListenerToHighlights(hltr);
 
     //make the highlight information box available
     document.getElementsByClassName("text-highlighted-info")[0].style.display = "block";
 }
 else
-    console.log("%c Browser feature localStorage not available.", "color: white; background-color: crimson; border-radius: 15px; padding: 5px");
+    console.log("%c Browser feature localStorage not available.", styles["badNews"]);
 

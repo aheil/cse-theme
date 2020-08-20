@@ -28,7 +28,7 @@
          */
         IGNORE_TAGS = [
             'SCRIPT', 'STYLE', 'SELECT', 'OPTION', 'BUTTON', 'OBJECT', 'APPLET', 'VIDEO', 'AUDIO', 'CANVAS', 'EMBED',
-            'PARAM', 'METER', 'PROGRESS', 'PRE', 'CODE'
+            'PARAM', 'METER', 'PROGRESS'
         ];
 
     /**
