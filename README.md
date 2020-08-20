@@ -62,6 +62,7 @@ The CSS is split across files:
 - `/assets/css/personalizable.css` contains the colors (and a few other bits and pieces) to personalize the skin.
 - `/assets/css/skin.css` contains the CSS for the layout of the entire page (CSS grid) and the header, navbar and footer.
 - `/assets/css/github-markdown.css` contains the CSS for the layout of the lectures/exercises, etc. The CSS comes from [sindresorhus](https://github.com/sindresorhus/github-markdown-css) (with slight adaptations).
+- `/assets/css/text-highlighting.css` contains the CSS for the highlighting and note-taking features.
 
 
 
