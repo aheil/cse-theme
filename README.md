@@ -10,7 +10,7 @@ For this theme to work, the course information, lectures and practicals need to 
 
 ## Acknowledgements
 
-The EWI building [image](assets/images/tudelt-ewi.svg) has been created by [David Maxwell](https://www.dmax.org.uk/)!
+The EWI building [image](assets/images/tudelt-ewi.svg), which resides at the footer of each page, has been created by [David Maxwell](https://www.dmax.org.uk/)!
 
 ## Installation
 
