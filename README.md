@@ -8,6 +8,10 @@ For this theme to work, the course information, lectures and practicals need to 
 
 ![cse-theme preview](/screenshot.png)
 
+## Acknowledgements
+
+The EWI building [image](assets/images/tudelt-ewi.svg) has been created by [David Maxwell](https://www.dmax.org.uk/)!
+
 ## Installation
 
 This theme repo was designed for the [CSE1500 course materials](https://github.io/chauff/Web-Teaching/). It does not have to be forked, cloned or anything else. It can be used as [remote theme](https://github.blog/2017-11-29-use-any-theme-with-github-pages/). All that is needed in the repository to apply the theme to is to copy the contents of `_config.yml`, remove the line `theme: minima` and add the following two lines:
@@ -65,3 +69,4 @@ The CSS is split across files:
 
 - GitHub Pages does not run the latest Jekyll version, make sure to check the right Jekyll version when looking at the documentation. GitHub's Jekyll version can be found [here](https://pages.github.com/versions/). For example, the very useful `sort_by` is a Jekyll 4 feature.
 - `_layouts/default.html` contains a hardcoded page visit counter
+
