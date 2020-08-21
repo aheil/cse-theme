@@ -83,7 +83,7 @@ nav li {
     padding-right: 15px;
   }
   footer.skin {
-    font-size: 60%;
+    font-size: 75%;
   }
 
   footer span.footer-img {
@@ -105,7 +105,10 @@ nav li {
     grid-column-end: 2;
   }
   footer.skin {
-    font-size: 50%;
+    font-size: 75%;
+  }
+  .skin {
+    font-size: 10px;
   }
 }
 
@@ -176,7 +179,7 @@ nav li {
 }
 
 .skin .preview::after {
-  content: "";
+  content: "Node.js, JavaScript, CSS, HTTP, HTML";
   animation: preview 4s linear 1;
   animation-fill-mode: forwards;
 }
@@ -289,12 +292,5 @@ nav li {
   }
   to {
     content: "Node.js, JavaScript, CSS, HTTP, HTML";
-  }
-}
-
-
-@media only screen and (max-width:500px){
-  .skin {
-    font-size: 10px;
   }
 }

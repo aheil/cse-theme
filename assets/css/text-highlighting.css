@@ -61,7 +61,7 @@ ul.text-highlighted-info {
 }
 
 ul.text-highlighted-info li::before {
-    content: "";
+	content: "";
 }
 
 .text-highlighted-highlight {
