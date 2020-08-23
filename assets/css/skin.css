@@ -12,6 +12,11 @@ main {
   grid-template-rows: auto 30px;
 }
 
+.iosfix {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
 section {
   width: 100%;
   overflow: scroll;

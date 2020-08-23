@@ -46,10 +46,15 @@
       </ul>
     </nav>
 
+    <!-- fixes an issue in Safari iOS: 
+        https://stackoverflow.com/questions/29315889/ios-safari-100-width-fixed-position-header-wider-than-viewport 
+    -->
+    <div class="iosfix"> 
     <section class="markdown-body">
       {{ content }}
       :bike: :bike: :bike: <!-- indicates end of page -->
     </section>
+    </div>
     {%- include footer.html -%}
  
   </main>
