@@ -75,5 +75,3 @@ The CSS is split across files:
 
 - GitHub Pages does not run the latest Jekyll version, make sure to check the right Jekyll version when looking at the documentation. GitHub's Jekyll version can be found [here](https://pages.github.com/versions/). For example, the very useful `sort_by` is a Jekyll 4 feature.
 - `_layouts/default.html` contains a hardcoded page visit counter
-- The warning *The materials are currently being updated ...* can be removed by removing the corresponding `div` in `_layouts/default.html`.
-
