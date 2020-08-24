@@ -66,5 +66,4 @@ ul.text-highlighted-info li::before {
 
 .text-highlighted-highlight {
     background-color: var(--highlight-color);
-    color: black;
 }

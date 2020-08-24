@@ -161,7 +161,7 @@ if (storageAvailable('localStorage') == true) {
     console.log("%c Browser feature localStorage available.", styles["goodNews"]);
 
     let hltr = new TextHighlighter(document.querySelector('section'), {
-        color: "gold",
+        color: getComputedStyle(document.querySelector('.text-highlighted-highlight')).backgroundColor,
         onBeforeHighlight: function(range){
             //check if 'h' is pressed
             if( keysPressed[72]>0)
