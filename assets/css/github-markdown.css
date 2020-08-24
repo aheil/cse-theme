@@ -14,17 +14,18 @@
 
 .markdown-body .warning {
   display: flex;
-  background-color: LightSalmon;
-  color: tomato;
+  background-color: var(--warning-bg-light);
+  color: var(--warning-bg-dark);
   padding: 10px;
   padding-left: 80px;
   font-size: 110%;
   height: 100px;
-  color: black;
+  color: var(--warning-font-color);
   position: relative;
   justify-content: center;
   align-content: center;
   flex-direction: column;
+  border: 1px solid var(--warning-bg-dark);
 }
 
 .markdown-body .warning::before {
@@ -32,7 +33,7 @@
   display: inline-block;
   width: 60px;
   height: 100px;
-  background-color: Tomato;
+  background-color: var(--warning-bg-dark);
   position: absolute;
   top: 0px;
   left: 0px;

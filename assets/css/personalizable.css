@@ -22,4 +22,7 @@
     --content-details: rgb(124, 20, 77);
     --highlight-color: gold; /* TODO: hardcoded in utils.js as well*/
     --popup-color: rgb(255,165,0,0.8);
+    --warning-bg-light: LightSalmon;
+    --warning-bg-dark: tomato;
+    --warning-font-color: FireBrick;
   }

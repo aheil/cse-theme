@@ -41,12 +41,13 @@ layout: default
 permalink: /http/
 linkname: HTTP
 ordering: 4
+updateWarning: true
 ---
 
 OTHER CONTENT
 ```
 
-The `layout` variable is always `default` in our case (other Jekyll themes may have different types of pages depending on the content type). The `permalink` variable beautifies the URL and the `linkname` variable determines how the link appears in the navigation bar. As lectures are typically in a specific order, the `ordering` variable (just use integers, ascending order) determines the order of the lectures. Without this explicit ordering, the links would show up in alphabetic order.
+The `layout` variable is always `default` in our case (other Jekyll themes may have different types of pages depending on the content type). The `permalink` variable beautifies the URL and the `linkname` variable determines how the link appears in the navigation bar. As lectures are typically in a specific order, the `ordering` variable (just use integers, ascending order) determines the order of the lectures. Without this explicit ordering, the links would show up in alphabetic order. Lastly, setting the `updateWarning` variable to `true` ensures that there will be a warning box shown at the top of the page. The warning string itself should be set in `_config.yml`. Note that the `div` sizing and resizing based on the viewport size was hardcoded based on the initial update warning string -- significantly longer/shorter update strings may look odd or even overflow the `div`. 
 
 Note: all content appearing after the front matter is pushed into the `content` attribute, accessed as `{{content}}` in `default.html`.
 

@@ -1,6 +1,7 @@
 ---
 layout: default
 permalink: /
+updateWarning: true
 ---
 
 Course title <!-- omit in toc -->

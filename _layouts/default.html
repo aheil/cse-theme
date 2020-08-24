@@ -52,7 +52,9 @@
     <div class="iosfix"> 
     <section class="markdown-body">
 
-      <div class="warning">The materials are currently being updated for the 2020/21 course edition. Some content may still change.</div>
+      {% if page.updateWarning == true %}
+      <div class="warning">{{ site.updateWarning }}</div>
+      {% endif %}
 
       {{ content }}
       :bike: :bike: :bike: <!-- indicates end of page -->
