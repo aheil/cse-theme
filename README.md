@@ -14,16 +14,16 @@ The EWI building [image](assets/images/tudelt-ewi.svg), which resides at the foo
 
 ## Installation
 
-This theme repo was designed for the [CSE1500 course materials](https://github.com/chauff/Web-Teaching/). It does not have to be forked, cloned or anything else. It can be used as [remote theme](https://github.blog/2017-11-29-use-any-theme-with-github-pages/). All that is needed in the repository to apply the theme to is to copy the contents of `_config.yml`, remove the line `theme: minima` and add the following two lines:
+This theme repo was designed for the [CSE1500 course materials](https://github.com/chauff/Web-Teaching/). It does not have to be forked, cloned or anything else. It can be used as [remote theme](https://github.blog/2017-11-29-use-any-theme-with-github-pages/). All that is needed in the repository to apply the theme to is to copy the contents of `_config.yml`, remove the line `theme: minima` (at the bottom of the file) and add the following two lines:
 
 ```
 baseurl: "/Web-Teaching/"
 remote_theme: chauff/cse-theme
 ```
 
-The `baseurl` is used to set the root of the website (minus the hostname). The `remote_theme` has the format `GITHUBUSERNAME/REPO`. That's it. Once the `_config.yml` file is added to the repository of choice this theme will apply to it.
+The `baseurl` is used to set the root of the website (minus the hostname). The `remote_theme` has the format `GITHUBUSERNAME/REPO`. That's it. Once the `_config.yml` file is added to the repository of choice this theme will apply to it. 
 
-The custom 404 page for some reason did not work when only placed in this repo, so it should be copied to the repository that uses the remote theme.
+The custom 404 page (`404.html`) should also be copied to the repository (do not hide it away in a folder, otherwise it won't be found) that uses the remote theme.
 
 # Course content
 
@@ -55,6 +55,10 @@ Note: all content appearing after the front matter is pushed into the `content` 
 ## Adding practicals
 
 Practicals (assignments, exercises, old exams, etc.) are added to the `_practicals` folder. The front matter is the same as for the lectures.
+
+## I don't like these folder names
+
+No worries, you can always change the folder names in `_config.yml`.
 
 # Layout
 
