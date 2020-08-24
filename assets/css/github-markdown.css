@@ -1,8 +1,11 @@
+---
+---
+
 /* hard copy from https://github.com/sindresorhus/github-markdown-css */
 /* (last commit  28b1143) */
 /* added small color changes to include the color scheme of the skin */
 
-@import "personalizable.css";
+@import "{{ site.cssTheme }}";
 
 .markdown-body img.emoji {
   background: transparent;

@@ -1,0 +1,46 @@
+:root {
+    --nav-background: #616161;                                  /* dark primary */
+    --nav-foreground: white;                                    /* text */
+    --nav-link-color: #FF9800;                                  /* accent */
+    --nav-list-icon: "✪ ";
+
+    --footer-background: #424242;                               /* primary */
+    --footer-foreground: white;                                 /* text */
+
+    --header-foreground: white;                                 /* text */
+    --header-main-box-color: rgba(97,97,97, 0.5);               /* dark primary */
+    --header-highlight-box-color: rgba(0,0,0, 0.75);            /* primary texrt */
+    --header-border: white;
+    --header-preview-box-color: rgba(255,152,0, 0.75);          /* accent */
+
+    --content-list-icon: "✪ ";
+    --content-hX-underline: #9E9E9E;                            /* dark primary */
+    --content-hX-color: #9E9E9E;                                /* dark primary */
+    --content-link-color: #FF9800;                              /* accent */
+    --content-table-bg-header: #212121;                         /* primary text */
+    --content-table-fg-header: white;                           
+    --content-table-row-alt: #BDBDBD;                           /* light primary */
+    --content-link-before-icon: "⇗ ";
+    --content-summary: #e65100;                                 /* accent */
+    --content-details: #e65100;                                 /* lighter accent */
+    --content-background: white;
+    --content-text-color: #212121;                              /* primary text */
+
+    --highlight-color: #ffd54f;                                    
+    --popup-color: rgb(97,97,97,0.8);                          /* dark primary */
+    --highlight-info-background: #F5F5F5;                       /* light primary */
+    --highlight-info-text: black;
+    --delete-highlights-button-bg1: #ffcc80;                    /* very light accent */
+    --delete-highlights-button-bg2: #ffa726;                    /* lighter accent */
+    --delete-highlights-button-border: #e65100;                 /* darker accent */
+    --delete-highlights-button-text: black;                   /* darker accent */
+
+    --save-notes-button-bg1: #9E9E9E;
+    --save-notes-button-bg2: #424242;
+    --save-notes-button-border: #212121;
+    --save-notes-button-text: #212121;
+
+    --warning-bg-light: LightSalmon;
+    --warning-bg-dark: tomato;
+    --warning-font-color: FireBrick;
+  }

@@ -1,4 +1,7 @@
-@import "personalizable.css";
+---
+---
+
+@import "{{ site.cssTheme }}";
 
 html,
 body {
@@ -49,12 +52,12 @@ footer span.footer-img {
   top: -180px;
   height: 180px;
   width: 300px;
-  background: url("../images/tudelft-ewi.svg") no-repeat center bottom;
+  background: url("{{ site.footerImage }}") no-repeat center bottom;
 }
 
 header {
   /* TU Delft's EEMCS building */
-  background-image: url("../images/tudelft_campus_lente_EWI_09_1_.jpg");
+  background-image: url("{{ site.headerImage }}");
   background-size: cover;
   height: 100vh;
   color: var(--header-foreground);
