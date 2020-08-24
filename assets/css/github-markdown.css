@@ -12,6 +12,32 @@
   color: var(--content-details);
 }
 
+.markdown-body .warning {
+  display: flex;
+  background-color: LightSalmon;
+  color: tomato;
+  padding: 10px;
+  padding-left: 80px;
+  font-size: 110%;
+  height: 100px;
+  color: black;
+  position: relative;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.markdown-body .warning::before {
+  content: "";
+  display: inline-block;
+  width: 60px;
+  height: 100px;
+  background-color: Tomato;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
 .markdown-body {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -25,6 +51,10 @@
 @media (max-width: 767px) {
     .markdown-body {
         padding: 15px;
+    }
+
+    .markdown-body .warning {
+      font-size: 90%;
     }
 }
 
