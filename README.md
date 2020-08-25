@@ -49,12 +49,10 @@ The `baseurl` is used to set the root of the website (minus the hostname). The `
 
 The copied `_config.yml` file has a few options to allow for easy customization:
 
-- Set the color theme, either `light-blue`, `light-green`, `light-grey`, `light-pink`, `light-red` or `dark-pink`. **Importantly, by default the code highlighting assumes a light theme; - set `isDarkTheme: true` to have a matching code highlighter for the dark themes.**
+- Set the color theme, either `light-blue`, `light-green`, `light-grey`, `light-pink`, `light-red` or `dark-pink`. **Importantly**, by default the code highlighting assumes a light theme; set `isDarkTheme: true` to have a matching code highlighter for the dark themes.
 - Set the header image.
 - Set the footer image.
 - Decide whether to show a warning.
-
-*More information on how and what to customize is provided below.*
 
 ## Responsiveness
 
@@ -76,24 +74,19 @@ layout: default
 permalink: /http/
 linkname: HTTP
 ordering: 4
-updateWarning: true
+warning: true
 ---
 
 OTHER CONTENT
 ```
 
-The `layout` variable is always `default` in our case (other Jekyll themes may have different types of pages depending on the content type). The `permalink` variable beautifies the URL and the `linkname` variable determines how the link appears in the navigation bar. As lectures are typically in a specific order, the `ordering` variable (just use integers, ascending order) determines the order of the lectures. Without this explicit ordering, the links would show up in alphabetic order. Lastly, setting the `updateWarning` variable to `true` ensures that there will be a warning box shown at the top of the page (removing the variable or another setting yields no warning box). The warning string itself should be set in `_config.yml`. Note that the `div` sizing and resizing based on the viewport size was hardcoded based on the initial update warning string -- significantly longer/shorter update strings may look odd or even overflow the `div`. 
+The `layout` variable is always `default` in our case (other Jekyll themes may have different types of pages depending on the content type). The `permalink` variable beautifies the URL and the `linkname` variable determines how the link appears in the navigation bar. As lectures are typically in a specific order, the `ordering` variable (just use integers, ascending order) determines the order of the lectures. Without this explicit ordering, the links would show up in alphabetic order. Lastly, setting the `warning` variable to `true` ensures that there will be a warning box shown at the top of the page (removing the variable or another setting yields no warning box). The warning string itself should be set in `_config.yml`. Note that the `div` sizing and resizing based on the viewport size was hardcoded based on the initial update warning string -- significantly longer/shorter update strings may look odd or even overflow the `div`. 
 
 Note: all content appearing after the front matter is pushed into the `content` attribute, accessed as `{{content}}` in `default.html`.
-
 
 ### Adding practicals
 
 Practicals (assignments, exercises, old exams, etc.) are added to the `_practicals` folder. The front matter is the same as for the lectures.
-
-### I don't like these folder names
-
-If you don't like `_practicals` and `_lectures`, go ahead and change the folder names in your `_config.yml` (should be self-explanatory).
 
 ## CSS
 
@@ -103,9 +96,7 @@ The CSS is split across a number of files:
 - `/assets/css/github-markdown.css` contains the CSS for the layout of the lectures/exercises, etc. The CSS comes from [sindresorhus](https://github.com/sindresorhus/github-markdown-css) (with slight adaptations).
 - `/assets/css/text-highlighting.css` contains the CSS for the highlighting and note-taking features.
 
-The color themes reside in `/assets/css/themes/`. To change the theme, go to `_config.yml` and change the `cssTheme` variable.
-
-Next to the color theme, the header and footer image can also be changed in `_config.yml` by setting new `headerImage` and `footerImage` values.
+The color themes reside in `/assets/css/themes/`. To change the theme, go to `_config.yml` and change the `cssTheme` variable. Change if necessary `isDarkTheme` as well.
 
 ## Notes
 
