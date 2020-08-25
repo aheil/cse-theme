@@ -108,3 +108,4 @@ Next to the color theme, the header and footer image can also be changed in `_co
 
 - GitHub Pages does not run the latest Jekyll version, make sure to check the right Jekyll version when looking at the documentation. GitHub's Jekyll version can be found [here](https://pages.github.com/versions/). For example, the very useful `sort_by` is a Jekyll 4 feature.
 - `_layouts/default.html` contains a hardcoded page visit counter
+- If you made changes to the configuration but don't see them reflected on the served pages,  clear the browser's cache or try the private mode (Firefox likes caching a lot ...).
