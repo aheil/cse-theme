@@ -15,7 +15,7 @@ footerImage: ../images/tudelft-ewi.svg
 #cssTheme: light-grey-theme.css
 
 headerImage: ../images/tudelft_ewi.jpg #goes well with colorful themes
-cssTheme: default.css
+cssTheme: /assets/css/default.css
 
 plugins:
   - jemoji

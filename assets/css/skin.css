@@ -1,7 +1,7 @@
 ---
 ---
 
-@import "/assets/css/{{ site.cssTheme | relative_url}}";
+@import "{{ site.cssTheme | relative_url}}";
 
 html,
 body {
