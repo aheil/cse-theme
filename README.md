@@ -9,13 +9,13 @@ For this theme to work, the course information, lectures and practicals need to 
 **Highlighting** and **note-taking** is built into the theme. All data is stored in the browser's localStorage.
 
 ![cse-theme preview](/screenshot.png)
-*default theme*
+*default color theme*
 
 ![cse-theme preview](/blue-theme.png)
-*blue theme*
+*blue color theme*
 
 ![cse-theme preview](/grey-theme.png)
-*grey theme*
+*grey color theme*
 
 ## Acknowledgements
 
@@ -36,10 +36,14 @@ The custom 404 page (`404.html`) should also be copied to the repository (do not
 
 ## Customization in `_config.yml`
 
+The copied `_config.yml` file has a few options to allow for easy customization:
+
 - Pick one of (so far) three color themes.
 - Pick the header image.
 - Pick the footer image.
 - Decide whether to show an update warning.
+
+*More information on how and what to customize is provided below.*
 
 ## Responsiveness
 
