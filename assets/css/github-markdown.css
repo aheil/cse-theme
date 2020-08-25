@@ -5,7 +5,7 @@
 /* (last commit  28b1143) */
 /* added small color changes to include the color scheme of the skin */
 
-@import "{{ site.cssTheme }}";
+@import "/assets/css/{{ site.cssTheme | relative_url}}";
 
 .markdown-body img.emoji {
   background: transparent;

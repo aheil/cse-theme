@@ -1,7 +1,7 @@
 ---
 ---
 
-@import "{{ site.cssTheme }}";
+@import "/assets/css/{{ site.cssTheme | relative_url}}";
 
 #popup {
     display: none;
