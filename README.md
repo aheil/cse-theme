@@ -27,6 +27,9 @@ Different color schemes are available:
 ![cse-theme preview](/screenshot-grey.png)
 *Light grey.*
 
+![cse-theme preview](/screenshot-dark-pink.png)
+*Dark pink.*
+
 ## Acknowledgements
 
 The EWI building [image](assets/images/tudelft-ewi.svg), which resides at the footer of each page, has been created by [David Maxwell](https://www.dmax.org.uk/)!
@@ -46,7 +49,7 @@ The `baseurl` is used to set the root of the website (minus the hostname). The `
 
 The copied `_config.yml` file has a few options to allow for easy customization:
 
-- Set the color theme, either `light-blue`, `light-green`, `light-grey`, `light-pink` or `light-red`.
+- Set the color theme, either `light-blue`, `light-green`, `light-grey`, `light-pink`, `light-red` or `dark-pink`. **Importantly, by default the code highlighting assumes a light theme (i.e. a lightly colored); - set `isDarkTheme: true` to have a matching code highlighter for the dark themes.**
 - Set the header image.
 - Set the footer image.
 - Decide whether to show a warning.
