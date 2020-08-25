@@ -76,7 +76,7 @@ layout: default
 permalink: /http/
 linkname: HTTP
 ordering: 4
-updateWarning: true
+warning: true
 ---
 
 OTHER CONTENT
