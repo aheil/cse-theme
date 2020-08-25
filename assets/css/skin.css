@@ -1,7 +1,7 @@
 ---
 ---
 
-@import "{{ site.cssTheme | relative_url}}";
+@import "{{ site.cssTheme }}";
 
 html,
 body {

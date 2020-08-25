@@ -1,7 +1,7 @@
 ---
 ---
 
-@import "{{ site.cssTheme | relative_url}}";
+@import "{{ site.cssTheme }}";
 
 #popup {
     display: none;
@@ -14,7 +14,7 @@
 
 #popup textarea {
     background-color: var(--popup-color);
-    color: white;
+    color: var(--popup-text-color);
     outline: none; 
     border: none;
 	margin-bottom: 5px;

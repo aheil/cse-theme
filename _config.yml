@@ -10,12 +10,8 @@ collections:
 updateWarning: The materials are currently being updated for the 2020/21 course edition. Some content may still change.
 
 footerImage: ../images/tudelft-ewi.svg
-
-#headerImage: ../images/tudelft_ewi_bw.jpg #goes well with the light-grey-theme.css
-#cssTheme: light-grey-theme.css
-
-headerImage: ../images/tudelft_ewi.jpg #goes well with colorful themes
-cssTheme: /assets/css/default.css
+headerImage: ../images/tudelft_ewi_bw.jpg
+cssTheme: ../css/themes/light-green.css
 
 plugins:
   - jemoji
@@ -43,5 +39,3 @@ kramdown:
       line_numbers: false
     block:
       line_numbers: false
-# Build settings
-theme: minima

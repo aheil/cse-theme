@@ -4,50 +4,58 @@ A theme for lectures notes.
 
 This Jekyll theme is built on top of [Minima](https://github.com/jekyll/minima), Jekyll's default theme. Only the necessary files were kept, the rest was stripped from the repo.
 
-For this theme to work, the course information, lectures and practicals need to reside in specific folders/files (see below). Apart from those prerequisites, it should be possible to develop the lecture materials entirely in markdown, without regard for the `cse-theme`.
+It should be possible to develop the lecture materials entirely in markdown, without regard for the `cse-theme`.
 
 **Highlighting** and **note-taking** is built into the theme. All data is stored in the browser's localStorage.
 
-![cse-theme preview](/screenshot.png)
-*default color theme*
+## Color themes
 
-![cse-theme preview](/blue-theme.png)
-*blue color theme*
+Different color schemes are available:
 
-![cse-theme preview](/grey-theme.png)
-*grey color theme*
+![cse-theme preview](/screenshot-red.png)
+*Light red.*
+
+![cse-theme preview](/screenshot-blue.png)
+*Light blue.*
+
+![cse-theme preview](/screenshot-pink.png)
+*Light pink.*
+
+![cse-theme preview](/screenshot-green.png)
+*Light green.*
+
+![cse-theme preview](/screenshot-grey.png)
+*Light grey.*
 
 ## Acknowledgements
 
-The EWI building [image](assets/images/tudelt-ewi.svg), which resides at the footer of each page, has been created by [David Maxwell](https://www.dmax.org.uk/)!
+The EWI building [image](assets/images/tudelft-ewi.svg), which resides at the footer of each page, has been created by [David Maxwell](https://www.dmax.org.uk/)!
 
 ## Installation
 
-This theme repo was designed for the [CSE1500 course materials](https://github.com/chauff/Web-Teaching/). It does not have to be forked, cloned or anything else. It can be used as [remote theme](https://github.blog/2017-11-29-use-any-theme-with-github-pages/). All that is needed in the repository to apply the theme to is to copy the contents of `_config.yml`, remove the line `theme: minima` (at the bottom of the file) and add the following two lines:
+This theme repo was designed for the [CSE1500 course materials](https://github.com/chauff/Web-Teaching/). It does not have to be forked or cloned. It can be used as [remote theme](https://github.blog/2017-11-29-use-any-theme-with-github-pages/). All that is needed in the repository to apply the theme to is to copy `_config.yml` and `404.html` to the root directory and add the following two lines to `_config.yml`:
 
 ```
-baseurl: "/Web-Teaching/"
+baseurl: "/your-repository-name/"
 remote_theme: chauff/cse-theme
 ```
 
-The `baseurl` is used to set the root of the website (minus the hostname). The `remote_theme` has the format `GITHUBUSERNAME/REPO`. That's it. Once the `_config.yml` file is added to the repository of choice this theme will apply to it. 
-
-The custom 404 page (`404.html`) should also be copied to the repository (do not hide it away in a folder, otherwise it won't be found) that uses the remote theme.
+The `baseurl` is used to set the root of the website (minus the hostname). The `remote_theme` has the format `GITHUBUSERNAME/REPO` and should be left as-is, unless the `cse-theme` repo was forked. That's it. Once the `_config.yml` file is added to the repository of choice this Jekyll theme will apply to it. 
 
 ## Customization in `_config.yml`
 
 The copied `_config.yml` file has a few options to allow for easy customization:
 
-- Pick one of (so far) three color themes.
-- Pick the header image.
-- Pick the footer image.
-- Decide whether to show an update warning.
+- Set the color theme, either `light-blue`, `light-green`, `light-grey`, `light-pink` or `light-red`.
+- Set the header image.
+- Set the footer image.
+- Decide whether to show a warning.
 
 *More information on how and what to customize is provided below.*
 
 ## Responsiveness
 
-The design has basic responsiveness, it looks good across large screens, tables and phones. The responsiveness is not overly sophisticated though (a couple of `@media` queries).
+The design has basic responsiveness, it looks good across large screens, tables and phones. The responsiveness is not overly sophisticated though (a couple of `@media` queries).If you 
 
 ## Course content
 
@@ -82,7 +90,7 @@ Practicals (assignments, exercises, old exams, etc.) are added to the `_practica
 
 ### I don't like these folder names
 
-No worries, you can always change the folder names in `_config.yml`.
+If you don't like `_practicals` and `_lectures`, go ahead and change the folder names in your `_config.yml` (should be self-explanatory).
 
 ## CSS
 
@@ -92,12 +100,7 @@ The CSS is split across a number of files:
 - `/assets/css/github-markdown.css` contains the CSS for the layout of the lectures/exercises, etc. The CSS comes from [sindresorhus](https://github.com/sindresorhus/github-markdown-css) (with slight adaptations).
 - `/assets/css/text-highlighting.css` contains the CSS for the highlighting and note-taking features.
 
-So far, three themes have been implemented:
-- `default.css` picks up the red/blue colors (though mostly red) of TU Delft's EWI building
-- `light-blue-theme.css` consists mostly of various shades of indigo with red accents
-- `light-grey-theme.css` consists mostlfy of grey shades with orange accents
-
-To change the theme, go to `_config.yml` and change the `cssTheme` variable (for now it expects all CSS files to reside in the `/assets/css` folder). 
+The color themes reside in `/assets/css/themes/`. To change the theme, go to `_config.yml` and change the `cssTheme` variable.
 
 Next to the color theme, the header and footer image can also be changed in `_config.yml` by setting new `headerImage` and `footerImage` values.
 
