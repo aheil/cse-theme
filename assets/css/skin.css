@@ -147,6 +147,7 @@ nav li {
 
 .skin li {
   list-style: none;
+  padding-right: 5px;
 }
 
 .skin li:before {
