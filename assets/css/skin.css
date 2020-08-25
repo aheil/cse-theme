@@ -72,7 +72,7 @@ header {
 }
 
 footer.skin {
-  font-size: 75%;
+  font-size: 90%;
 }
 
 nav li {
@@ -155,6 +155,10 @@ nav li {
 
 .skin .nothing:before {
   content: " ";
+}
+
+footer a::before {
+  content: var(--content-link-before-icon);
 }
 
 .skin .nothing:hover {
