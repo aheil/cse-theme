@@ -35,7 +35,7 @@ Different color schemes are available:
 
 ## Acknowledgements
 
-The EWI building [image](assets/images/tudelft-ewi.svg), which resides at the footer of each page, has been created by [David Maxwell](https://www.dmax.org.uk/)!
+The EWI building ([by day](tudelft-ewi-light-footer.svg) and [by night](tudelft-ewi-dark-footer.svg)), which resides at the footer of each page, has been created by [David Maxwell](https://www.dmax.org.uk/)!
 
 ## Installation
 
