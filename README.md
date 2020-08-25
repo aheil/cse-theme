@@ -49,7 +49,7 @@ The `baseurl` is used to set the root of the website (minus the hostname). The `
 
 The copied `_config.yml` file has a few options to allow for easy customization:
 
-- Set the color theme, either `light-blue`, `light-green`, `light-grey`, `light-pink`, `light-red` or `dark-pink`. **Importantly, by default the code highlighting assumes a light theme (i.e. a lightly colored); - set `isDarkTheme: true` to have a matching code highlighter for the dark themes.**
+- Set the color theme, either `light-blue`, `light-green`, `light-grey`, `light-pink`, `light-red` or `dark-pink`. **Importantly, by default the code highlighting assumes a light theme; - set `isDarkTheme: true` to have a matching code highlighter for the dark themes.**
 - Set the header image.
 - Set the footer image.
 - Decide whether to show a warning.
