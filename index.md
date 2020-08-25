@@ -39,9 +39,12 @@ This course is about X, Y and Z.
 
 ...
 
+
 ## Course grading
 
-...
+The entire course (covering both database and web technoloogy topics) is graded as follows:
+
+![grading](img/RME-grading.png)
 
 
 ## Course topics
