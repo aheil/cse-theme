@@ -33,6 +33,9 @@ Different color schemes are available:
 ![cse-theme preview](/screenshot-dark-blue.png)
 *Dark blue.*
 
+![cse-theme preview](/screenshot-dark-red.png)
+*Dark red.*
+
 ## Acknowledgements
 
 The EWI building [image](assets/images/tudelft-ewi.svg), which resides at the footer of each page, has been created by [David Maxwell](https://www.dmax.org.uk/)!
@@ -52,7 +55,7 @@ The `baseurl` is used to set the root of the website (minus the hostname). The `
 
 The copied `_config.yml` file has a few options to allow for easy customization:
 
-- Set the color theme, either `light-blue`, `light-green`, `light-grey`, `light-pink`, `light-red`, `dark-pink` or `dark-blue`. **Importantly**, by default the code highlighting assumes a light theme; set `isDarkTheme: true` to have a matching code highlighter for the dark themes.
+- Set the color theme, either `light-blue`, `light-green`, `light-grey`, `light-pink`, `light-red`, `dark-pink`, `dark-red` or `dark-blue`. **Importantly**, by default the code highlighting assumes a light theme; set `isDarkTheme: true` to have a matching code highlighter for the dark themes.
 - Set the header image: two variants exist already,  `../images/tudelft_ewi.jpg` shows TU Delft's EWI building and `../images/tudelft_ewi_bw.jpg` is its grayscale variant.
 - Set the footer image: two variants exist already, `../images/tudelft-ewi-light-footer.svg` shows TU Delft's EWI building plus some Dutch things (bikes, bridge, windmill) and `../images/tudelft-ewi-dark-footer.svg` is its dark variant.
 - Decide whether to show a warning of some type (can be switched on/off for each individual page).
