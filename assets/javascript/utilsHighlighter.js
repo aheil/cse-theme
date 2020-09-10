@@ -190,3 +190,5 @@ if (storageAvailable('localStorage') == true) {
 else
     console.log("%c Browser feature localStorage not available.", styles["badNews"]);
 
+
+

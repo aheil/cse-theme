@@ -19,6 +19,10 @@
   color: var(--content-details);
 }
 
+.markdown-body p sup {
+  color: var(--content-figcaption);
+}
+
 .markdown-body .warning {
   display: flex;
   background-color: var(--warning-bg-light);

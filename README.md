@@ -13,28 +13,36 @@ It should be possible to develop the lecture materials entirely in markdown, wit
 Different color schemes are available:
 
 ![cse-theme preview](/screenshot-red.png)
-*Light red.*
+
+<sup>Light red.</sup>
 
 ![cse-theme preview](/screenshot-blue.png)
-*Light blue.*
+
+<sup>Light blue.</sup>
 
 ![cse-theme preview](/screenshot-pink.png)
-*Light pink.*
+
+<sup>Light pink.</sup>
 
 ![cse-theme preview](/screenshot-green.png)
-*Light green.*
+
+<sup>Light green.</sup>
 
 ![cse-theme preview](/screenshot-grey.png)
-*Light grey.*
+
+<sup>Light grey.</sup>
 
 ![cse-theme preview](/screenshot-dark-pink.png)
-*Dark pink.*
+
+<sup>Dark pink.</sup>
 
 ![cse-theme preview](/screenshot-dark-blue.png)
-*Dark blue.*
+
+<sup>Dark blue.</sup>
 
 ![cse-theme preview](/screenshot-dark-red.png)
-*Dark red.*
+
+<sup>Dark red.</sup>
 
 ## Acknowledgements
 
@@ -106,6 +114,16 @@ The color themes reside in `/assets/css/themes/`. To change the theme, go to `_c
 
 ## Notes
 
-- GitHub Pages does not run the latest Jekyll version, make sure to check the right Jekyll version when looking at the documentation. GitHub's Jekyll version can be found [here](https://pages.github.com/versions/). For example, the very useful `sort_by` is a Jekyll 4 feature.
-- `_layouts/default.html` contains a hardcoded page visit counter
-- If you made changes to the configuration but don't see them reflected on the served pages,  clear the browser's cache or try the private mode (Firefox likes caching a lot ...).
+GitHub Pages does not run the latest Jekyll version, make sure to check the right Jekyll version when looking at the documentation. GitHub's Jekyll version can be found [here](https://pages.github.com/versions/). For example, the very useful `sort_by` is a Jekyll 4 feature.
+
+The file `_layouts/default.html` contains a hardcoded page visit counter.
+
+If you made changes to the configuration but don't see them reflected on the served pages, clear the browser's cache or try the private mode (Firefox likes caching a lot ...).
+
+There is no special tag for figure captions. The current regime is to use `<sup>My caption.</sup>`:
+
+```
+![cse-theme preview](/screenshot-dark-red.png)
+
+<sup>Dark red.</sup>
+```
