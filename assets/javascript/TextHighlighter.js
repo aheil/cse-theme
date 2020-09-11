@@ -501,6 +501,13 @@
 
             this.options.onAfterHighlight(range, normalizedHighlights, timestamp);
         }
+        else {
+            //if no highlighting takes place, return;
+            //without this line, all highlights made
+            //that do not fulfill the h key pressed condition
+            //will be removed -> this makes it hard to copy code.
+            return;
+        }
 
         if (!keepRange) {
             dom(this.el).removeAllRanges();
