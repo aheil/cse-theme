@@ -11,6 +11,10 @@
   background: transparent;
 }
 
+.markdown-body video {
+  max-width: 100%;
+}
+
 .markdown-body summary {
   color: var(--content-summary);
 }

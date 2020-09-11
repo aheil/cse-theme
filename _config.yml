@@ -10,7 +10,7 @@ warning: The materials are currently being updated for the 2020/21 course editio
 
 footerImage: ../images/tudelft-ewi-light-footer.svg
 headerImage: ../images/tudelft_ewi_bw.jpg
-cssTheme: themes/light-red.css
+cssTheme: themes/light-green.css
 isDarkTheme: false
 
 plugins:
