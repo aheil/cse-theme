@@ -63,7 +63,8 @@ The `baseurl` is used to set the root of the website (minus the hostname). The `
 
 The copied `_config.yml` file has a few options to allow for easy customization:
 
-- Set the color theme, either `light-blue`, `light-green`, `light-grey`, `light-pink`, `light-red`, `dark-pink`, `dark-red` or `dark-blue`. **Importantly**, by default the code highlighting assumes a light theme; set `isDarkTheme: true` to have a matching code highlighter for the dark themes.
+- Set the color theme (`cssTheme`), either `light-blue`, `light-green`, `light-grey`, `light-pink`, `light-red`, `dark-pink`, `dark-red` or `dark-blue`.
+- Set the code color theme (`cssCodeTheme`), prepackaged are `monokai` (dark), `dracula` (dark) and `perldoc` (light).
 - Set the header image: two variants exist already,  `../images/tudelft_ewi.jpg` shows TU Delft's EWI building and `../images/tudelft_ewi_bw.jpg` is its grayscale variant.
 - Set the footer image: two variants exist already, `../images/tudelft-ewi-light-footer.svg` shows TU Delft's EWI building plus some Dutch things (bikes, bridge, windmill) and `../images/tudelft-ewi-dark-footer.svg` is its dark variant.
 - Decide whether to show a warning of some type (can be switched on/off for each individual page).
@@ -110,7 +111,7 @@ The CSS is split across a number of files:
 - `/assets/css/github-markdown.css` contains the CSS for the layout of the lectures/exercises, etc. The CSS comes from [sindresorhus](https://github.com/sindresorhus/github-markdown-css) (with slight adaptations).
 - `/assets/css/text-highlighting.css` contains the CSS for the highlighting and note-taking features.
 
-The color themes reside in `/assets/css/themes/`. To change the theme, go to `_config.yml` and change the `cssTheme` variable. Change if necessary `isDarkTheme` as well (this switch at the moment only ensures that the code highlighting for dark themes is chosen - it is an arbitrary decision to not let the user simply set the correct code highlighting CSS in here).
+The color themes reside in `/assets/css/themes/`. To change the theme, go to `_config.yml` and change the `cssTheme` variable. The color theme of the page is separate from the color theme of the code snippets: these themes reside in `/assets/css/themes/code`. Change `cssCodeTheme` in `_config.yml` if you want to switch to another code highlighter. Code highlighter CSS files have to be compatible with [pygments](https://github.com/pygments/pygments).
 
 ## Notes
 
