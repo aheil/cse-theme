@@ -75,7 +75,7 @@ The copied `_config.yml` file has a few options to customize the look of the sit
 
 ## Responsiveness
 
-The design has basic responsiveness, it looks good across large screens, tables and phones. The responsiveness is not overly sophisticated though (a couple of `@media` queries).
+The design has basic responsiveness, it looks good across large screens, tablets and phones. The responsiveness is not overly sophisticated though (a couple of `@media` queries).
 
 ## Course content
 
