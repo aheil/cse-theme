@@ -12,7 +12,7 @@ Your repo should have the following files and folders in the root folder of the 
 - folders: `_lectures`, `_practicals`, `_extras`
 - files: `index.md`, `404.html`, `_config.yml`
 
-What to put in each of those is explained below. *If you want a different file/folder structure/naming, changes to `_config.yml` have to be made (otherwise it can largely be copied from this repo).
+What to put in each of those is explained below. *If you want a different file/folder structure/naming, changes to `_config.yml` have to be made (otherwise it can largely be copied from this repo)*.
 
 ## Color themes
 
