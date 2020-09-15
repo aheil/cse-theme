@@ -8,6 +8,12 @@ It should be possible to develop the lecture materials entirely in markdown, wit
 
 **Highlighting** and **note-taking** is built into the theme. All data is stored in the browser's localStorage.
 
+Your repo should have the following files and folders in the root folder of the git repo:
+- folders: `_lectures`, `_practicals`, `_extras`
+- files: `index.md`, `404.html`, `_config.yml`
+
+What to put in each of those is explained below. *If you want a different file/folder structure/naming, changes to `_config.yml` have to be made (otherwise it can largely be copied from this repo).
+
 ## Color themes
 
 Different color schemes are available:
@@ -50,7 +56,7 @@ The EWI building ([by day](assets/images/tudelft-ewi-light-footer.svg) and [by n
 
 ## Installation
 
-This theme repo was designed for the [CSE1500 course materials](https://github.com/chauff/Web-Teaching/). It does not have to be forked or cloned. It can be used as [remote theme](https://github.blog/2017-11-29-use-any-theme-with-github-pages/). All that is needed in the repository to apply the theme to is to copy `_config.yml` and `404.html` to the root directory and add the following two lines to `_config.yml`:
+This theme repo was designed for the [CSE1500 course materials](https://github.com/chauff/Web-Teaching/). It does not have to be forked or cloned. It can be used as [remote theme](https://github.blog/2017-11-29-use-any-theme-with-github-pages/). All that is needed in the repository to apply the theme to is to copy `_config.yml` and `404.html` to your repository's root directory and add the following two lines to `_config.yml`:
 
 ```
 baseurl: "/your-repository-name/"
@@ -61,7 +67,7 @@ The `baseurl` is used to set the root of the website (minus the hostname). The `
 
 ## Customization in `_config.yml`
 
-The copied `_config.yml` file has a few options to allow for easy customization:
+The copied `_config.yml` file has a few options to customize the look of the site:
 
 - Set the color theme (`cssTheme`), either `light-blue`, `light-green`, `light-grey`, `light-pink`, `light-red`, `dark-pink`, `dark-red` or `dark-blue`.
 - Set the code color theme (`cssCodeTheme`), prepackaged are `monokai` (dark), `dracula` (dark) and `perldoc` (light).
@@ -103,6 +109,23 @@ Note: all content appearing after the front matter is pushed into the `content` 
 
 Practicals (assignments, exercises, old exams, etc.) are added to the `_practicals` folder. The front matter is the same as for the lectures.
 
+### Adding additional (analytics) scripts/content
+
+To track for instance site visits, add a folder `_extras`: any file in this folder will be included right before the `</body>` tag in the default layout page. For the file content to be included, the file needs to start with an empty frontmatter. As an example, the [statcounter](https://statcounter.com/) snippet looks as follows:
+
+```
+---
+---
+<!-- Default Statcounter code  -->
+  <script type="text/javascript">
+    var sc_project = xxx;
+    var sc_invisible = 1;
+    var sc_security = "xxx"; 
+  </script>
+  <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+  <!-- End of Statcounter Code -->
+```
+
 ## CSS
 
 The CSS is split across a number of files:
@@ -121,7 +144,7 @@ The file `_layouts/default.html` contains a hardcoded page visit counter.
 
 If you made changes to the configuration but don't see them reflected on the served pages, clear the browser's cache or try the private mode (Firefox likes caching a lot ...).
 
-There is no special tag for figure captions. The current regime is to use `<sup>My caption.</sup>`:
+There is no special tag for figure captions. The current regime is to use `<sup>My caption.</sup>` (note the extra empty line):
 
 ```
 ![cse-theme preview](/screenshot-dark-red.png)
