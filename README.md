@@ -107,7 +107,7 @@ Note: all content appearing after the front matter is pushed into the `content` 
 
 Practicals (assignments, exercises, old exams, etc.) are added to the `_practicals` folder. The front matter is the same as for the lectures.
 
-### Adding additional (analytics) scripts/content
+## Adding additional (analytics) scripts/content
 
 To track for instance site visits, add a folder `_extras`: any file in this folder will be included right before the `</body>` tag in the default layout page. For the file content to be included, the file needs to start with an empty frontmatter. As an example, the [statcounter](https://statcounter.com/) snippet looks as follows:
 
