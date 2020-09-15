@@ -8,7 +8,7 @@ It should be possible to develop the lecture materials entirely in markdown, wit
 
 **Highlighting** and **note-taking** is built into the theme. All data is stored in the browser's localStorage.
 
-Your repo should have the following files and folders in the root folder of the git repo:
+Your repo should have the following files and folders in the root folder:
 - folders: `_lectures`, `_practicals`, `_extras`
 - files: `index.md`, `404.html`, `_config.yml`
 
