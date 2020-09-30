@@ -6,7 +6,7 @@ This Jekyll theme is built on top of [Minima](https://github.com/jekyll/minima),
 
 It should be possible to develop the lecture materials entirely in markdown, without regard for the `cse-theme`.
 
-**Highlighting** and **note-taking** is built into the theme. All data is stored in the browser's localStorage.
+**Spoilers**, **highlighting** and **note-taking** are built into the theme. All highlights and notes are stored in the browser's localStorage. 
 
 Your repo should have the following files and folders in the root folder of the git repo:
 - folders: `_lectures`, `_practicals`, `_extras`
@@ -144,10 +144,27 @@ The file `_layouts/default.html` contains a hardcoded page visit counter.
 
 If you made changes to the configuration but don't see them reflected on the served pages, clear the browser's cache or try the private mode (Firefox likes caching a lot ...).
 
-There is no special tag for figure captions. The current regime is to use `<sup>My caption.</sup>` (note the extra empty line):
+There is no special tag for figure captions. The current regime is to use `<sup>My caption.</sup>` (note the extra empty line) :point_down::
 
 ```
 ![cse-theme preview](/screenshot-dark-red.png)
 
 <sup>Dark red.</sup>
+```
+
+Spoilers (text that should onl be visible once the mouse hovers over it; e.g. as solutions to problems) can be added with a bit of HTML :point_down::
+
+```html
+<span class="spoiler">The short answer is no.</span>
+
+<div class="spoiler">The long answer takes a whole paragraph to explain.</div>
+```
+
+To add a set of closed questions, the `<details>`/`<summary>` tags work well :point_down::
+
+```html
+<details> 
+  <summary>True or False? PUT sends data from server to client; the client determines how to handle the data.</summary>
+  False.
+</details>
 ```
