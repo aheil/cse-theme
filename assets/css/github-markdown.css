@@ -768,11 +768,12 @@ li .spoiler {
 .markdown-body li {
   word-wrap: break-all;
   list-style: none;
-  text-indent: -1.1em;
 }
 
 .markdown-body li:before {
   content: var(--content-list-icon);
+  margin-left: -20px; 
+  margin-right: 4px;
 }
 
 .markdown-body li>p {
