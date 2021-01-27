@@ -72,6 +72,7 @@ The copied `_config.yml` file has a few options to customize the look of the sit
 - Set the header image: two variants exist already,  `../images/tudelft_ewi.jpg` shows TU Delft's EWI building and `../images/tudelft_ewi_bw.jpg` is its grayscale variant.
 - Set the footer image: two variants exist already, `../images/tudelft-ewi-light-footer.svg` shows TU Delft's EWI building plus some Dutch things (bikes, bridge, windmill) and `../images/tudelft-ewi-dark-footer.svg` is its dark variant.
 - Decide whether to show a warning of some type (can be switched on/off for each individual page).
+- If the setting `exam: false` is changed to `exam: true`, a JavaScript snippet is triggered which places an opaque `<div>` across the entire viewport with the text *Exam time*. Note that this can easily be circumvented by disabling JavaScript.
 
 ## Responsiveness
 

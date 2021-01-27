@@ -76,6 +76,25 @@
   {% for extra in site.extras %}
     {{ extra.content }}
   {% endfor %}
+
+  {% if site.exam == true %}
+  <script>
+    let div = document.createElement("div");
+    div.style.width="100vw";
+    div.style.height="100vh";
+    div.style.backgroundColor="crimson";
+    div.style.position="fixed";
+    div.style.top="0";
+    div.style.left="0"
+    div.style.textAlign="center";
+    document.body.appendChild(div);
+    let h1 = document.createElement("h1");
+    h1.innerHTML = "EXAM TIME";
+    h1.style.color = "white";
+    h1.style.fontSize = "10vw";
+    div.appendChild(h1);
+    </script>
+    {% endif %}
 </body>
 
 </html>
