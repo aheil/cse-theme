@@ -38,7 +38,7 @@ Your repo should have the following files and folders in the root folder:
 
 ## Installation
 
-This theme was devloped for one of my courses, you can view the course (and thus this theme) [here](https://chauff.github.io/Web-Teaching/). This repository does not have to be forked or cloned. It can be used as [remote theme](https://github.blog/2017-11-29-use-any-theme-with-github-pages/). All that is needed in the repository to apply the theme to is to copy `_config.yml` and `404.html` to your repository's root directory and add the following two lines to `_config.yml`:
+This repository does not have to be forked or cloned. It can be used as [remote theme](https://github.blog/2017-11-29-use-any-theme-with-github-pages/). All that is needed in the repository to apply the theme to is to copy `_config.yml` and `404.html` to your repository's root directory and add the following two lines to `_config.yml`:
 
 ```
 baseurl: "/your-repository-name/"
