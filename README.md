@@ -1,5 +1,4 @@
-![cse-theme preview](/banner.png)
-
+![cse-theme preview](/img/banner.png)
 
 # Jekyll theme for lecture notes <!-- omit in toc -->
 
@@ -9,7 +8,7 @@ This Jekyll theme is built on top of [Minima](https://github.com/jekyll/minima),
 
 It should be possible to develop the lecture materials entirely in markdown, without regard for the `cse-theme`.
 
-**Spoilers**, **highlighting** and **note-taking** are built into the theme. All highlights and notes are stored in the browser's localStorage. 
+**Spoilers**, **highlighting** and **note-taking** are built into the theme. All highlights and notes are stored in the browser's localStorage.
 
 Your repo should have the following files and folders in the root folder:
 - folders: `_lectures`, `_practicals`, `_extras`
@@ -39,7 +38,7 @@ Your repo should have the following files and folders in the root folder:
 
 ## Installation
 
-This repository does not have to be forked or cloned. It can be used as [remote theme](https://github.blog/2017-11-29-use-any-theme-with-github-pages/). All that is needed in the repository to apply the theme to is to copy `_config.yml` and `404.html` to your repository's root directory and add the following two lines to `_config.yml`:
+This theme was devloped for one of my courses, you can view the course (and thus this theme) [here](https://chauff.github.io/Web-Teaching/). This repository does not have to be forked or cloned. It can be used as [remote theme](https://github.blog/2017-11-29-use-any-theme-with-github-pages/). All that is needed in the repository to apply the theme to is to copy `_config.yml` and `404.html` to your repository's root directory and add the following two lines to `_config.yml`:
 
 ```
 baseurl: "/your-repository-name/"
@@ -56,31 +55,31 @@ This section walks through the site-wide options that can be set in the `_config
 
 Set the color theme (`cssTheme`), either `light-blue`, `light-green`, `light-grey`, `light-pink`, `light-red`, `dark-pink`, `dark-red` or `dark-blue`.
 
-![cse-theme preview](/screenshot-light-red.png)
+![cse-theme preview](/img/screenshot-light-red.png)
 
-![cse-theme preview](/screenshot-light-blue.png)
+![cse-theme preview](/img/screenshot-light-blue.png)
 
-![cse-theme preview](/screenshot-light-pink.png)
+![cse-theme preview](/img/screenshot-light-pink.png)
 
-![cse-theme preview](/screenshot-light-green.png)
+![cse-theme preview](/img/screenshot-light-green.png)
 
-![cse-theme preview](/screenshot-light-grey.png)
+![cse-theme preview](/img/screenshot-light-grey.png)
 
-![cse-theme preview](/screenshot-dark-pink.png)
+![cse-theme preview](/img/screenshot-dark-pink.png)
 
-![cse-theme preview](/screenshot-dark-blue.png)
+![cse-theme preview](/img/screenshot-dark-blue.png)
 
-![cse-theme preview](/screenshot-dark-red.png)
+![cse-theme preview](/img/screenshot-dark-red.png)
 
 ### Code color theme
 
 Set the code color theme (`cssCodeTheme`), prepackaged are `monokai`, `dracula` (bboth have a dark background color) and `perldoc` (light background color). 
 
-![cse-theme preview](/screenshot-code-monokai.png)
+![cse-theme preview](/img/screenshot-code-monokai.png)
 
-![cse-theme preview](/screenshot-code-dracula.png)
+![cse-theme preview](/img/screenshot-code-dracula.png)
 
-![cse-theme preview](/screenshot-code-perldoc.png)
+![cse-theme preview](/img/screenshot-code-perldoc.png)
 
 ### Header image
 
@@ -92,29 +91,29 @@ Set the footer image (`footerImage`). Included already is a typical Dutch scene 
 
 The daytime image goes well with a light theme:
 
-![cse-theme preview](/screenshot-light-footer.png)
+![cse-theme preview](/img/screenshot-light-footer.png)
 
 The night-time image goes well with a dark theme:
 
-![cse-theme preview](/screenshot-dark-footer.png)
+![cse-theme preview](/img/screenshot-dark-footer.png)
 
 ### Warning
 
 Decide whether to show a warning of some type. If yes, set the `warning` string. This is one *global* warning string for the site. Whether or not a particular page shows the warning is determined by setting `warning: true` in each individual page's front matter (explained below in more detail). My standard use case is the updating of lecture materials throughout the year. Each page that has not been updated yet for the new year contains the warning. The warning appears just above the start of the page's content:
 
-![cse-theme preview](/screenshot-warning.png)
+![cse-theme preview](/img/screenshot-warning.png)
 
 ### Exam
 
 During the exam, you may want to remove access to the lecture materials without setting the GitHub repo to private. If the setting `exam: false` is changed to `exam: true`, a JavaScript snippet is triggered which places an opaque `<div>` across the entire viewport with the text *Exam time*. Note though that this can easily be circumvented by disabling JavaScript ... it is not more than a reminder that the lecture materials should not be accessed. It typically takes 2-3 minutes for this change in the configuration file to take effect when reloading the page (as on GitHub's end the page is rebuilt).
 
-![cse-theme preview](/screenshot-exam.png)
+![cse-theme preview](/img/screenshot-exam.png)
 
 ## Responsiveness
 
 The design has basic responsiveness, it looks decent across large screens, tablets and phones.
 
-![cse-theme preview](/screenshot-mobile.png)
+![cse-theme preview](/img/screenshot-mobile.png)
 
 
 ## Course content
@@ -160,14 +159,14 @@ Practicals (assignments, exercises, old exams, etc.) are added to the `_practica
 There is no special tag for **figure captions** in Markdown. The current regime is to use `<sup>My caption.</sup>` (note the extra empty line) :point_down::
 
 ```markdown
-![caniuse indexedb](/caniuse-indexedb.png)
+![caniuse indexedb](/img/caniuse-indexedb.png)
 
 <sup>Screenshot taken on September 3, 2020.</sup>
 ```
 
 The result looks like this:
 
-![screenshot caption](/screenshot-caption.png)
+![screenshot caption](/img/screenshot-caption.png)
 
 **Spoilers** (text that should onl be visible once the mouse hovers over it) can be added with a bit of HTML :point_down::
 
@@ -177,7 +176,7 @@ The result looks like this:
 
 The result looks like this:
 
-![screenshot caption](/screenshot-spoiler.png)
+![screenshot caption](/img/screenshot-spoiler.png)
 
 To add a set of **questions/answers** (e.g. at the end of a transcript as self-check questions), the `<details>`/`<summary>` tag combination works well :point_down::
 
@@ -187,7 +186,7 @@ To add a set of **questions/answers** (e.g. at the end of a transcript as self-c
   Declarations are processed before any code is executed.
 </details>
 ```
-![screenshot summary](/screenshot-summary.png)
+![screenshot summary](/img/screenshot-summary.png)
 
 *Note that the `<details>` tag does clash at the moment with how markdown handles code snippets. Ccode snippets are marked by backticks and rendered in a specific way; inside the `<details>` tag though this does not happen, the text is treated as normal text. A workaround is to place the code snippet to ask questions about right before the `<details>` tag.*
 

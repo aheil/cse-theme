@@ -26,3 +26,6 @@ _lectures/
 _practicals/
 _extras/
 img
+
+# Others
+.editorconfig
