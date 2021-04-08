@@ -1,8 +1,9 @@
 ![cse-theme preview](/banner.png)
 
-# cse-theme <!-- omit in toc -->
 
-A theme for lectures notes.
+# Jekyll theme for lecture notes <!-- omit in toc -->
+
+This theme was devloped for one of my courses, you can view the course (and thus this theme) [here](https://chauff.github.io/Web-Teaching/).
 
 This Jekyll theme is built on top of [Minima](https://github.com/jekyll/minima), Jekyll's default theme. Only the necessary files were kept, the rest was stripped from the repo.
 
@@ -38,7 +39,7 @@ Your repo should have the following files and folders in the root folder:
 
 ## Installation
 
-This theme was devloped for one of my courses, you can view the course (and thus this theme) [here](https://chauff.github.io/Web-Teaching/). This repository does not have to be forked or cloned. It can be used as [remote theme](https://github.blog/2017-11-29-use-any-theme-with-github-pages/). All that is needed in the repository to apply the theme to is to copy `_config.yml` and `404.html` to your repository's root directory and add the following two lines to `_config.yml`:
+This repository does not have to be forked or cloned. It can be used as [remote theme](https://github.blog/2017-11-29-use-any-theme-with-github-pages/). All that is needed in the repository to apply the theme to is to copy `_config.yml` and `404.html` to your repository's root directory and add the following two lines to `_config.yml`:
 
 ```
 baseurl: "/your-repository-name/"
