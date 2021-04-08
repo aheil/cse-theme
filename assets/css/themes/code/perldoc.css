@@ -1,6 +1,8 @@
-/* source: http://jwarby.github.io/jekyll-pygments-themes/languages/javascript.html */
+/* source: http://jwarby.github.io/jekyll-pygments-themes/languages/javascript.html 
+ * with a slight adaptation of the first line 
+*/
 
-.highlight .hll { background-color: #ffffcc }
+.highlight  { background: #ffffcc; }
 .highlight .c { color: #228B22 } /* Comment */
 .highlight .err { color: #a61717; background-color: #e3d2d2 } /* Error */
 .highlight .k { color: #8B008B; font-weight: bold } /* Keyword */
