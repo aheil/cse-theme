@@ -2,7 +2,7 @@
 
 # Jekyll theme for lecture notes <!-- omit in toc -->
 
-This Jekyll theme was devloped for one of my courses, you can view the course (and thus this theme) [here](https://chauff.github.io/Web-Teaching/). Jekyll is a static site generator that can be used to customize ones' GitHub Pages. 
+This Jekyll theme was devloped for one of my courses (web technology), you can view the course (and thus this theme) [here](https://chauff.github.io/Web-Teaching/). Jekyll is a static site generator that can be used to customize ones' GitHub Pages. The themes is set up with code-heavy teaching materials in mind.
 
 This Jekyll theme is built on top of [Minima](https://github.com/jekyll/minima), Jekyll's default theme. Only the necessary files were kept, the rest was stripped from the repo.
 
