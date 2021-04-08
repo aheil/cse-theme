@@ -73,7 +73,7 @@ Set the color theme (`cssTheme`), either `light-blue`, `light-green`, `light-gre
 
 ### Code color theme
 
-Set the code color theme (`cssCodeTheme`), prepackaged are `monokai`, `dracula` (bboth have a dark background color) and `perldoc` (light background color). 
+Set the code color theme (`cssCodeTheme`), prepackaged are `monokai`, `dracula` (both have a dark background color) and `perldoc` (light background color). 
 
 ![cse-theme preview](/img/screenshot-code-monokai.png)
 
