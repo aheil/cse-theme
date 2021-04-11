@@ -100,6 +100,8 @@ Set the code color theme (`cssCodeTheme`), prepackaged are `monokai`, `dracula` 
 
 Set the header image (`headerImage`). Included already are two variants,  `../images/tudelft_ewi.jpg` shows TU Delft's iconic EWI building and `../images/tudelft_ewi_bw.jpg` is its grayscale variant.
 
+**Important: if you are using your own header image, you need to provide an absolute URL (starting with `http://` or `https://`), instead of a relative one (starting with `../`). The relative URLs refer to the `cse-theme` repository only.**
+
 ### Footer image
 
 Set the footer image (`footerImage`). Included already is a typical Dutch scene ([by day](assets/images/tudelft-ewi-light-footer.svg) and [by night](assets/images/tudelft-ewi-dark-footer.svg)). The imagery has been created by [David Maxwell](https://www.dmax.org.uk/)!
@@ -111,6 +113,8 @@ The daytime image goes well with a light theme:
 The night-time image goes well with a dark theme:
 
 ![cse-theme preview](/img/screenshot-dark-footer.png)
+
+**Important: if you are using your own footer image, you need to provide an absolute URL (starting with `http://` or `https://`), instead of a relative one (starting with `../`). The relative URLs refer to the `cse-theme` repository only.**
 
 ### Warning
 
