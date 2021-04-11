@@ -100,7 +100,7 @@ Set the code color theme (`cssCodeTheme`), prepackaged are `monokai`, `dracula` 
 
 Set the header image (`headerImage`). Included already are two variants,  `../images/tudelft_ewi.jpg` shows TU Delft's iconic EWI building and `../images/tudelft_ewi_bw.jpg` is its grayscale variant.
 
-**Important: if you are using your own header image, you need to provide an absolute URL (starting with `http://` or `https://`), instead of a relative one (starting with `../`). The relative URLs refer to the `cse-theme` repository only.**
+**Important: if you are using your own header image, the easiest option is to use an absolute URL (starting with `http://` or `https://`). If you are using a relative URL, you need to keep track of the folder structure: for instance, you may want to create a folder `images` in your repository and add your header/footer images there. Then, `headerImage` should be set to `../../images/your-image.png` as per the theme, the CSS file that contains the rule to load the header image is in `assets/css/skin.css`. Thus, two directories have to be traversed to reach a directory that is in your repository's root folder. → Absolute URLs are easier to deal with!**
 
 ### Footer image
 
@@ -114,7 +114,7 @@ The night-time image goes well with a dark theme:
 
 ![cse-theme preview](/img/screenshot-dark-footer.png)
 
-**Important: if you are using your own footer image, you need to provide an absolute URL (starting with `http://` or `https://`), instead of a relative one (starting with `../`). The relative URLs refer to the `cse-theme` repository only.**
+**Important: the note above about absolute vs. relative URLs holds here as well.**
 
 ### Warning
 
