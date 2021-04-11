@@ -52,13 +52,14 @@ The `baseurl` is used to set the root of the website (minus the hostname). The `
 
 This section walks through the site-wide options that can be set in the `_config.yml` file.
 
-### Course titles
+### Course title and tagline
 
-Four types of titles can be set:
-- `line1Title`: e.g. the course code `CSE1500`
-- `line2Title`: e.g. what this course is about in 1-2 terms `Web Technology` (first letter of each term is given a different highlight)
-- `line3Title`: e.g. what this course is about in more detail `Node.js, JavaScript, CSS, HTTP, HTML` (this line is animated - unless you view the transcript on Safari)
-- `tabTitle`: e.g. `CSE1500 TU Delft course materials` (this is the browser tab title).
+The browser (tab) title is set via `tabTitle`.
+
+Three taglines can be set, which differ in size/coloring and whether they are animated. 
+- `line1Title`: e.g. the course code (not animated)
+- `line2Title`: e.g. what this course is about in 1-2 terms (not animated; first letter of each term is given a different highlight)
+- `line3Title`: e.g. what this course is about in more detail (this line is animated and appears being *typed out* one letter at a time - unless you view the transcript in Safari which doesn't implement this particular CSS feature)
 
 You can also opt to not set one or more of the titles, in this case remove the variable from `_config.yml`.
 
