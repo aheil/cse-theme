@@ -1,8 +1,29 @@
 <header class="skin">
   <div>
-    <span class="boxing1">CSE1500</span>
+    <span class="boxing1">{{ site.line1Title }}</span>
     <br />
+    {% assign charArray = site.line2Title | split: "" %}
+    {% assign startingLetter = 1 %}
+    {%- for char in charArray -%}
+      {%- if startingLetter == 1 -%}
+        <span class="boxing2 boxing3">
+      {%- else -%}
+        <span class="boxing2">
+      {%- endif -%}
+
+      {% if char == " " %}
+        &nbsp;
+        {% assign startingLetter = 1 %}
+      {% else %}
+        {{char}}
+        {% assign startingLetter = 2 %}
+      {% endif %}
+      </span>
+    {%- endfor -%}
+
+    <!--
     <span class="boxing2 boxing3">W</span><span class="boxing2">e</span><span class="boxing2">b</span><span class="boxing2"> &nbsp;</span><span class="boxing2 boxing3">T</span><span class="boxing2">e</span><span class="boxing2">c</span><span class="boxing2">h</span><span class="boxing2">n</span><span class="boxing2">o</span><span class="boxing2">l</span><span class="boxing2">o</span><span class="boxing2">g</span><span class="boxing2">y</span>
+    -->
     <br />
     <span class="preview"></span>
   </div>

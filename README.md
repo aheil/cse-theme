@@ -17,11 +17,12 @@ Your repo should have the following files and folders in the root folder:
 ## Table of Contents <!-- omit in toc -->
 
 - [Installation](#installation)
-- [Customization in `_config.yml`](#customization-in-_configyml)
+- [Customization happens via settings in `_config.yml`](#customization-happens-via-settings-in-_configyml)
+  - [Course titles](#course-titles)
   - [Color themes](#color-themes)
   - [Code color theme](#code-color-theme)
   - [Header image](#header-image)
-  - [Footer imagery](#footer-imagery)
+  - [Footer image](#footer-image)
   - [Warning](#warning)
   - [Exam](#exam)
 - [Responsiveness](#responsiveness)
@@ -47,9 +48,22 @@ remote_theme: chauff/cse-theme
 
 The `baseurl` is used to set the root of the website (minus the hostname). The `remote_theme` has the format `GITHUBUSERNAME/REPO` and should be left as-is, unless the `cse-theme` repo was forked. That's it. Once the `_config.yml` file is added to the repository of choice this Jekyll theme will apply to it. 
 
-## Customization in `_config.yml`
+## Customization happens via settings in `_config.yml`
 
 This section walks through the site-wide options that can be set in the `_config.yml` file.
+
+### Course titles
+
+Four types of titles can be set:
+- `line1Title`: e.g. `CSE1500`   
+- `line2Title`: e.g. `Web Technology` (first letter of each term is given a different highlight)
+- `line3Title`: e.g. `Node.js, JavaScript, CSS, HTTP, HTML` (this line is animated - unless you view the transcript on Safari)
+- `tabTitle`: e.g. `CSE1500 TU Delft course materials` (this is the browser tab title).
+
+You can also opt to not set one or more of the titles, in this case remove the variable from `_config.yml`.
+
+![cse-theme preview](/img/screenshot-title.png)
+
 
 ### Color themes
 
@@ -85,7 +99,7 @@ Set the code color theme (`cssCodeTheme`), prepackaged are `monokai`, `dracula` 
 
 Set the header image (`headerImage`). Included already are two variants,  `../images/tudelft_ewi.jpg` shows TU Delft's iconic EWI building and `../images/tudelft_ewi_bw.jpg` is its grayscale variant.
 
-### Footer imagery
+### Footer image
 
 Set the footer image (`footerImage`). Included already is a typical Dutch scene ([by day](assets/images/tudelft-ewi-light-footer.svg) and [by night](assets/images/tudelft-ewi-dark-footer.svg)). The imagery has been created by [David Maxwell](https://www.dmax.org.uk/)!
 

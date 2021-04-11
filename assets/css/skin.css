@@ -35,6 +35,11 @@ nav {
   height: auto;
 }
 
+#smallnav {
+  position: fixed;
+  
+}
+
 footer {
   display: grid;
   background-color: var(--footer-background);
@@ -194,118 +199,18 @@ footer a::before {
 }
 
 .skin .preview::after {
-  content: "Node.js, JavaScript, CSS, HTTP, HTML";
+  content: "{{site.line3Title}}";
   animation: preview 4s linear 1;
   animation-fill-mode: forwards;
 }
 
 @keyframes preview {
-  from {
-    content: "N";
-  }
-  3% {
-    content: "No";
-  }
-  6% {
-    content: "Nod";
-  }
-  9% {
-    content: "Node";
-  }
-  12% {
-    content: "Node.";
-  }
-  15% {
-    content: "Node.j";
-  }
-  18% {
-    content: "Node.js";
-  }
-  21% {
-    content: "Node.js,";
-  }
-  24% {
-    content: "Node.js, ";
-  }
-  27% {
-    content: "Node.js, J";
-  }
-  30% {
-    content: "Node.js, Ja";
-  }
-  33% {
-    content: "Node.js, Jav";
-  }
-  36% {
-    content: "Node.js, Java";
-  }
-  39% {
-    content: "Node.js, JavaS";
-  }
-  42% {
-    content: "Node.js, JavaSc";
-  }
-  45% {
-    content: "Node.js, JavaScr";
-  }
-  48% {
-    content: "Node.js, JavaScri";
-  }
-  51% {
-    content: "Node.js, JavaScrip";
-  }
-  54% {
-    content: "Node.js, JavaScript";
-  }
-  57% {
-    content: "Node.js, JavaScript,";
-  }
-  60% {
-    content: "Node.js, JavaScript, ";
-  }
-  63% {
-    content: "Node.js, JavaScript, C";
-  }
-  66% {
-    content: "Node.js, JavaScript, CS";
-  }
-  69% {
-    content: "Node.js, JavaScript, CSS";
-  }
-  72% {
-    content: "Node.js, JavaScript, CSS,";
-  }
-  75% {
-    content: "Node.js, JavaScript, CSS, ";
-  }
-  78% {
-    content: "Node.js, JavaScript, CSS, H";
-  }
-  81% {
-    content: "Node.js, JavaScript, CSS, HT";
-  }
-  84% {
-    content: "Node.js, JavaScript, CSS, HTT";
-  }
-  87% {
-    content: "Node.js, JavaScript, CSS, HTTP";
-  }
-  89% {
-    content: "Node.js, JavaScript, CSS, HTTP,";
-  }
-  91% {
-    content: "Node.js, JavaScript, CSS, HTTP, ";
-  }
-  93% {
-    content: "Node.js, JavaScript, CSS, HTTP, H";
-  }
-  95% {
-    content: "Node.js, JavaScript, CSS, HTTP, HT";
-  }
-  97% {
-    content: "Node.js, JavaScript, CSS, HTTP, HTM";
-  }
-  to {
-    content: "Node.js, JavaScript, CSS, HTTP, HTML";
-  }
+
+  {% assign cuts = 100.0 | divided_by: site.line3Title.size %}
+  {% for counter in (0..site.line3Title.size) %}
+    {% assign percentage = counter | times: cuts %}
+    {{percentage}}% {
+      content: "{{ site.line3Title| slice: 0, counter }}"
+    }
+  {% endfor %}
 }
