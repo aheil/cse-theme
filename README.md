@@ -18,7 +18,7 @@ Your repo should have the following files and folders in the root folder:
 
 - [Installation](#installation)
 - [Customization happens via settings in `_config.yml`](#customization-happens-via-settings-in-_configyml)
-  - [Course titles](#course-titles)
+  - [Course title and tagline](#course-title-and-tagline)
   - [Color themes](#color-themes)
   - [Code color theme](#code-color-theme)
   - [Header image](#header-image)
