@@ -55,9 +55,9 @@ This section walks through the site-wide options that can be set in the `_config
 ### Course titles
 
 Four types of titles can be set:
-- `line1Title`: e.g. `CSE1500`   
-- `line2Title`: e.g. `Web Technology` (first letter of each term is given a different highlight)
-- `line3Title`: e.g. `Node.js, JavaScript, CSS, HTTP, HTML` (this line is animated - unless you view the transcript on Safari)
+- `line1Title`: e.g. the course code `CSE1500`
+- `line2Title`: e.g. what this course is about in 1-2 terms `Web Technology` (first letter of each term is given a different highlight)
+- `line3Title`: e.g. what this course is about in more detail `Node.js, JavaScript, CSS, HTTP, HTML` (this line is animated - unless you view the transcript on Safari)
 - `tabTitle`: e.g. `CSE1500 TU Delft course materials` (this is the browser tab title).
 
 You can also opt to not set one or more of the titles, in this case remove the variable from `_config.yml`.
