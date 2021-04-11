@@ -46,7 +46,7 @@ baseurl: "/your-repository-name/"
 remote_theme: chauff/cse-theme
 ```
 
-The `baseurl` is used to set the root of the website (minus the hostname). The `remote_theme` has the format `GITHUBUSERNAME/REPO` and should be left as-is, unless the `cse-theme` repo was forked. That's it. Once the `_config.yml` file is added to the repository of choice this Jekyll theme will apply to it. 
+The `baseurl` is used to set the root of the website (minus the hostname). The `remote_theme` has the format `GITHUBUSERNAME/REPO` and should be left as-is, unless the `cse-theme` repo was forked. That's it. Once the `_config.yml` file is added to the repository of choice this Jekyll theme will apply to it. As a starting point, you can use this repository's [_config.yml](_config.yml) file.
 
 ## Customization happens via settings in `_config.yml`
 
