@@ -36,8 +36,36 @@ nav {
 }
 
 #smallnav {
+  z-index: 1000;
   position: fixed;
-  
+  bottom: 15px;
+  left: 15px;
+  width: 25px;
+  height: 35px;
+  background-color: var(--nav-link-color);
+  background-image: var(--smallnav-arrow);
+  background-size: cover;
+  border-radius: 5px;
+  border: 2px solid var(--popup-color);
+  box-shadow: 2px 2px 2px 1px var(--popup-color);
+  color: var(--nav-foreground);
+}
+
+#smallnav ul {
+  visibility: hidden;
+}
+
+#smallnav:hover {
+  width: 200px;
+  height: 250px;
+  background-image: none;
+  overflow: scroll;
+  font-size: 75%;
+  background-color: var(--smallnav-background);
+}
+
+#smallnav:hover ul {
+  visibility: visible;
 }
 
 footer {

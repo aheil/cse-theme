@@ -1,5 +1,7 @@
 :root {
   --nav-background: #778da9;
+  --smallnav-background: rgba(119, 141, 169, 0.8);
+  --smallnav-arrow: url("../images/arrow-up-white.png");
   --nav-foreground: #e0e1dd;
   --nav-link-color: #1b263b;
   --nav-list-icon: "✪ ";
