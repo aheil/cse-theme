@@ -14,6 +14,8 @@ Your repo should have the following files and folders in the root folder:
 - folders: `_lectures`, `_practicals`, `_extras`
 - files: `index.md`, `404.html`, `_config.yml`
 
+**Important: when you make changes to the configuration file (e.g. trying out a new header image) it may look like these changes are not reflected on your site, even a few minutes after updating the configurations on GitHub. If you experience this, try to open the site in a private browser window! Depending on the browser, agressive caching may be employed and although the css/image/js files have changed on the server, the browser simply looks up cached versions of these files.**
+
 ## Table of Contents <!-- omit in toc -->
 
 - [Installation](#installation)
