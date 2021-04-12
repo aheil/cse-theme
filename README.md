@@ -27,6 +27,7 @@ Your repo should have the following files and folders in the root folder:
   - [Footer image](#footer-image)
   - [Warning](#warning)
   - [Exam](#exam)
+  - [Small navigation bar](#small-navigation-bar)
 - [Responsiveness](#responsiveness)
 - [Course content](#course-content)
   - [Course information](#course-information)
@@ -129,6 +130,22 @@ Decide whether to show a warning of some type. If yes, set the `warning` string.
 During the exam, you may want to remove access to the lecture materials without setting the GitHub repo to private. If the setting `exam: false` is changed to `exam: true`, a JavaScript snippet is triggered which places an opaque `<div>` across the entire viewport with the text *Exam time*. Note though that this can easily be circumvented by disabling JavaScript ... it is not more than a reminder that the lecture materials should not be accessed. It typically takes 2-3 minutes for this change in the configuration file to take effect when reloading the page (as on GitHub's end the page is rebuilt).
 
 ![cse-theme preview](/img/screenshot-exam.png)
+
+### Small navigation bar
+
+If a transcript is very long, switching to the next transcript can require a lot of scrolling (to scroll up and view the navigation bar again). For this reason the setting `smallNavbar=true` adds a small icon at the bottom left of the screen that pops up a small semi-transparent navigation pane when hovering over the icon with the mouse. It has the same structure/content as the original navigation bar. 
+
+The screenshots above were all made with the setting `smallNavbar=false`. 
+
+Here is how the icon looks like when the mouse does not hover over it:
+
+![cse-theme small navigation bar](/img/screenshot-smallnav1.png)
+
+And here is the mouse hovering over the icon:
+
+![cse-theme small navigation bar](/img/screenshot-smallnav2.png)
+
+
 
 ## Responsiveness
 

@@ -9,31 +9,7 @@
 
   <main>
     <nav class="skin">
-      <ul>
-        <li><a href="{{ "/" | relative_url}}">Course information</a></li>
-        <li class="nothing">---</li>
-        <li class="nothing">Assignments &amp; Practicing</li>
-        <li class="nothing">---</li>
-        {% assign sorted_practicals = site.practicals | sort:"ordering" %}
-        {% for practical in sorted_practicals %}
-        <li>
-          <a href="{{ practical.url | relative_url}}">
-            {{ practical.linkname }}
-          </a>
-        </li>
-        {% endfor %}
-        <li class="nothing">---</li>
-        <li class="nothing">Lectures</li>
-        <li class="nothing">---</li>
-        {% assign sorted_lectures = site.lectures | sort:"ordering" %}
-        {% for lecture in sorted_lectures %}
-        <li>
-          <a href="{{ lecture.url | relative_url}}">
-            {{ lecture.linkname }}
-          </a>
-        </li>
-        {% endfor %}
-      </ul>
+      {%- include nav.html -%}
 
       <ul class="text-highlighted-info">
         <li><small>The course notes can be <span class="text-highlighted-highlight">✎ highlighted</span> by holding <kbd>h</kbd> and selecting
@@ -70,33 +46,11 @@
     <button id="popup-close">Save</button>
   </div>
 
+  {% if site.smallNavbar == true %}
   <div id="smallnav"  class="skin">
-      <ul>
-        <li><a href="{{ "/" | relative_url}}">Course information</a></li>
-        <li class="nothing">---</li>
-        <li class="nothing">Assignments &amp; Practicing</li>
-        <li class="nothing">---</li>
-        {% assign sorted_practicals = site.practicals | sort:"ordering" %}
-        {% for practical in sorted_practicals %}
-        <li>
-          <a href="{{ practical.url | relative_url}}">
-            {{ practical.linkname }}
-          </a>
-        </li>
-        {% endfor %}
-        <li class="nothing">---</li>
-        <li class="nothing">Lectures</li>
-        <li class="nothing">---</li>
-        {% assign sorted_lectures = site.lectures | sort:"ordering" %}
-        {% for lecture in sorted_lectures %}
-        <li>
-          <a href="{{ lecture.url | relative_url}}">
-            {{ lecture.linkname }}
-          </a>
-        </li>
-        {% endfor %}
-      </ul>
+    {%- include nav.html -%}
   </div>
+  {% endif %}
 
   <script type="text/javascript" src="{{ "/assets/javascript/TextHighlighter.js" | relative_url}}"></script>
   <script type="text/javascript" src="{{ "/assets/javascript/utilsHighlighter.js" | relative_url}}"></script>

@@ -14,6 +14,7 @@ line3Title: Node.js, JavaScript, CSS, HTTP, HTML
 tabTitle: CSE1500 TU Delft course materials.
 warning: The materials are currently being updated for the 2020/21 course edition. Some content may still change.
 exam: false
+smallNavbar: true
 
 footerImage: ../images/tudelft-ewi-dark-footer.svg #the light-footer goes well with a light theme, the dark footer with a dark theme
 headerImage: ../images/tudelft_ewi_bw.jpg
