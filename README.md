@@ -133,9 +133,9 @@ During the exam, you may want to remove access to the lecture materials without 
 
 ### Small navigation bar
 
-If a transcript is very long, switching to the next transcript can require a lot of scrolling (to scroll up and view the navigation bar again). For this reason the setting `smallNavbar=true` adds a small icon at the bottom left of the screen that pops up a small semi-transparent navigation pane when hovering over the icon with the mouse. It has the same structure/content as the original navigation bar. 
+If a transcript is very long, switching to the next transcript can require a lot of scrolling (to scroll up and view the navigation bar again). For this reason the setting `smallNavbar: true` adds a small icon at the bottom left of the screen that pops up a small semi-transparent navigation pane when hovering over the icon with the mouse. It has the same structure/content as the original navigation bar. 
 
-The screenshots above were all made with the setting `smallNavbar=false`. 
+The screenshots above were all made with the setting `smallNavbar: false`. 
 
 Here is how the icon looks like when the mouse does not hover over it:
 
