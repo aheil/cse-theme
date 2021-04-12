@@ -103,7 +103,12 @@ Set the code color theme (`cssCodeTheme`), prepackaged are `monokai`, `dracula` 
 
 Set the header image (`headerImage`). Included already are two variants,  `../images/tudelft_ewi.jpg` shows TU Delft's iconic EWI building and `../images/tudelft_ewi_bw.jpg` is its grayscale variant.
 
-**Important: if you are using your own header image, the easiest option is to use an absolute URL (starting with `http://` or `https://`). If you are using a relative URL, you need to keep track of the folder structure: for instance, you may want to create a folder `images` in your repository and add your header/footer images there. Then, `headerImage` should be set to `../../images/your-image.png` as per the theme, the CSS file that contains the rule to load the header image is in `assets/css/skin.css`. Thus, two directories have to be traversed to reach a directory that is in your repository's root folder. → Absolute URLs are easier to deal with!**
+**Important**: if you are using your own header image, the easiest option is to use an absolute URL (starting with `http://` or `https://`). If you are using a relative URL, you need to keep track of the folder structure: for instance, you may want to create a folder `images` in your repository and add your header/footer images there. Then, `headerImage` should be set to `../../images/your-image.png` as per the theme, the CSS file that contains the rule to load the header image is in `assets/css/skin.css`. Thus, two directories have to be traversed to reach a directory that is in your repository's root folder.
+
+The best way to figure out what went wrong with your relative URL setting is to use your browser's *Inspect element* option to determine the absolute path that was derived from your relative URL. Below is a screenshot of what to look out for (using Firefox) when inspecting the `<div>` holding the background image:
+
+![cse-theme preview](/img/screenshot-inspector.png)
+
 
 ### Footer image
 
