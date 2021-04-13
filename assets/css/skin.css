@@ -57,6 +57,16 @@ nav {
   z-index: 999;
 }
 
+#timeSpent div::before {
+  content: "HH:MM:SS";
+  position: absolute;
+  font-size: 40%;
+  font-style: italic;
+  color: var(--nav-link-color);
+  top: 0;
+  left: 0;
+}
+
 #timeSpent div {
   visibility: hidden;
 }

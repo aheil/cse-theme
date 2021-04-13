@@ -162,7 +162,7 @@ idleTimeout: 60
 
 If `timeSpent: true` is set, a second icon appears next to the small navigation icon with a clock (as seen in the screenshot above). Hovering over it reveals the amount of time spent on the particular page:
 
-![cse-theme small time spent](/img/screenshot-timeSpent.png)
+![cse-theme small time spent](/img/screenshot-timespent.png)
 
 The `idleTimeout` setting is the number of seconds of idling that is required for the timer to stop. By default, this is 60 seconds. Idling occurs when (1) the page is not in focus or (2) the page is in focus but no mouse/keyboard/scroll activity is detected. 
 
