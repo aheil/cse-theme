@@ -160,7 +160,7 @@ timeSpent: true
 idleTimeout: 60
 ```
 
-If `timeSpent: true` is set, a second icon appears next to the small navigation icon with a clock (as seen in the screenshot above). Hovering over it reveals the amount of time spent on the particular page:
+If `timeSpent: true` is set, a second icon appears next to the small navigation icon with a clock (as seen in the two screenshots above). Hovering over it reveals the amount of time spent on the particular page:
 
 ![cse-theme small time spent](/img/screenshot-timespent.png)
 
