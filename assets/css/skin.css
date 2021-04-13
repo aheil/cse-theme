@@ -58,7 +58,7 @@ nav {
 }
 
 #timeSpent div::before {
-  content: "HH:MM:SS";
+  content: "Time spent on this page (HH:MM:SS)";
   position: absolute;
   font-size: 40%;
   font-style: italic;
@@ -90,6 +90,7 @@ nav {
 
 #timeSpent:hover {
   height: 50px;
+  width: 225px;
   font-size: 150%;
   display: flex;
   justify-content: center;
