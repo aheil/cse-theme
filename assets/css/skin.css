@@ -109,7 +109,7 @@ footer {
   align-items: center;
   justify-items: center;
   white-space: nowrap;
-  z-index: 1000;
+  z-index: 900;
   position: relative;
 }
 
