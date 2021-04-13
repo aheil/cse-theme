@@ -43,14 +43,14 @@ Your repo should have the following files and folders in the root folder:
 
 ## Installation
 
-This repository does not have to be forked or cloned. It can be used as [remote theme](https://github.blog/2017-11-29-use-any-theme-with-github-pages/). All that is needed in the repository to apply the theme to is to copy `_config.yml` and `404.html` to your repository's root directory and add the following two lines to `_config.yml`:
+This repository does not have to be forked or cloned. It can be used as [remote theme](https://github.blog/2017-11-29-use-any-theme-with-github-pages/). All that is needed in the repository to apply the theme to is to copy [_config.yml](_config.yml) and [404.html](404.html) to your repository's root directory and add the following two lines to `_config.yml`:
 
 ```
 baseurl: "/your-repository-name/"
 remote_theme: chauff/cse-theme
 ```
 
-The `baseurl` is used to set the root of the website (minus the hostname). The `remote_theme` has the format `GITHUBUSERNAME/REPO` and should be left as-is, unless the `cse-theme` repo was forked. That's it. Once the `_config.yml` file is added to the repository of choice this Jekyll theme will apply to it. As a starting point, you can use this repository's [_config.yml](_config.yml) file. While at it, you can also copy [404.html](404.html).
+The `baseurl` is used to set the root of the website (minus the hostname). The `remote_theme` has the format `GITHUBUSERNAME/REPO` and should be left as-is, unless the `cse-theme` repo was forked. That's it. Once the `_config.yml` file is added to the repository of choice this Jekyll theme will apply to it. 
 
 ## Customization happens via settings in `_config.yml`
 
@@ -106,7 +106,7 @@ Set the header image (`headerImage`). Included already are two variants,  `../im
 
 **Important**: if you are using your own header image, the easiest option is to use an absolute URL (starting with `http://` or `https://`). If you are using a relative URL, you need to keep track of the folder structure: for instance, you may want to create a folder `images` in your repository and add your header/footer images there. Then, `headerImage` should be set to `../../images/your-image.png` as per the theme, the CSS file that contains the rule to load the header image is in `assets/css/skin.css`. Thus, two directories have to be traversed to reach a directory that is in your repository's root folder.
 
-The best way to figure out what went wrong with your relative URL setting is to use your browser's *Inspect element* option to determine the absolute path that was derived from your relative URL. Below is a screenshot of what to look out for (using Firefox) when inspecting the `<div>` holding the background image:
+The best way to figure out what went wrong with your relative URL setting is to use your browser's *Inspect element* option to determine the absolute path that was derived from your relative URL. Below is a screenshot of what to look out for (using Firefox) when inspecting the `<header>` holding the background image:
 
 ![cse-theme preview](/img/screenshot-inspector.png)
 
