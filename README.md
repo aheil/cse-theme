@@ -8,7 +8,7 @@ This Jekyll theme is built on top of [Minima](https://github.com/jekyll/minima),
 
 It should be possible to develop the lecture materials entirely in markdown, without regard for the `cse-theme`.
 
-**Spoilers**, **highlighting** and **note-taking** are built into the theme. All highlights and notes are stored in the browser's localStorage.
+**Spoilers**, **highlighting**, **note-taking** and **timing of active reading** are built into the theme. All information is stored in the browser's localStorage.
 
 Your repo should have the following files and folders in the root folder:
 - folders: `_lectures`, `_practicals`, `_extras`
@@ -28,6 +28,7 @@ Your repo should have the following files and folders in the root folder:
   - [Warning](#warning)
   - [Exam](#exam)
   - [Small navigation bar](#small-navigation-bar)
+  - [Time spent (or: active reading)](#time-spent-or-active-reading)
 - [Responsiveness](#responsiveness)
 - [Course content](#course-content)
   - [Course information](#course-information)
@@ -150,7 +151,24 @@ And here is the mouse hovering over the icon:
 
 ![cse-theme small navigation bar](/img/screenshot-smallnav2.png)
 
+### Time spent (or: active reading)
 
+In order to provide some feedback on the amount of time spent on each transcript, the following setting is available:
+
+```
+timeSpent: true
+idleTimeout: 60
+```
+
+If `timeSpent: true` is set, a second icon appears next to the small navigation icon with a clock (as seen in the screenshot above). Hovering over it reveals the amount of time spent on the particular page:
+
+![cse-theme small time spent](/img/screenshot-timeSpent.png)
+
+The `idleTimeout` setting is the number of seconds of idling that is required for the timer to stop. By default, this is 60 seconds. Idling occurs when (1) the page is not in focus or (2) the page is in focus but no mouse/keyboard/scroll activity is detected. 
+
+*This is only a crude approximation of time spent on each transcript of course. It provides nothing more than an indication.*
+
+The timer information is stored in the browser's localStorage.
 
 ## Responsiveness
 

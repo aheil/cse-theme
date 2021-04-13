@@ -35,7 +35,7 @@ nav {
   height: auto;
 }
 
-#smallnav {
+#smallnav, #timeSpent {
   z-index: 1000;
   position: fixed;
   bottom: 15px;
@@ -51,17 +51,39 @@ nav {
   color: var(--nav-foreground);
 }
 
+#timeSpent {
+  left: 55px;
+  background-image: var(--timespent-clock);
+  z-index: 999;
+}
+
+#timeSpent div {
+  visibility: hidden;
+}
+
+#timeSpent:hover div {
+  visibility: visible;
+}
+
 #smallnav ul {
   visibility: hidden;
 }
 
-#smallnav:hover {
+#smallnav:hover, #timeSpent:hover {
   width: 200px;
   height: 250px;
   background-image: none;
   overflow: scroll;
   font-size: 75%;
   background-color: var(--smallnav-background);
+}
+
+#timeSpent:hover {
+  height: 50px;
+  font-size: 150%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #smallnav:hover ul {

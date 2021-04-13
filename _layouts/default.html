@@ -52,6 +52,13 @@
   </div>
   {% endif %}
 
+  {% if site.timeSpent == true %}
+  <div id="timeSpent" class="skin">
+    <div></div> <!-- time is shown here -->
+  </div>
+  <script type="text/javascript" src="{{ "/assets/javascript/timeSpent.js" | relative_url}}"></script>
+  {% endif %}
+
   <script type="text/javascript" src="{{ "/assets/javascript/TextHighlighter.js" | relative_url}}"></script>
   <script type="text/javascript" src="{{ "/assets/javascript/utilsHighlighter.js" | relative_url}}"></script>
 
