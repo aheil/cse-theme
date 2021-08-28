@@ -79,8 +79,8 @@ nav {
   visibility: hidden;
 }
 
-#smallnav:hover, #timeSpent:hover {
-  width: 200px;
+#smallnav:hover {
+  width: auto;
   height: 250px;
   background-image: none;
   overflow: scroll;
@@ -95,6 +95,8 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: var(--smallnav-background);
+  background-image: none;
 }
 
 #smallnav:hover ul {
