@@ -33,7 +33,7 @@
   padding: 10px;
   padding-left: 80px;
   font-size: 110%;
-  height: 100px;
+  height: auto;
   color: var(--warning-font-color);
   position: relative;
   justify-content: center;
@@ -46,7 +46,7 @@
   content: "";
   display: inline-block;
   width: 60px;
-  height: 99px;
+  height: 100%;
   background-color: var(--warning-bg-dark);
   position: absolute;
   top: 0px;

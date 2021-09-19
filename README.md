@@ -26,7 +26,6 @@ Your repo should have the following files and folders in the root folder:
   - [Header image](#header-image)
   - [Footer image](#footer-image)
   - [Warning](#warning)
-  - [Exam](#exam)
   - [Small navigation bar](#small-navigation-bar)
   - [Time spent (or: active reading)](#time-spent-or-active-reading)
 - [Responsiveness](#responsiveness)
@@ -130,12 +129,6 @@ The night-time image goes well with a dark theme:
 Decide whether to show a warning of some type. If yes, set the `warning` string. This is one *global* warning string for the site. Whether or not a particular page shows the warning is determined by setting `warning: true` in each individual page's front matter (explained below in more detail). My standard use case is the updating of lecture materials throughout the year. Each page that has not been updated yet for the new year contains the warning. The warning appears just above the start of the page's content:
 
 ![cse-theme preview](/img/screenshot-warning.png)
-
-### Exam
-
-During the exam, you may want to remove access to the lecture materials without setting the GitHub repo to private. If the setting `exam: false` is changed to `exam: true`, a JavaScript snippet is triggered which places an opaque `<div>` across the entire viewport with the text *Exam time*. Note though that this can easily be circumvented by disabling JavaScript ... it is not more than a reminder that the lecture materials should not be accessed. It typically takes 2-3 minutes for this change in the configuration file to take effect when reloading the page (as on GitHub's end the page is rebuilt).
-
-![cse-theme preview](/img/screenshot-exam.png)
 
 ### Small navigation bar
 
