@@ -44,4 +44,12 @@
   --warning-font-color: #f1f3de;
   --spoiler-main: #006494;
   --spoiler-text: #eee;
+  --debug-bg-light: #c3cedf;
+  --debug-bg-dark: #415a77;
+  --debug-font-color: #00456d;
+  --debug-side-font-color: #f1f3de;
+  --optional-bg-light: #edc0c8;
+  --optional-bg-dark: #ee2c50;
+  --optional-font-color: #0d1b2a;
+  --optional-side-font-color: #f1f3de;
 }

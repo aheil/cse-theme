@@ -16,12 +16,12 @@
   --content-list-icon: "✪ ";
   --content-hX-underline: #90e0ef;
   --content-hX-color: #90e0ef;
-  --content-link-color: #FF5252;
+  --content-link-color: #ff5252;
   --content-table-bg-header: #3b3b5a;
   --content-table-fg-header: white;
   --content-table-row-alt: #a3ced6;
   --content-link-before-icon: "⇗ ";
-  --content-summary: #FF5252;
+  --content-summary: #ff5252;
   --content-details: #ef9a9a;
   --content-background: white;
   --content-text-color: #212121;
@@ -44,4 +44,12 @@
   --warning-font-color: #03045e;
   --spoiler-main: #ddd;
   --spoiler-text: #03045e;
+  --debug-bg-light: #cdeef4;
+  --debug-bg-dark: #343788;
+  --debug-font-color: #343788;
+  --debug-side-font-color: #cdeef4;
+  --optional-bg-light: #fee4e4;
+  --optional-bg-dark: #ff5252;
+  --optional-font-color: #343788;
+  --optional-side-font-color: #cdeef4;
 }

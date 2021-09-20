@@ -11,6 +11,7 @@ It should be possible to develop the lecture materials entirely in markdown, wit
 **Spoilers**, **highlighting**, **note-taking** and **timing of active reading** are built into the theme. All information is stored in the browser's localStorage.
 
 Your repo should have the following files and folders in the root folder:
+
 - folders: `_lectures`, `_practicals`, `_extras`
 - files: `index.md`, `404.html`, `_config.yml`
 
@@ -33,7 +34,7 @@ Your repo should have the following files and folders in the root folder:
   - [Course information](#course-information)
   - [Adding a lecture](#adding-a-lecture)
   - [Adding practicals](#adding-practicals)
-  - [Figure captions, spoilers and questions](#figure-captions-spoilers-and-questions)
+  - [Figure captions, debug information, spoilers, optional content and questions](#figure-captions-debug-information-spoilers-optional-content-and-questions)
 - [Other information](#other-information)
   - [Adding additional (analytics) scripts/content](#adding-additional-analytics-scriptscontent)
   - [CSS split](#css-split)
@@ -42,14 +43,14 @@ Your repo should have the following files and folders in the root folder:
 
 ## Installation
 
-This repository does not have to be forked or cloned. It can be used as [remote theme](https://github.blog/2017-11-29-use-any-theme-with-github-pages/). All that is needed in the repository to apply the theme to is to copy [_config.yml](_config.yml) and [404.html](404.html) to your repository's root directory and add the following two lines to `_config.yml`:
+This repository does not have to be forked or cloned. It can be used as [remote theme](https://github.blog/2017-11-29-use-any-theme-with-github-pages/). All that is needed in the repository to apply the theme to is to copy [\_config.yml](_config.yml) and [404.html](404.html) to your repository's root directory and add the following two lines to `_config.yml`:
 
 ```
 baseurl: "/your-repository-name/"
 remote_theme: chauff/cse-theme
 ```
 
-The `baseurl` is used to set the root of the website (minus the hostname). The `remote_theme` has the format `GITHUBUSERNAME/REPO` and should be left as-is, unless the `cse-theme` repo was forked. That's it. Once the `_config.yml` file is added to the repository of choice this Jekyll theme will apply to it. 
+The `baseurl` is used to set the root of the website (minus the hostname). The `remote_theme` has the format `GITHUBUSERNAME/REPO` and should be left as-is, unless the `cse-theme` repo was forked. That's it. Once the `_config.yml` file is added to the repository of choice this Jekyll theme will apply to it.
 
 ## Customization happens via settings in `_config.yml`
 
@@ -59,15 +60,15 @@ This section walks through the site-wide options that can be set in the `_config
 
 The browser (tab) title is set via `tabTitle`.
 
-Three taglines can be set, which differ in size/coloring and whether they are animated. 
+Three taglines can be set, which differ in size/coloring and whether they are animated.
+
 - `line1Title`: e.g. the course code (not animated)
 - `line2Title`: e.g. what this course is about in 1-2 terms (not animated; first letter of each term is given a different highlight)
-- `line3Title`: e.g. what this course is about in more detail (this line is animated and appears being *typed out* one letter at a time - unless you view the transcript in Safari which doesn't implement this particular CSS feature)
+- `line3Title`: e.g. what this course is about in more detail (this line is animated and appears being _typed out_ one letter at a time - unless you view the transcript in Safari which doesn't implement this particular CSS feature)
 
 You can also opt to not set one or more of the titles, in this case remove the variable from `_config.yml`.
 
 ![cse-theme preview](/img/screenshot-title.png)
-
 
 ### Color themes
 
@@ -101,14 +102,13 @@ Set the code color theme (`cssCodeTheme`), prepackaged are `monokai`, `dracula` 
 
 ### Header image
 
-Set the header image (`headerImage`). Included already are two variants,  `../images/tudelft_ewi.jpg` shows TU Delft's iconic EWI building and `../images/tudelft_ewi_bw.jpg` is its grayscale variant.
+Set the header image (`headerImage`). Included already are two variants, `../images/tudelft_ewi.jpg` shows TU Delft's iconic EWI building and `../images/tudelft_ewi_bw.jpg` is its grayscale variant.
 
 **Important**: if you are using your own header image, the easiest option is to use an absolute URL (starting with `http://` or `https://`). If you are using a relative URL, you need to keep track of the folder structure: for instance, you may want to create a folder `images` in your repository and add your header/footer images there. Then, `headerImage` should be set to `../../images/your-image.png` as per the theme, the CSS file that contains the rule to load the header image is in `assets/css/skin.css`. Thus, two directories have to be traversed to reach a directory that is in your repository's root folder.
 
-The best way to figure out what went wrong with your relative URL setting is to use your browser's *Inspect element* option to determine the absolute path that was derived from your relative URL. Below is a screenshot of what to look out for (using Firefox) when inspecting the `<header>` holding the background image:
+The best way to figure out what went wrong with your relative URL setting is to use your browser's _Inspect element_ option to determine the absolute path that was derived from your relative URL. Below is a screenshot of what to look out for (using Firefox) when inspecting the `<header>` holding the background image:
 
 ![cse-theme preview](/img/screenshot-inspector.png)
-
 
 ### Footer image
 
@@ -126,15 +126,15 @@ The night-time image goes well with a dark theme:
 
 ### Warning
 
-Decide whether to show a warning of some type. If yes, set the `warning` string. This is one *global* warning string for the site. Whether or not a particular page shows the warning is determined by setting `warning: true` in each individual page's front matter (explained below in more detail). My standard use case is the updating of lecture materials throughout the year. Each page that has not been updated yet for the new year contains the warning. The warning appears just above the start of the page's content:
+Decide whether to show a warning of some type. If yes, set the `warning` string. This is one _global_ warning string for the site. Whether or not a particular page shows the warning is determined by setting `warning: true` in each individual page's front matter (explained below in more detail). My standard use case is the updating of lecture materials throughout the year. Each page that has not been updated yet for the new year contains the warning. The warning appears just above the start of the page's content:
 
 ![cse-theme preview](/img/screenshot-warning.png)
 
 ### Small navigation bar
 
-If a transcript is very long, switching to the next transcript can require a lot of scrolling (to scroll up and view the navigation bar again). For this reason the setting `smallNavbar: true` adds a small icon at the bottom left of the screen that pops up a small semi-transparent navigation pane when hovering over the icon with the mouse. It has the same structure/content as the original navigation bar. 
+If a transcript is very long, switching to the next transcript can require a lot of scrolling (to scroll up and view the navigation bar again). For this reason the setting `smallNavbar: true` adds a small icon at the bottom left of the screen that pops up a small semi-transparent navigation pane when hovering over the icon with the mouse. It has the same structure/content as the original navigation bar.
 
-The screenshots above were all made with the setting `smallNavbar: false`. 
+The screenshots above were all made with the setting `smallNavbar: false`.
 
 Here is how the icon looks like when the mouse does not hover over it:
 
@@ -157,9 +157,9 @@ If `timeSpent: true` is set, a second icon appears next to the small navigation 
 
 ![cse-theme small time spent](/img/screenshot-timespent.png)
 
-The `idleTimeout` setting is the number of seconds of idling that is required for the timer to stop. By default, this is 60 seconds. Idling occurs when (1) the page is not in focus or (2) the page is in focus but no mouse/keyboard/scroll activity is detected. 
+The `idleTimeout` setting is the number of seconds of idling that is required for the timer to stop. By default, this is 60 seconds. Idling occurs when (1) the page is not in focus or (2) the page is in focus but no mouse/keyboard/scroll activity is detected.
 
-*This is only a crude approximation of time spent on each transcript of course. It provides nothing more than an indication.*
+_This is only a crude approximation of time spent on each transcript of course. It provides nothing more than an indication._
 
 The timer information is stored in the browser's localStorage.
 
@@ -168,7 +168,6 @@ The timer information is stored in the browser's localStorage.
 The design has basic responsiveness, it looks decent across large screens, tablets and phones.
 
 ![cse-theme preview](/img/screenshot-mobile.png)
-
 
 ## Course content
 
@@ -190,17 +189,16 @@ linkname: HTTP
 ordering: 4
 warning: true
 ---
-
 OTHER CONTENT
 ```
 
-The `layout` variable is always `default` in our case (other Jekyll themes may have different types of pages depending on the content type). 
+The `layout` variable is always `default` in our case (other Jekyll themes may have different types of pages depending on the content type).
 
-The `permalink` variable beautifies the URL (instead of just going with the filename, which may be rather ugly) and the `linkname` variable determines how the link appears in the navigation bar of the site. 
+The `permalink` variable beautifies the URL (instead of just going with the filename, which may be rather ugly) and the `linkname` variable determines how the link appears in the navigation bar of the site.
 
-As lectures are typically in a specific order, the `ordering` variable (just use integers, ascending order) determines the order of the lectures. Without this explicit ordering, the links would show up in alphabetic order. 
+As lectures are typically in a specific order, the `ordering` variable (just use integers, ascending order) determines the order of the lectures. Without this explicit ordering, the links would show up in alphabetic order.
 
-Lastly, setting the `warning` variable to `true` ensures that there will be a warning box shown at the top of the page (removing the variable or another setting yields no warning box). The warning string itself should be set in `_config.yml`. Note that the `div` sizing and resizing based on the viewport size was **hardcoded** based on my typical update warning string -- significantly longer/shorter update strings may look odd or even overflow the `div`. 
+Lastly, setting the `warning` variable to `true` ensures that there will be a warning box shown at the top of the page (removing the variable or another setting yields no warning box). The warning string itself should be set in `_config.yml`. Note that the `div` sizing and resizing based on the viewport size was **hardcoded** based on my typical update warning string -- significantly longer/shorter update strings may look odd or even overflow the `div`.
 
 Note: all content appearing after the front matter is pushed into the `content` attribute, accessed as `{{content}}` in `default.html`.
 
@@ -208,7 +206,7 @@ Note: all content appearing after the front matter is pushed into the `content` 
 
 Practicals (assignments, exercises, old exams, etc.) are added to the `_practicals` folder. The front matter is the same as for the lectures.
 
-### Figure captions, spoilers and questions
+### Figure captions, debug information, spoilers, optional content and questions
 
 There is no special tag for **figure captions** in Markdown. The current regime is to use `<sup>My caption.</sup>` (note the extra empty line) :point_down::
 
@@ -222,27 +220,52 @@ The result looks like this:
 
 ![screenshot caption](/img/screenshot-caption.png)
 
-**Spoilers** (text that should onl be visible once the mouse hovers over it) can be added with a bit of HTML :point_down::
+---
+
+To set debug information visually apart from the main text, use:
 
 ```html
-<span class="spoiler">Besides a little broken image icon not much is happening.</span>
+<debug-info>add some debug information here.</debug-info>
 ```
 
-The result looks like this:
+This is a custom HTML element. The definition of the element can be found [here](assets/javascript/debugInfo.js).
 
-![screenshot caption](/img/screenshot-spoiler.png)
+---
+
+**Spoilers** are pieces of text that should only be visible once the mouse hovers over them. They can be added with a bit of HTML :point_down::
+
+```html
+<spoiler-info> This is the spoiler text ... </spoiler-info>
+```
+
+This is another custom HTML element. The definition of the element can be found [here](assets/javascript/spoilerInfo.js).
+
+---
+
+To set optional information visually apart from the main text, use:
+
+```html
+<optional-info>add some debug information here.</optional-info>
+```
+
+This is a custom HTML element. The definition of the element can be found [here](assets/javascript/optionalInfo.js).
+
+---
 
 To add a set of **questions/answers** (e.g. at the end of a transcript as self-check questions), the `<details>`/`<summary>` tag combination works well :point_down::
 
 ```html
-<details> 
+<details>
   <summary>What does JavaScript's hoisting principle refer to?</summary>
   Declarations are processed before any code is executed.
 </details>
 ```
+
 ![screenshot summary](/img/screenshot-summary.png)
 
-*Note that the `<details>` tag does clash at the moment with how markdown handles code snippets. Ccode snippets are marked by backticks and rendered in a specific way; inside the `<details>` tag though this does not happen, the text is treated as normal text. A workaround is to place the code snippet to ask questions about right before the `<details>` tag.*
+_Note that the `<details>` tag does clash with how markdown handles code snippets. Ccode snippets are marked by backticks and rendered in a specific way; inside the `<details>` tag though this does not happen, the text is treated as normal text. A workaround is to place the code snippet to ask questions about right before the `<details>` tag._
+
+Why is this not a custom element? Because this tag combination comes with a set of default behaviours (including expanding the answer) that are a great fit for questions.
 
 ## Other information
 
@@ -256,13 +279,13 @@ To track for instance site visits, add a folder `_extras`: any file in this fold
 ---
 ---
 <!-- Default Statcounter code  -->
-  <script type="text/javascript">
-    var sc_project = xxx;
-    var sc_invisible = 1;
-    var sc_security = "xxx"; 
-  </script>
-  <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
-  <!-- End of Statcounter Code -->
+<script type="text/javascript">
+var sc_project = xxx;
+var sc_invisible = 1;
+var sc_security = "xxx";
+</script>
+<script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+<!-- End of Statcounter Code -->
 ```
 
 ### CSS split
@@ -284,7 +307,7 @@ Configuration file: /Users/claudia/GitHub/cse-theme/_config.yml
             Source: /Users/claudia/GitHub/cse-theme
        Destination: /Users/claudia/GitHub/cse-theme/_site
  Incremental build: disabled. Enable with --incremental
-      Generating... 
+      Generating...
                     done in 1.001 seconds.
  Auto-regeneration: enabled for '/Users/claudia/GitHub/cse-theme'
     Server address: http://127.0.0.1:4000
@@ -293,7 +316,7 @@ Configuration file: /Users/claudia/GitHub/cse-theme/_config.yml
 
 The **server address** tells you which URL to open to view the theme in action.
 
-*Note, that changing the `_config.yml` file (e.g. to switch to a different css theme) requires a restart of the server.*
+_Note, that changing the `_config.yml` file (e.g. to switch to a different css theme) requires a restart of the server._
 
 ### Misc
 
@@ -302,4 +325,3 @@ GitHub Pages does not run the latest Jekyll version, make sure to check the righ
 If you made changes to the configuration but don't see them reflected on the served pages, clear the browser's cache or try the private mode (Firefox likes caching a lot ...).
 
 The table of contents for each transcript can be easily generated with VS Code's [Markdown all in one](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one) extension. In general, writing your Markdown in VSC is a nice way of doing things!
-

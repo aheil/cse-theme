@@ -44,4 +44,12 @@
   --warning-font-color: FireBrick;
   --spoiler-main: #fce7bc;
   --spoiler-text: #928e86;
+  --debug-bg-light: #ccc5b9;
+  --debug-bg-dark: #403d39;
+  --debug-font-color: #403d39;
+  --debug-side-font-color: #ccc5b9;
+  --optional-bg-light: rgb(249, 216, 210);
+  --optional-bg-dark: tomato;
+  --optional-font-color: ;
+  --optional-side-font-color: gainsboro;
 }

@@ -53,6 +53,48 @@
   left: 0px;
 }
 
+
+debug-info, optional-info {
+  display: block;
+  background-color: var(--debug-bg-light);
+  padding: 10px;
+  padding-left: 80px;
+  height: auto;
+  color: var(--debug-font-color);
+  position: relative;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+optional-info {
+  background-color: var(--optional-bg-light);
+  color: var(--optional-font-color);
+}
+
+debug-info::before, optional-info::before {
+  content: "DEBUG";
+  display: flex;
+  align-items: center;
+  width: 60px;
+  height: calc(100% - 20px);
+  background-color: var(--debug-bg-dark);
+  color: var(--debug-side-font-color);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  padding-top: 20px;
+  writing-mode: vertical-lr;
+  text-orientation: sideways;
+}
+
+optional-info::before {
+  content: "OPTIONAL";
+  background-color: var(--optional-bg-dark);
+  color: var(--optional-side-font-color);
+}
+
 .markdown-body {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -251,12 +293,9 @@
   border-radius: 3px;
   box-shadow: inset 0 -1px 0 #d1d5da;
 }
-
-span.spoiler {
-  display: inline-block;
-}
   
-.spoiler {
+spoiler-info {
+  display: inline-block;
   transition: color 2s, background-color 2s;
   padding-left: 10px;
   padding-right: 10px;
@@ -264,20 +303,21 @@ span.spoiler {
   height: auto;
   border-top: 2px solid var(--spoiler-text);
   border-bottom: 2px solid var(--spoiler-text);
+  margin-bottom: 10px;
 }
 
-.spoiler::before {
+spoiler-info::before {
   content: " SPOILER ➽ ";
 
   color: var(--spoiler-text);
 }
 
-.spoiler:not(:hover) {
+spoiler-info:not(:hover) {
   color: var(--spoiler-main);
   background-color: var(--spoiler-main);
 }
 
-li .spoiler {
+li spoiler-info {
   padding-left: 25px;
 }
 
