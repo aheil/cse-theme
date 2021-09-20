@@ -202,6 +202,12 @@ Lastly, setting the `warning` variable to `true` ensures that there will be a wa
 
 Note: all content appearing after the front matter is pushed into the `content` attribute, accessed as `{{content}}` in `default.html`.
 
+Finally, we note that if you want to include a piece of text in a lecture which is the same for a number of lectures, it makes sense to move that text into a separate `.md` file (without a preamble). A typical use case may be an explanation of a set of icons or an indication of which materials are relevant for the exam or ... If we assume that this file is called `explanation.md`, the following line would copy the contents of that file into our lecture:
+
+```
+{% include_relative explanation.md %}
+```
+
 ### Adding practicals
 
 Practicals (assignments, exercises, old exams, etc.) are added to the `_practicals` folder. The front matter is the same as for the lectures.
