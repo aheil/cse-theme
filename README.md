@@ -271,7 +271,7 @@ To add a set of **questions/answers** (e.g. at the end of a transcript as self-c
 
 ![screenshot summary](/img/screenshot-summary.png)
 
-_Note that the `<details>` tag does clash with how markdown handles code snippets. Ccode snippets are marked by backticks and rendered in a specific way; inside the `<details>` tag though this does not happen, the text is treated as normal text._ The solution to this problem looks ugly but it works: whenever code is used inform the kramdown parser that this particular part of HTML contains Markdown to be parsed. For blocks of code, surround the code with `<div markdown="1">..</div>`. For elements that are part of the flow of the text, use `<span markdown="span">`11`</span>` instead:
+_Note that the `<details>` tag does clash with how markdown handles code snippets. Code snippets are marked by backticks and rendered in a specific way; inside the `<details>` tag though this does not happen, the text is treated as normal text._ The solution to this problem looks ugly but it works: whenever code is used inform the kramdown parser that this particular part of HTML contains Markdown to be parsed. For blocks of code, surround the code with `<div markdown="1">..</div>`. For elements that are part of the flow of the text, use `<span markdown="span">`11`</span>` instead:
 
 ````html
 <details>
