@@ -253,7 +253,7 @@ This is another custom HTML element. The definition of the element can be found 
 To set optional information visually apart from the main text (and visually apart from the debug information), use:
 
 ```html
-<optional-info markdown="block">add some *debug* information here.</optional-info>
+<optional-info markdown="block">add some *optional* information here.</optional-info>
 ```
 
 This is another custom HTML element. The definition of the element can be found [here](assets/javascript/optionalInfo.js).
