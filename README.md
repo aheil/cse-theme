@@ -216,7 +216,7 @@ Practicals (assignments, exercises, old exams, etc.) are added to the `_practica
 
 ### Figure captions
 
-There is no special tag for **figure captions** in Markdown. The current regime is to use `<sup>My caption.</sup>` (note the extra empty line) :point_down::
+There is no separate tag for **figure captions** in Markdown. The current regime is to use `<sup>My caption.</sup>` (note the extra empty line) :point_down::
 
 ```markdown
 ![caniuse indexedb](/img/caniuse-indexedb.png)
