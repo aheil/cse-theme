@@ -74,7 +74,7 @@ You can also opt to not set one or more of the titles, in this case remove the v
 
 ### Color themes
 
-Set the color theme (`cssTheme`), either `light-blue`, `light-green`, `light-grey`, `light-pink`, `light-red`, `dark-pink`, `dark-red` or `dark-blue`.
+Set the color theme (`cssTheme`), either `light-green`, `light-grey`, `light-pink`, `light-red`, `dark-pink`, `dark-red` or `dark-blue`.
 
 ### Code color theme
 
