@@ -1,11 +1,6 @@
-class DebugInfo extends HTMLDivElement {
+class DebugInfo extends HTMLElement {
   constructor() {
     super();
-    // Create a shadow root
-    const shadow = this.attachShadow({ mode: "open" }); // sets and returns 'this.shadowRoot'
-    const wrapper = document.createElement("div");
-    wrapper.setAttribute("markdown", "1");
-    shadow.appendChild(wrapper);
   }
 }
 

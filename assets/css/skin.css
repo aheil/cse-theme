@@ -82,6 +82,7 @@ nav {
 #smallnav:hover {
   width: auto;
   height: 250px;
+  padding-right: 20px;
   background-image: none;
   overflow: scroll;
   font-size: 75%;

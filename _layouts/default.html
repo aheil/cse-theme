@@ -1,72 +1,84 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+  {%- include head.html -%}
 
-{%- include head.html -%}
+  <body>
+    {%- include header.html -%}
 
-<body>
+    <main>
+      <nav class="skin">
+        {%- include nav.html -%}
 
-  {%- include header.html -%}
+        <ul class="text-highlighted-info">
+          <li>
+            <small
+              >The course notes can be
+              <span class="text-highlighted-highlight">✎ highlighted</span> by
+              holding <kbd>h</kbd> and selecting text.
+              <span class="text-highlighted-highlight">Hovering</span> over a
+              highlight opens a notepad. A
+              <span class="text-highlighted-highlight">double-click</span> on a
+              highlight removes it.
+              <br />
+              <button id="deleteHighlights">
+                Delete all highlights on this page.
+              </button>
+            </small>
+          </li>
+        </ul>
+      </nav>
 
-  <main>
-    <nav class="skin">
-      {%- include nav.html -%}
-
-      <ul class="text-highlighted-info">
-        <li><small>The course notes can be <span class="text-highlighted-highlight">✎ highlighted</span> by holding <kbd>h</kbd> and selecting
-            text. <span class="text-highlighted-highlight">Hovering</span> over a highlight opens a notepad.
-            A <span class="text-highlighted-highlight">double-click</span> on a highlight removes it. 
-            <br />
-            <button id="deleteHighlights">Delete all highlights on this page.</button>
-          </small>
-        </li>
-      </ul>
-    </nav>
-
-    <!-- fixes an issue in Safari iOS: 
+      <!-- fixes an issue in Safari iOS: 
         https://stackoverflow.com/questions/29315889/ios-safari-100-width-fixed-position-header-wider-than-viewport 
     -->
-    <div class="iosfix"> 
-    <section class="markdown-body">
+      <div class="iosfix">
+        <section class="markdown-body">
+          {% if page.warning == true %}
+          <div class="warning">{{ site.warning }}</div>
+          {% endif %} {{ content }} :bike: :bike: :bike:
+          <!-- indicates end of page -->
+        </section>
+      </div>
+      {%- include footer.html -%}
+    </main>
 
-      {% if page.warning == true %}
-      <div class="warning">{{ site.warning }}</div>
-      {% endif %}
-
-      {{ content }}
-      :bike: :bike: :bike: <!-- indicates end of page -->
-    </section>
+    <div id="popup">
+      <textarea
+        id="popup-text"
+        placeholder="Add your notes here, don't forget to hit save!"
+        cols="20"
+        rows="10"
+      ></textarea>
+      <br />
+      <button id="popup-close">Save</button>
     </div>
-    {%- include footer.html -%}
- 
-  </main>
 
-  <div id="popup">
-    <textarea id="popup-text"  placeholder="Add your notes here, don't forget to hit save!" cols="20" rows="10"></textarea>
-    <br />
-    <button id="popup-close">Save</button>
-  </div>
+    {% if site.smallNavbar == true %}
+    <div id="smallnav" class="skin">{%- include nav.html -%}</div>
+    {% endif %} {% if site.timeSpent == true %}
+    <div id="timeSpent" class="skin">
+      <div></div>
+      <!-- time is shown here -->
+    </div>
+    <script
+      type="text/javascript"
+      src="{{ '/assets/javascript/timeSpent.js' | relative_url}}"
+    ></script>
+    {% endif %}
 
-  {% if site.smallNavbar == true %}
-  <div id="smallnav"  class="skin">
-    {%- include nav.html -%}
-  </div>
-  {% endif %}
+    <script
+      type="text/javascript"
+      src="{{ '/assets/javascript/debugInfo.js' | relative_url}}"
+    ></script>
+    <script
+      type="text/javascript"
+      src="{{ '/assets/javascript/TextHighlighter.js' | relative_url}}"
+    ></script>
+    <script
+      type="text/javascript"
+      src="{{ '/assets/javascript/utilsHighlighter.js' | relative_url}}"
+    ></script>
 
-  {% if site.timeSpent == true %}
-  <div id="timeSpent" class="skin">
-    <div></div> <!-- time is shown here -->
-  </div>
-  <script type="text/javascript" src="{{ "/assets/javascript/timeSpent.js" | relative_url}}"></script>
-  {% endif %}
-
-  <script type="text/javascript" src="{{ "/assets/javascript/debugInfo.js" | relative_url}}"></script>
-  <script type="text/javascript" src="{{ "/assets/javascript/TextHighlighter.js" | relative_url}}"></script>
-  <script type="text/javascript" src="{{ "/assets/javascript/utilsHighlighter.js" | relative_url}}"></script>
-
-  {% for extra in site.extras %}
-    {{ extra.content }}
-  {% endfor %}
-
-</body>
-
+    {% for extra in site.extras %} {{ extra.content }} {% endfor %}
+  </body>
 </html>
