@@ -19,7 +19,7 @@ main {
 .iosfix {
   overflow: auto;
   -webkit-overflow-scrolling: touch;  
-  background-color: var(--content-background);
+  background-color: rgb(var(--content-background));
 }
 
 section {
@@ -29,7 +29,7 @@ section {
 
 nav {
   color: var(--nav-foreground);
-  background-color: var(--nav-background);
+  background-color: rgb(var(--nav-background));
   padding-top: 45px;
   position: relative;
   height: auto;
@@ -42,12 +42,12 @@ nav {
   left: 15px;
   width: 25px;
   height: 35px;
-  background-color: var(--nav-link-color);
+  background-color: var(--popup-color);
   background-image: var(--smallnav-arrow);
   background-size: cover;
   border-radius: 5px;
-  border: 2px solid var(--popup-color);
-  box-shadow: 2px 2px 2px 1px var(--popup-color);
+  border: 2px solid var(--popup-shadow-color);
+  box-shadow: 2px 2px 2px 1px var(--popup-shadow-color);
   color: var(--nav-foreground);
 }
 
@@ -62,7 +62,7 @@ nav {
   position: absolute;
   font-size: 40%;
   font-style: italic;
-  color: var(--nav-link-color);
+  color: rgb(var(--nav-link-color));
   top: 0;
   left: 0;
 }
@@ -205,7 +205,7 @@ nav li {
 }
 
 .skin a {
-  color: var(--nav-link-color);
+  color: rgb(var(--nav-link-color));
   text-decoration: none;
 }
 
