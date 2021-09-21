@@ -60,6 +60,7 @@ debug-info, optional-info {
   padding: 10px;
   padding-left: 80px;
   height: auto;
+  min-height: 130px; /* otherwise the vertical text overflows the div if not enough content is inside this tag. */
   color: var(--debug-font-color);
   position: relative;
   justify-content: center;

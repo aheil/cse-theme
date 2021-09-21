@@ -34,9 +34,11 @@ Your repo should have the following files and folders in the root folder:
   - [Course information](#course-information)
   - [Adding a lecture](#adding-a-lecture)
   - [Adding practicals](#adding-practicals)
-  - [Figure captions, debug information, spoilers, optional content and questions](#figure-captions-debug-information-spoilers-optional-content-and-questions)
-- [Other information](#other-information)
-  - [Adding additional (analytics) scripts/content](#adding-additional-analytics-scriptscontent)
+  - [Figure captions](#figure-captions)
+  - [Debug information](#debug-information)
+  - [Spoilers](#spoilers)
+  - [Optional content](#optional-content)
+  - [Questions and answers](#questions-and-answers)
   - [CSS split](#css-split)
   - [How to develop the theme further](#how-to-develop-the-theme-further)
   - [Misc](#misc)
@@ -212,7 +214,7 @@ Finally, we note that if you want to include a piece of text in a lecture which 
 
 Practicals (assignments, exercises, old exams, etc.) are added to the `_practicals` folder. The front matter is the same as for the lectures.
 
-### Figure captions, debug information, spoilers, optional content and questions
+### Figure captions
 
 There is no special tag for **figure captions** in Markdown. The current regime is to use `<sup>My caption.</sup>` (note the extra empty line) :point_down::
 
@@ -226,37 +228,37 @@ The result looks like this:
 
 ![screenshot caption](/img/screenshot-caption.png)
 
----
+### Debug information
 
 To set debug information visually apart from the main text, use:
 
 ```html
-<debug-info>add some debug information here.</debug-info>
+<debug-info markdown="block">add some debug information here.</debug-info>
 ```
 
-This is a custom HTML element. The definition of the element can be found [here](assets/javascript/debugInfo.js).
+The attribute `markdown` ensures that the Markdown inside this tag is parsed by the kramdown parser. If no Markdown is used for the text inside these tags, this attribute does not have to be set. This is a custom HTML element. The definition of the element can be found [here](assets/javascript/debugInfo.js).
 
----
+### Spoilers
 
 **Spoilers** are pieces of text that should only be visible once the mouse hovers over them. They can be added with a bit of HTML :point_down::
 
 ```html
-<spoiler-info> This is the spoiler text ... </spoiler-info>
+<spoiler-info markdown="block"> This is the spoiler text ... </spoiler-info>
 ```
 
 This is another custom HTML element. The definition of the element can be found [here](assets/javascript/spoilerInfo.js).
 
----
+### Optional content
 
-To set optional information visually apart from the main text, use:
+To set optional information visually apart from the main text (and visually apart from the debug information), use:
 
 ```html
-<optional-info>add some debug information here.</optional-info>
+<debug-info markdown="block">add some *debug* information here.</optional-info>
 ```
 
-This is a custom HTML element. The definition of the element can be found [here](assets/javascript/optionalInfo.js).
+This is another custom HTML element. The definition of the element can be found [here](assets/javascript/optionalInfo.js).
 
----
+### Questions and answers
 
 To add a set of **questions/answers** (e.g. at the end of a transcript as self-check questions), the `<details>`/`<summary>` tag combination works well :point_down::
 
@@ -269,9 +271,29 @@ To add a set of **questions/answers** (e.g. at the end of a transcript as self-c
 
 ![screenshot summary](/img/screenshot-summary.png)
 
-_Note that the `<details>` tag does clash with how markdown handles code snippets. Ccode snippets are marked by backticks and rendered in a specific way; inside the `<details>` tag though this does not happen, the text is treated as normal text. A workaround is to place the code snippet to ask questions about right before the `<details>` tag._
+_Note that the `<details>` tag does clash with how markdown handles code snippets. Ccode snippets are marked by backticks and rendered in a specific way; inside the `<details>` tag though this does not happen, the text is treated as normal text._ The solution to this problem looks ugly but it works: whenever code is used inform the kramdown parser that this particular part of HTML contains Markdown to be parsed. For blocks of code, surround the code with `<div markdown="1">..</div>`. For elements that are part of the flow of the text, use `<span markdown="span">`11`</span>` instead:
 
-Why is this not a custom element? Because this tag combination comes with a set of default behaviours (including expanding the answer) that are a great fit for questions.
+````html
+<details>
+  <summary>
+    What will be the result of executing the above piece of JavaScript in the
+    browser?
+    <div markdown="1">
+      ```javascript for (var i = 1; i <= 10; i++) { setTimeout(function () {
+      console.log(i); }, 1000); }
+    </div>
+  </summary>
+</details>
+````
+
+  </div>
+  </summary>
+  After a one second delay, ten printouts of the number <span markdown="span">`11`</span> appear on the console.
+</details>
+```
+
+The use of the markdown attribute here looks different to the use on the custom tags - this is not desired but the only way to have been found to work in practice.
+Why is this not a custom element? Because this tag combination comes with a set of default behaviours that are a good fit for questions.
 
 ## Other information
 
