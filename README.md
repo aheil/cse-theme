@@ -76,31 +76,9 @@ You can also opt to not set one or more of the titles, in this case remove the v
 
 Set the color theme (`cssTheme`), either `light-blue`, `light-green`, `light-grey`, `light-pink`, `light-red`, `dark-pink`, `dark-red` or `dark-blue`.
 
-![cse-theme preview](/img/screenshot-light-red.png)
-
-![cse-theme preview](/img/screenshot-light-blue.png)
-
-![cse-theme preview](/img/screenshot-light-pink.png)
-
-![cse-theme preview](/img/screenshot-light-green.png)
-
-![cse-theme preview](/img/screenshot-light-grey.png)
-
-![cse-theme preview](/img/screenshot-dark-pink.png)
-
-![cse-theme preview](/img/screenshot-dark-blue.png)
-
-![cse-theme preview](/img/screenshot-dark-red.png)
-
 ### Code color theme
 
 Set the code color theme (`cssCodeTheme`), prepackaged are `monokai`, `dracula` (both have a dark background color) and `perldoc` (light background color).
-
-![cse-theme preview](/img/screenshot-code-monokai.png)
-
-![cse-theme preview](/img/screenshot-code-dracula.png)
-
-![cse-theme preview](/img/screenshot-code-perldoc.png)
 
 ### Header image
 
@@ -253,7 +231,9 @@ This is another custom HTML element. The definition of the element can be found 
 To set optional information visually apart from the main text (and visually apart from the debug information), use:
 
 ```html
-<optional-info markdown="block">add some *optional* information here.</optional-info>
+<optional-info markdown="block"
+  >add some *optional* information here.</optional-info
+>
 ```
 
 This is another custom HTML element. The definition of the element can be found [here](assets/javascript/optionalInfo.js).
@@ -283,7 +263,7 @@ _Note that the `<details>` tag does clash with how markdown handles code snippet
       console.log(i); }, 1000); }
     </div>
   </summary>
-    The answer is <span markdown="span">`11`</span>
+  The answer is <span markdown="span">`11`</span>
 </details>
 ````
 
