@@ -1,55 +1,61 @@
 :root {
-  --nav-background: #43aa8b;
-  --smallnav-background: rgba(67, 170, 139, 0.8);
-  --smallnav-arrow: url("../images/arrow-up-black.png");
-  --timespent-clock: url("../images/clock-black.png");
+  --nav-background: 67, 170, 139; /* dark green */
+  --nav-link-color: 255, 215, 44; /* orange */
   --nav-foreground: white;
-  --nav-link-color: #f9c74f;
+  --content-background: 239, 250, 231; /* light green */
+  --highlight-info-background: 233, 233, 233; /* grey */
+
+  --warning-bg-dark: #f3722c;
+  --warning-bg-light: #f8961e;
+  --warning-font-color: white;
+
+  --delete-highlights-button-bg1: #7ccab3;
+  --delete-highlights-button-bg2: #368a71;
+
+  --spoiler-main: #cbd3c5;
+
+  --smallnav-background: rgba(var(--nav-background), 0.8);
+  --smallnav-arrow: url("../images/arrow-up-white.png");
+  --timespent-clock: url("../images/clock-white.png");
   --nav-list-icon: "✪ ";
-  --footer-background: #277da1;
-  --footer-foreground: white;
-  --header-foreground: white;
-  --header-main-box-color: rgba(77, 144, 142, 0.5);
-  --header-highlight-box-color: rgba(144, 190, 109, 0.5);
-  --header-border: white;
-  --header-preview-box-color: rgba(249, 65, 68, 0.5);
+  --footer-background: rgba(var(--nav-background), 0.3);
+  --footer-foreground: #rgb(var(--nav-background));
+  --header-foreground: var(--nav-foreground);
+  --header-main-box-color: rgba(var(--nav-background), 0.5);
+  --header-highlight-box-color: rgba(var(--nav-link-color), 0.75);
+  --header-border: var(--nav-foreground);
+  --header-preview-box-color: rgba(var(--nav-link-color), 0.5);
   --content-list-icon: "✪ ";
-  --content-hX-underline: #43aa8b;
-  --content-hX-color: #4d908e;
-  --content-link-color: #f94144;
-  --content-table-bg-header: #4d908e;
-  --content-table-fg-header: white;
-  --content-table-row-alt: #bfd1b0;
+  --content-hX-underline: rgba(var(--nav-background), 0.5);
+  --content-hX-color: rgba(var(--nav-background), 0.95);
+  --content-link-color: var(--nav-link-color);
+  --content-table-bg-header: rgba(var(--nav-background), 0.75);
+  --content-table-fg-header: var(--nav-foreground);
+  --content-table-row-alt: rgba(var(--nav-background), 0.25);
   --content-link-before-icon: "⇗ ";
   --content-summary: #f8961e;
-  --content-details: #f8961e;
-  --content-background: #effae7;
-  --content-text-color: #277da1;
-  --content-figcaption: #43aa8b;
-  --highlight-color: #f9c74f;
-  --popup-color: rgba(144, 190, 109, 0.75);
-  --popup-text-color: #577590;
-  --highlight-info-background: #90be6d;
-  --highlight-info-text: black;
-  --delete-highlights-button-bg1: #43aa8b;
-  --delete-highlights-button-bg2: #368a71;
-  --delete-highlights-button-border: #f9c74f;
-  --delete-highlights-button-text: #f9c74f;
-  --save-notes-button-bg1: #43aa8b;
-  --save-notes-button-bg2: #368a71;
-  --save-notes-button-border: #f9c74f;
-  --save-notes-button-text: #f9c74f;
-  --warning-bg-light: #f3722c;
-  --warning-bg-dark: #f8961e;
-  --warning-font-color: white;
-  --spoiler-main: #cbd3c5;
-  --spoiler-text: #368a71;
-  --debug-bg-light: #fad785;
-  --debug-bg-dark: #368a71;
-  --debug-font-color: #368a71;
-  --debug-side-font-color: #f9c74f;
-  --optional-bg-light: #ffeab9;
-  --optional-bg-dark: #f3722c;
-  --optional-font-color: #f3722c;
-  --optional-side-font-color: gainsboro;
+  --content-details: #f3722c;
+  --content-text-color: grey;
+  --content-figcaption: rgba(var(--nav-background), 0.5);
+  --highlight-color: rgba(var(--nav-link-color), 0.95);
+  --popup-color: rgba(var(--nav-link-color), 0.75);
+  --popup-shadow-color: rgba(var(--nav-link-color), 0.95);
+  --popup-text-color: var(--nav-foreground);
+  --highlight-info-text: rgb(var(--nav-background));
+  --delete-highlights-button-border: rgb(var(--nav-background));
+  --delete-highlights-button-text: white;
+  --save-notes-button-bg1: var(--delete-highlights-button-bg1);
+  --save-notes-button-bg2: var(--delete-highlights-button-bg2);
+  --save-notes-button-border: rgb(var(--nav-background));
+  --save-notes-button-text: rgb(var(--nav-background));
+  --spoiler-text: rgba(var(--nav-background), 0.75);
+  --debug-bg-light: rgba(var(--nav-background), 0.15);
+  --debug-bg-dark: rgba(var(--nav-background), 0.5);
+  --debug-font-color: rgb(var(--nav-background));
+  --debug-side-font-color: rgb(var(--content-background));
+
+  --optional-bg-light: rgba(var(--nav-link-color), 0.25);
+  --optional-bg-dark: rgb(var(--nav-link-color));
+  --optional-font-color: rgb(var(--nav-background));
+  --optional-side-font-color: rgb(var(--content-background));
 }
