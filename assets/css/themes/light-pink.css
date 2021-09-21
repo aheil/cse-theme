@@ -53,3 +53,65 @@
   --optional-font-color: #30343f;
   --optional-side-font-color: gainsboro;
 }
+
+:root {
+  --nav-background: 27, 32, 33; /* dark grey */
+  --nav-link-color: 234, 99, 140; /* pink */
+  --nav-foreground: white;
+  --content-background: 255, 255, 255; /* white */
+  --highlight-info-background: 184, 186, 190; /*  grey */
+
+  --warning-bg-light: #ea638c;
+  --warning-bg-dark: #89023e;
+  --warning-font-color: white;
+
+  --delete-highlights-button-bg1: #ea638c;
+  --delete-highlights-button-bg2: #ffd9da;
+
+  --spoiler-main: #ffd9da;
+
+  --smallnav-background: rgba(var(--nav-background), 0.8);
+  --smallnav-arrow: url("../images/arrow-up-white.png");
+  --timespent-clock: url("../images/clock-white.png");
+  --nav-list-icon: "✪ ";
+  --footer-background: rgba(var(--nav-background), 0.3);
+  --footer-foreground: #rgb(var(--nav-background));
+  --header-foreground: var(--nav-foreground);
+  --header-main-box-color: rgba(var(--nav-background), 0.5);
+  --header-highlight-box-color: rgba(var(--nav-link-color), 0.75);
+  --header-border: var(--nav-foreground);
+  --header-preview-box-color: rgba(var(--nav-link-color), 0.5);
+  --content-list-icon: "✪ ";
+  --content-hX-underline: rgba(var(--nav-background), 0.5);
+  --content-hX-color: rgba(var(--nav-background), 0.5);
+  --content-link-color: var(--nav-link-color);
+  --content-table-bg-header: rgba(var(--nav-background), 0.75);
+  --content-table-fg-header: var(--nav-foreground);
+  --content-table-row-alt: rgba(var(--nav-background), 0.25);
+  --content-link-before-icon: "⇗ ";
+  --content-summary: var(--warning-bg-light);
+  --content-details: var(--warning-bg-dark);
+  --content-text-color: rgba(var(--nav-background), 0.75);
+  --content-figcaption: rgba(var(--nav-background), 0.5);
+  --highlight-color: rgba(var(--nav-link-color), 0.5);
+  --popup-color: rgba(var(--nav-link-color), 0.75);
+  --popup-shadow-color: rgba(var(--nav-link-color), 0.95);
+  --popup-text-color: var(--nav-foreground);
+  --highlight-info-text: rgb(var(--nav-background));
+  --delete-highlights-button-border: rgb(var(--nav-background));
+  --delete-highlights-button-text: rgb(var(--nav-background));
+  --save-notes-button-bg1: var(--delete-highlights-button-bg1);
+  --save-notes-button-bg2: var(--delete-highlights-button-bg2);
+  --save-notes-button-border: rgb(var(--nav-background));
+  --save-notes-button-text: rgb(var(--nav-background));
+  --spoiler-text: rgba(var(--nav-background), 0.75);
+  --debug-bg-light: rgba(var(--nav-background), 0.15);
+  --debug-bg-dark: rgba(var(--nav-background), 0.5);
+  --debug-font-color: rgb(var(--nav-background));
+  --debug-side-font-color: rgb(var(--content-background));
+
+  --optional-bg-light: rgba(var(--nav-link-color), 0.25);
+  --optional-bg-dark: rgb(var(--nav-link-color));
+  --optional-font-color: rgb(var(--nav-background));
+  --optional-side-font-color: rgb(var(--content-background));
+}
