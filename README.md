@@ -283,6 +283,7 @@ _Note that the `<details>` tag does clash with how markdown handles code snippet
       console.log(i); }, 1000); }
     </div>
   </summary>
+    The answer is <span markdown="span">`11`</span>
 </details>
 ````
 
