@@ -34,6 +34,7 @@ Your repo should have the following files and folders in the root folder:
   - [Course information](#course-information)
   - [Adding a lecture](#adding-a-lecture)
   - [Adding practicals](#adding-practicals)
+  - [Source code](#source-code)
   - [Figure captions](#figure-captions)
   - [Debug information](#debug-information)
   - [Spoilers](#spoilers)
@@ -191,6 +192,34 @@ Finally, we note that if you want to include a piece of text in a lecture which 
 ### Adding practicals
 
 Practicals (assignments, exercises, old exams, etc.) are added to the `_practicals` folder. The front matter is the same as for the lectures.
+
+### Source code
+
+Source code can either be used with the standard Markdown code markers:
+
+````
+```javascript
+source code goes here
+```
+````
+
+or with the [CodeMirror](https://codemirror.net/) library:
+
+```html
+<textarea class="javascript-code">
+for (var i = 1; i <= 10; i++) {
+setTimeout(function () {
+    console.log(i);
+  }, 1000);
+}
+</textarea>
+```
+
+```html
+<textarea class="html-code">
+<b>This is a bit of HTML.</b>
+</textarea>
+```
 
 ### Figure captions
 
