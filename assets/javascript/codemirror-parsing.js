@@ -42,3 +42,18 @@ for (let cssTA of cssTextAreas) {
   editor.setSize("100%", "100%");
   editor.save();
 }
+
+/* retrieval all textarea elements with class 'java-code' */
+
+const javaTextAreas = document.getElementsByClassName("java-code");
+
+for (let javaTA of javaTextAreas) {
+  javaTA.textContent = javaTA.textContent.trim(); //trim last newline
+  var editor = CodeMirror.fromTextArea(javaTA, {
+    mode: "java",
+    lineNumbers: true,
+    readOnly: true,
+  });
+  editor.setSize("100%", "100%");
+  editor.save();
+}
