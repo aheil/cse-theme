@@ -32,7 +32,7 @@
   --content-list-icon: "✪ ";
   --content-hX-underline: rgba(var(--nav-background), 0.5);
   --content-hX-color: rgba(var(--nav-background), 0.5);
-  --content-link-color: var(--nav-link-color);
+  --content-link-color: rgb(var(--nav-link-color));
   --content-table-bg-header: rgba(var(--nav-background), 0.75);
   --content-table-fg-header: var(--nav-foreground);
   --content-table-row-alt: rgba(var(--nav-background), 0.25);
