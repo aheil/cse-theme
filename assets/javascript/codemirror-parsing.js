@@ -5,7 +5,7 @@ const jsTextAreas = document.getElementsByClassName("javascript-code");
 for (let jsTA of jsTextAreas) {
   jsTA.textContent = jsTA.textContent.trim(); //trim last newline
   var editor = CodeMirror.fromTextArea(jsTA, {
-    mode: "javascript",
+    mode: "text/javascript",
     lineNumbers: true,
     readOnly: true,
   });
@@ -13,22 +13,7 @@ for (let jsTA of jsTextAreas) {
   editor.save();
 }
 
-/* retrieve all textarea elements with class 'html-code' */
-
-const htmlTextAreas = document.getElementsByClassName("html-code");
-
-for (let htmlTA of htmlTextAreas) {
-  htmlTA.textContent = htmlTA.textContent.trim(); //trim last newline
-  var editor = CodeMirror.fromTextArea(htmlTA, {
-    mode: "html",
-    lineNumbers: true,
-    readOnly: true,
-  });
-  editor.setSize("100%", "100%");
-  editor.save();
-}
-
-/* retrieval all textarea elements with class 'css-code' */
+/* retrieve all textarea elements with class 'css-code' */
 
 const cssTextAreas = document.getElementsByClassName("css-code");
 
@@ -43,14 +28,44 @@ for (let cssTA of cssTextAreas) {
   editor.save();
 }
 
-/* retrieval all textarea elements with class 'java-code' */
+/* retrieve all textarea elements with class 'java-code' */
 
 const javaTextAreas = document.getElementsByClassName("java-code");
 
 for (let javaTA of javaTextAreas) {
   javaTA.textContent = javaTA.textContent.trim(); //trim last newline
   var editor = CodeMirror.fromTextArea(javaTA, {
-    mode: "java",
+    mode: "text/x-java",
+    lineNumbers: true,
+    readOnly: true,
+  });
+  editor.setSize("100%", "100%");
+  editor.save();
+}
+
+/* retrieve all textarea elements with class 'http-code' */
+
+const httpTextAreas = document.getElementsByClassName("http-code");
+
+for (let httpTA of httpTextAreas) {
+  httpTA.textContent = httpTA.textContent.trim(); //trim last newline
+  var editor = CodeMirror.fromTextArea(httpTA, {
+    mode: "message/http",
+    lineNumbers: true,
+    readOnly: true,
+  });
+  editor.setSize("100%", "100%");
+  editor.save();
+}
+
+/* retrieve all textarea elements with class 'html-code' */
+
+const htmlTextAreas = document.getElementsByClassName("html-code");
+
+for (let htmlTA of htmlTextAreas) {
+  htmlTA.textContent = htmlTA.textContent.trim(); //trim last newline
+  var editor = CodeMirror.fromTextArea(htmlTA, {
+    mode: "htmlmixed",
     lineNumbers: true,
     readOnly: true,
   });
