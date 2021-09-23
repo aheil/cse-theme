@@ -75,7 +75,7 @@
   --timespent-clock: url("../images/clock-white.png");
   --nav-list-icon: "✪ ";
   --footer-background: rgba(var(--nav-background), 0.3);
-  --footer-foreground: #rgb(var(--nav-background));
+  --footer-foreground: rgb(var(--nav-background));
   --header-foreground: var(--nav-foreground);
   --header-main-box-color: rgba(var(--nav-background), 0.5);
   --header-highlight-box-color: rgba(var(--nav-link-color), 0.75);
