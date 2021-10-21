@@ -267,7 +267,7 @@ div.highlight {
 }
 
 .rouge-gutter {
-  opacity: 50%;
+  color: var(--code-line-number-color);
 }
 
 .skin .preview {

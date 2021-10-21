@@ -114,4 +114,6 @@
   --optional-bg-dark: rgb(var(--nav-link-color));
   --optional-font-color: rgb(var(--nav-background));
   --optional-side-font-color: rgb(var(--content-background));
+
+  --code-line-number-color: var(--warning-bg-light);
 }
