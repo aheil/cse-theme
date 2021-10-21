@@ -4,12 +4,12 @@ permalink: /
 updateWarning: true
 ---
 
-Course title <!-- omit in toc -->
-==
+# Course title <!-- omit in toc -->
 
 This course is about X, Y and Z.
 
 ## Table of Contents <!-- omit in toc --> <!-- , created via the VSC extension Markdown All -->
+
 - [Course instructors](#course-instructors)
 - [Course book](#course-book)
 - [Tooling](#tooling)
@@ -35,17 +35,11 @@ This course is about X, Y and Z.
 
 ...
 
-### Required 
+### Required
 
 ...
 
-
 ## Course grading
-
-The entire course (covering both database and web technoloogy topics) is graded as follows:
-
-![grading](img/RME-grading.png)
-
 
 ## Course topics
 
@@ -58,7 +52,6 @@ The entire course (covering both database and web technoloogy topics) is graded 
 ## Assignments & assessment
 
 ...
-
 
 ## Web development resources
 

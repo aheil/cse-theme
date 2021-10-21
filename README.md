@@ -195,31 +195,13 @@ Practicals (assignments, exercises, old exams, etc.) are added to the `_practica
 
 ### Source code
 
-Source code can either be used with the standard Markdown code markers:
+Source code can be written with the standard Markdown code markers:
 
 ````
 ```javascript
 source code goes here
 ```
 ````
-
-or with the [CodeMirror](https://codemirror.net/) library:
-
-```html
-<textarea class="javascript-code">
-for (var i = 1; i <= 10; i++) {
-setTimeout(function () {
-    console.log(i);
-  }, 1000);
-}
-</textarea>
-```
-
-```html
-<textarea class="html-code">
-<b>This is a bit of HTML.</b>
-</textarea>
-```
 
 ### Figure captions
 

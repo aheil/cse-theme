@@ -254,6 +254,22 @@ footer a::before {
   background-color: var(--header-highlight-box-color);
 }
 
+div.highlight {
+  position: relative;
+}
+
+.copy-button {
+  position: absolute;
+  margin: 16px;
+  top: 0;
+  right: 0;
+  border-radius: 10px;
+}
+
+.rouge-gutter {
+  opacity: 50%;
+}
+
 .skin .preview {
   background-color: var(--header-preview-box-color);
   display: inline-block;
@@ -269,7 +285,6 @@ footer a::before {
 }
 
 @keyframes preview {
-
   {% assign cuts = 100.0 | divided_by: site.line3Title.size %}
   {% for counter in (0..site.line3Title.size) %}
     {% assign percentage = counter | times: cuts %}
@@ -278,3 +293,4 @@ footer a::before {
     }
   {% endfor %}
 }
+

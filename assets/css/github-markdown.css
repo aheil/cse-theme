@@ -856,11 +856,6 @@ li spoiler-info {
 
 .markdown-body table td, .markdown-body table th {
   padding: 6px 13px;
-  border: 1px solid #dfe2e5;
-}
-
-.markdown-body table tr {
-  border-top: 1px solid #c6cbd1;
 }
 
 .markdown-body table tr:nth-child(2n) {
@@ -912,7 +907,7 @@ li spoiler-info {
 }
 
 .markdown-body .highlight pre, .markdown-body pre {
-  padding: 16px;
+  padding: 5px;
   overflow: auto;
   font-size: 100%;
   line-height: 1.45;
