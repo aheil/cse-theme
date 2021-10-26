@@ -116,4 +116,7 @@
   --optional-side-font-color: rgb(var(--content-background));
 
   --code-line-number-color: var(--warning-bg-light);
+
+  --copy-code-background-color: rgb(var(--nav-link-color));
+  --copy-code-font-color: rgb(var(--content-background));
 }

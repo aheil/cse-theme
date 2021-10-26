@@ -260,10 +260,16 @@ div.highlight {
 
 .copy-button {
   position: absolute;
-  margin: 16px;
-  top: 0;
+  height: 25px;
+  top: -25px;
   right: 0;
-  border-radius: 10px;
+  background-color: var(--copy-code-background-color);
+  color: var(--copy-code-font-color);
+  border: none;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  font-family: monospace;
+  font-size: 12px;
 }
 
 .rouge-gutter {

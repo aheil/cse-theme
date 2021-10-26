@@ -7,6 +7,9 @@ languagesToCopy.add("language-css");
 languagesToCopy.add("language-html");
 languagesToCopy.add("language-http");
 
+const copyText = "Copy me";
+const copiedText = "&nbsp;Copied";
+
 codeSnippets.forEach((codeSnippet) => {
   let allowCopy = false;
   codeSnippet.parentElement.classList.forEach((className) => {
@@ -19,13 +22,13 @@ codeSnippets.forEach((codeSnippet) => {
 
   const copyButton = document.createElement("button");
   copyButton.classList.add("copy-button");
-  copyButton.innerHTML = "Copy";
+  copyButton.innerHTML = copyText;
   copyButton.addEventListener("click", () => {
     sourceCode = codeSnippet.querySelector("td.rouge-code").innerText;
     setClipboard(sourceCode);
-    copyButton.innerHTML = "Copied!";
+    copyButton.innerHTML = copiedText; //monospace font, same size as initial text
     setTimeout(() => {
-      copyButton.innerHTML = "Copy";
+      copyButton.innerHTML = copyText;
     }, 2000);
   });
   codeSnippet.insertBefore(copyButton, codeSnippet.firstChild);
