@@ -5,7 +5,7 @@ const languagesToCopy = new Set();
 languagesToCopy.add("language-javascript");
 languagesToCopy.add("language-css");
 languagesToCopy.add("language-html");
-languagesToCopy.add("language-http");
+//languagesToCopy.add("language-http");
 
 const copyText = "Copy me";
 const copiedText = "&nbsp;Copied";
