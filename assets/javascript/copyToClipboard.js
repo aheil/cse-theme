@@ -32,6 +32,9 @@ codeSnippets.forEach((codeSnippet) => {
     }, 2000);
   });
   codeSnippet.insertBefore(copyButton, codeSnippet.firstChild);
+
+  //the copy button is 25px tall, so we need to adjust the margin-top of div.highlight
+  codeSnippet.style.marginTop = "25px";
 });
 
 function setClipboard(text) {
