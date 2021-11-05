@@ -859,7 +859,11 @@ li spoiler-info {
 }
 
 .markdown-body table tr:nth-child(2n) {
-  background-color: var(--content-table-row-alt);
+  background-color: var(--content-table-row-alt1);
+}
+
+.markdown-body table tr:nth-child(2n+1) {
+  background-color: var(--content-table-row-alt2);
 }
 
 .markdown-body img {
