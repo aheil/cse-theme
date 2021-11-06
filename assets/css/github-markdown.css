@@ -806,12 +806,18 @@ li spoiler-info {
   margin-bottom: 0;
 }
 
-.markdown-body li {
+.markdown-body ul li {
   word-wrap: break-all;
   list-style: none;
 }
 
-.markdown-body li:before {
+
+.markdown-body ol li {
+  word-wrap: break-all;
+  list-style: lower-roman;
+}
+
+.markdown-body ul li:before {
   content: var(--content-list-icon);
   margin-left: -20px; 
   margin-right: 4px;
