@@ -37,9 +37,12 @@ Your repo should have the following files and folders in the root folder:
   - [Source code](#source-code)
   - [Figure captions](#figure-captions)
   - [Debug information](#debug-information)
-  - [Spoilers](#spoilers)
   - [Optional content](#optional-content)
+  - [Spoilers](#spoilers)
+  - [Terminal recordings](#terminal-recordings)
   - [Questions and answers](#questions-and-answers)
+- [Other information](#other-information)
+  - [Adding additional (analytics) scripts/content](#adding-additional-analytics-scriptscontent)
   - [CSS split](#css-split)
   - [How to develop the theme further](#how-to-develop-the-theme-further)
   - [Misc](#misc)
@@ -219,13 +222,23 @@ The result looks like this:
 
 ### Debug information
 
-To set debug information visually apart from the main text, use:
+To set debug information visually apart (separate background color and *Debug* on the sidebar) from the main text, use:
 
 ```html
 <debug-info markdown="block">add some debug information here.</debug-info>
 ```
 
 The attribute `markdown` ensures that the Markdown inside this tag is parsed by the kramdown parser. If no Markdown is used for the text inside these tags, this attribute does not have to be set. This is a custom HTML element. The definition of the element can be found [here](assets/javascript/debugInfo.js).
+
+### Optional content
+
+To set optional information visually apart (separate background color and *Optional* on the sidebar; different colors than the debug box) from the main text use:
+
+```html
+<optional-info markdown="block">add some *optional* information here.</optional-info>
+```
+
+This is another custom HTML element. The definition of the element can be found [here](assets/javascript/optionalInfo.js).
 
 ### Spoilers
 
@@ -237,17 +250,15 @@ The attribute `markdown` ensures that the Markdown inside this tag is parsed by 
 
 This is another custom HTML element. The definition of the element can be found [here](assets/javascript/spoilerInfo.js).
 
-### Optional content
+### Terminal recordings
 
-To set optional information visually apart from the main text (and visually apart from the debug information), use:
+For programming-heavy courses it can be useful to show terminal session recordings (e.g. to showcase how to run a script). Instead of creating a gif or showing a screencast of the terminal, it is possible to create recordings with [asciinema](https://github.com/asciinema/asciinema).
+
+These recordings are just plain text files and can be dropped into a folder (e.g. `/cast`) in your GitHub repository. To include the recordings in the transcript use:
 
 ```html
-<optional-info markdown="block"
-  >add some *optional* information here.</optional-info
->
+<asciinema-player src="../cast/screen-recording-file.cast"></asciinema-player>
 ```
-
-This is another custom HTML element. The definition of the element can be found [here](assets/javascript/optionalInfo.js).
 
 ### Questions and answers
 
@@ -270,19 +281,15 @@ _Note that the `<details>` tag does clash with how markdown handles code snippet
     What will be the result of executing the above piece of JavaScript in the
     browser?
     <div markdown="1">
-      ```javascript for (var i = 1; i <= 10; i++) { setTimeout(function () {
+      ```javascript 
+      for (var i = 1; i <= 10; i++) { setTimeout(function () {
       console.log(i); }, 1000); }
+      ```
     </div>
   </summary>
   The answer is <span markdown="span">`11`</span>
 </details>
 ````
-
-  </div>
-  </summary>
-  After a one second delay, ten printouts of the number <span markdown="span">`11`</span> appear on the console.
-</details>
-```
 
 The use of the markdown attribute here looks different to the use on the custom tags - this is not desired but the only way to have been found to work in practice.
 Why is this not a custom element? Because this tag combination comes with a set of default behaviours that are a good fit for questions.
