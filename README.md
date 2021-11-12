@@ -82,7 +82,7 @@ Set the color theme (`cssTheme`), either `light-green`, `light-grey`, `light-pin
 
 ### Code color theme
 
-Set the code color theme (`cssCodeTheme`), prepackaged are `monokai`, `dracula` (both have a dark background color) and `perldoc` (light background color).
+Set the code color theme (`cssCodeTheme`), prepackaged are `monokai`, `dracula`, `cobalt` (dark background color) and `perldoc` (light background color).
 
 ### Header image
 
