@@ -213,6 +213,7 @@ nav li {
   text-decoration: underline overline;
   text-decoration-thickness: .125em;
   text-underline-offset: 2.5px;
+  filter: brightness(0.75);
 }
 
 .skin li {
