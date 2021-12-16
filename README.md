@@ -352,3 +352,7 @@ GitHub Pages does not run the latest Jekyll version, make sure to check the righ
 If you made changes to the configuration but don't see them reflected on the served pages, clear the browser's cache or try the private mode (Firefox likes caching a lot ...).
 
 The table of contents for each transcript can be easily generated with VS Code's [Markdown all in one](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one) extension. In general, writing your Markdown in VSC is a nice way of doing things!
+
+If screenshots of code snippets are needed (e.g. for slides), head to [Carbon](https://carbon.now.sh) for high-resolution images. 
+
+Inside VS Code, [CodeSnap](https://marketplace.visualstudio.com/items?itemName=adpyke.codesnap) works well, the only problem is that the images produced are of low resolution. Maybe this will be fixed soon ...
