@@ -23,8 +23,9 @@ main {
 }
 
 section {
-  width: 103%;
+  width: 100%;
   overflow: scroll;
+  overflow: hidden;
 }
 
 nav {
